@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
+import Apollo
+import PkmnApi
+
+let apolloClient = ApolloClient(url: URL(string: "https://graphqlpokemon.favware.tech/v8")!)
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("Request"){
+                apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: 722)) { result in
+                  guard let data = try? result.get().data else { return }
+                }
+            }
         }
         .padding()
     }

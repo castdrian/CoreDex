@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		3AB6ED782B8A7D30009B24B4 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB6ED772B8A7D30009B24B4 /* Apollo */; };
 		3AB6ED7A2B8A7D30009B24B4 /* ApolloTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB6ED792B8A7D30009B24B4 /* ApolloTestSupport */; };
 		3AB6ED7C2B8A7D41009B24B4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED7B2B8A7D41009B24B4 /* Config.xcconfig */; };
+		3AB6ED812B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED802B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql */; };
+		3AB6ED832B8A8C91009B24B4 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED822B8A8C91009B24B4 /* schema.graphqls */; };
+		3AB6ED8A2B8A8E94009B24B4 /* PkmnApi in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB6ED892B8A8E94009B24B4 /* PkmnApi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,8 @@
 		3AB6ED612B8A5B42009B24B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB6ED642B8A5B42009B24B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3AB6ED7B2B8A7D41009B24B4 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		3AB6ED802B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = getPokemonByDexNumber.graphql; sourceTree = "<group>"; };
+		3AB6ED822B8A8C91009B24B4 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB6ED8A2B8A8E94009B24B4 /* PkmnApi in Frameworks */,
 				3AB6ED782B8A7D30009B24B4 /* Apollo in Frameworks */,
 				3AB6ED7A2B8A7D30009B24B4 /* ApolloTestSupport in Frameworks */,
 			);
@@ -57,6 +63,7 @@
 		3AB6ED5C2B8A5B41009B24B4 /* CoreDex */ = {
 			isa = PBXGroup;
 			children = (
+				3AB6ED7D2B8A8327009B24B4 /* graphql */,
 				3AB6ED5D2B8A5B41009B24B4 /* CoreDexApp.swift */,
 				3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */,
 				3AB6ED612B8A5B42009B24B4 /* Assets.xcassets */,
@@ -72,6 +79,15 @@
 				3AB6ED642B8A5B42009B24B4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3AB6ED7D2B8A8327009B24B4 /* graphql */ = {
+			isa = PBXGroup;
+			children = (
+				3AB6ED822B8A8C91009B24B4 /* schema.graphqls */,
+				3AB6ED802B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql */,
+			);
+			path = graphql;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +109,7 @@
 			packageProductDependencies = (
 				3AB6ED772B8A7D30009B24B4 /* Apollo */,
 				3AB6ED792B8A7D30009B24B4 /* ApolloTestSupport */,
+				3AB6ED892B8A8E94009B24B4 /* PkmnApi */,
 			);
 			productName = CoreDex;
 			productReference = 3AB6ED5A2B8A5B41009B24B4 /* CoreDex.app */;
@@ -124,6 +141,7 @@
 			mainGroup = 3AB6ED512B8A5B41009B24B4;
 			packageReferences = (
 				3AB6ED762B8A7D30009B24B4 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				3AB6ED882B8A8E94009B24B4 /* XCLocalSwiftPackageReference "PkmnApi" */,
 			);
 			productRefGroup = 3AB6ED5B2B8A5B41009B24B4 /* Products */;
 			projectDirPath = "";
@@ -140,6 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB6ED652B8A5B42009B24B4 /* Preview Assets.xcassets in Resources */,
+				3AB6ED832B8A8C91009B24B4 /* schema.graphqls in Resources */,
+				3AB6ED812B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql in Resources */,
 				3AB6ED7C2B8A7D41009B24B4 /* Config.xcconfig in Resources */,
 				3AB6ED622B8A5B42009B24B4 /* Assets.xcassets in Resources */,
 			);
@@ -362,6 +382,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		3AB6ED882B8A8E94009B24B4 /* XCLocalSwiftPackageReference "PkmnApi" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = PkmnApi;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		3AB6ED762B8A7D30009B24B4 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -383,6 +410,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3AB6ED762B8A7D30009B24B4 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloTestSupport;
+		};
+		3AB6ED892B8A8E94009B24B4 /* PkmnApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PkmnApi;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

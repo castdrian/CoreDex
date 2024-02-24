@@ -1,0 +1,73 @@
+query GetPokemonByDexNumber($number: Int!) {
+  getPokemonByDexNumber(number: $number) {
+    abilities {
+      first {
+        name
+        shortDesc
+        desc
+        serebiiPage
+        smogonPage
+      }
+      second {
+        name
+        shortDesc
+        desc
+        serebiiPage
+        smogonPage
+      }
+      hidden {
+        name
+        shortDesc
+        desc
+        serebiiPage
+        smogonPage
+      }
+    }
+    backSprite
+    baseStats {
+      attack
+      defense
+      hp
+      specialattack
+      specialdefense
+      speed
+    }
+    baseStatsTotal
+    catchRate {
+      base
+      percentageWithOrdinaryPokeballAtFullHealth
+    }
+    color
+    eggGroups
+    evYields {
+      attack
+      defense
+      hp
+      specialattack
+      specialdefense
+      speed
+    }
+    evolutionLevel
+    flavorTexts {
+      flavor
+      game
+    }
+    gender {
+      female
+      male
+    }
+    height
+    num
+    serebiiPage
+    shinyBackSprite
+    shinySprite
+    smogonPage
+    smogonTier
+    species
+    sprite
+    types {
+      name
+    }
+    weight
+  }
+}
