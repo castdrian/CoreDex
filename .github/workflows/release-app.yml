@@ -34,11 +34,11 @@ jobs:
 
       - name: Bump version in Config.xcconfig
         run: |
-          CURRENT_BUILD=$(grep BUILD_NUMBER ishare/Config.xcconfig | cut -d ' ' -f 3)
+          CURRENT_BUILD=$(grep BUILD_NUMBER Config.xcconfig | cut -d ' ' -f 3)
           NEW_BUILD=$((CURRENT_BUILD + 1))
           sed -i '' "s/BUILD_NUMBER = $CURRENT_BUILD/BUILD_NUMBER = $NEW_BUILD/" ishare/Config.xcconfig
           
-          CURRENT_VERSION=$(grep VERSION ishare/Config.xcconfig | cut -d ' ' -f 3)
+          CURRENT_VERSION=$(grep VERSION Config.xcconfig | cut -d ' ' -f 3)
           NEW_VERSION=${{ steps.semver.outputs.nextStrict }}
           sed -i '' "s/VERSION = $CURRENT_VERSION/VERSION = $NEW_VERSION/" ishare/Config.xcconfig
 
