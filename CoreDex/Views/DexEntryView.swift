@@ -22,6 +22,8 @@ extension GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber.Abilities.Hidden
 struct DexEntryView: View {
     let pokemon: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber
     @State private var synthesizer = AVSpeechSynthesizer()
+    @State private var audioPlayer: AVAudioPlayer?
+    @State private var audioPlayerDelegate = AudioPlayerDelegate()
     @State private var showShinySprite = false
     
     var body: some View {
@@ -37,7 +39,9 @@ struct DexEntryView: View {
         }
         .navigationBarTitle(Text("\(pokemon.species.capitalized) #\(pokemon.num)"), displayMode: .inline)
         .onAppear {
-            readDexEntry()
+            playPokemonCry() {
+                readDexEntry()
+            }
         }
     }
     
@@ -46,11 +50,6 @@ struct DexEntryView: View {
             KFAnimatedImage(URL(string: showShinySprite ? pokemon.shinySprite : pokemon.sprite))
                 .scaledToFit()
                 .frame(width: 150, height: 150)
-                .onTapGesture {
-                    withAnimation {
-                        showShinySprite.toggle()
-                    }
-                }
             
         }
         .frame(maxWidth: .infinity)
@@ -58,6 +57,7 @@ struct DexEntryView: View {
         .contentShape(Rectangle())
         .onTapGesture {
             withAnimation {
+                playPokemonCry()
                 showShinySprite.toggle()
             }
         }
@@ -149,7 +149,40 @@ struct DexEntryView: View {
             }
         }
     }
+    
+    private func playPokemonCry(completion: (() -> Void)? = nil) {
+        guard let url = URL(string: "https://play.pokemonshowdown.com/audio/cries/\(pokemon.species).mp3") else {
+            completion?()
+            return
+        }
         
+        URLSession.shared.dataTask(with: url) { [self] data, response, error in
+            DispatchQueue.main.async {
+                if let data = data, error == nil {
+                    do {
+                        audioPlayer = try AVAudioPlayer(data: data)
+                        audioPlayerDelegate.onAudioFinished = {
+                            try? AVAudioSession.sharedInstance().setActive(false)
+                            completion?()
+                        }
+                        audioPlayer?.delegate = audioPlayerDelegate
+                        
+                        try AVAudioSession.sharedInstance().setCategory(.playback)
+                        try AVAudioSession.sharedInstance().setActive(true)
+                        
+                        audioPlayer?.prepareToPlay()
+                        audioPlayer?.play()
+                    } catch {
+                        print("Error setting up audio player: \(error)")
+                        completion?()
+                    }
+                } else {
+                    print("Error loading audio file: \(error?.localizedDescription ?? "Unknown error")")
+                    completion?()
+                }
+            }
+        }.resume()
+    }
     private func readDexEntry() {
         let audioSession = AVAudioSession()
         

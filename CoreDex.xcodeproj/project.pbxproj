@@ -22,6 +22,7 @@
 		3ACEBA2E2B8B67B100BFF4CF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACEBA2D2B8B67B100BFF4CF /* Kingfisher */; };
 		3ACEBA312B8B8C4700BFF4CF /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACEBA302B8B8C4700BFF4CF /* Apollo */; };
 		3ACEBA372B8B9E8F00BFF4CF /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */; };
+		3ACEBA392B8BD40000BFF4CF /* AudioPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEBA382B8BD40000BFF4CF /* AudioPlayerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3ACEBA282B8B62F700BFF4CF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3ACEBA2A2B8B676500BFF4CF /* DexEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexEntryView.swift; sourceTree = "<group>"; };
 		3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		3ACEBA382B8BD40000BFF4CF /* AudioPlayerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			children = (
 				3ACEBA282B8B62F700BFF4CF /* ImagePicker.swift */,
 				3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */,
+				3ACEBA382B8BD40000BFF4CF /* AudioPlayerDelegate.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				3ACEBA292B8B62F700BFF4CF /* ImagePicker.swift in Sources */,
 				3AB6ED5E2B8A5B41009B24B4 /* CoreDexApp.swift in Sources */,
 				3AB6ED922B8A953A009B24B4 /* Gen9.mlmodel in Sources */,
+				3ACEBA392B8BD40000BFF4CF /* AudioPlayerDelegate.swift in Sources */,
 				3ACEBA2B2B8B676500BFF4CF /* DexEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
