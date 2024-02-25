@@ -30,7 +30,7 @@ class ImagePredictor {
     private static let imageClassifier = createImageClassifier()
     
     struct Prediction {
-        let classification: String
+        let classification: Int
         let confidence: Float
     }
     
@@ -89,7 +89,7 @@ class ImagePredictor {
         }
         
         if let highestConfidenceObservation = observations.max(by: { a, b in a.confidence < b.confidence }) {
-            topPrediction = Prediction(classification: highestConfidenceObservation.identifier,
+            topPrediction = Prediction(classification: Int(highestConfidenceObservation.identifier)!,
                                        confidence: highestConfidenceObservation.confidence)
         }
     }
