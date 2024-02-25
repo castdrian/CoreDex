@@ -22,77 +22,83 @@ extension GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber.Abilities.Hidden
 struct DexEntryView: View {
     let pokemon: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber
     @State private var synthesizer = AVSpeechSynthesizer()
+    @State private var showShinySprite = false
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                headerSection
                 spriteSection
                 typeSection
+                flavorTextSection
                 statsSection
                 abilitiesSection
-                evolutionSection
-                flavorTextSection
             }
             .padding()
         }
-        .navigationBarTitle(Text(pokemon.species), displayMode: .inline)
+        .navigationBarTitle(Text("\(pokemon.species.capitalized) #\(pokemon.num)"), displayMode: .inline)
         .onAppear {
             readDexEntry()
         }
     }
     
-    private var headerSection: some View {
-        HStack {
-            Text(pokemon.species)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Spacer()
-            Text("#\(pokemon.num)")
-                .font(.title2)
-                .foregroundColor(.gray)
-        }
-    }
-    
     private var spriteSection: some View {
-        HStack(spacing: 20) {
-            KFImage(URL(string: pokemon.sprite))
-            KFImage(URL(string: pokemon.shinySprite))
-            KFImage(URL(string: pokemon.backSprite))
+        HStack {
+            KFAnimatedImage(URL(string: showShinySprite ? pokemon.shinySprite : pokemon.sprite))
+                .scaledToFit()
+                .frame(width: 150, height: 150)
+                .onTapGesture {
+                    withAnimation {
+                        showShinySprite.toggle()
+                    }
+                }
+            
         }
+        .frame(maxWidth: .infinity)
         .padding(.vertical)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            withAnimation {
+                showShinySprite.toggle()
+            }
+        }
     }
     
     private var typeSection: some View {
-        HStack {
+        HStack(spacing: 10) {
             ForEach(pokemon.types, id: \.name) { type in
-                Text(type.name)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
+                HStack {
+                    Text(type.name.capitalized)
+                        .padding(8)
+                        .frame(minWidth: 80, alignment: .center)
+                    
+                    Image(type.name.lowercased())
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                        .padding(.trailing, 8)
+                }
+                .foregroundColor(.white)
+                .background(pokemonTypeColors[type.name.lowercased()] ?? Color.gray)
+                .cornerRadius(10)
             }
         }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 10)
     }
     
-    private var statsSection: some View {
-        VStack(alignment: .leading) {
-            Text("Base Stats")
-                .font(.headline)
-            HStack {
-                Text("HP: \(pokemon.baseStats.hp)")
-                Spacer()
-                Text("Attack: \(pokemon.baseStats.attack)")
-            }
-            HStack {
-                Text("Defense: \(pokemon.baseStats.defense)")
-                Spacer()
-                Text("Sp. Atk: \(pokemon.baseStats.specialattack)")
-            }
-            HStack {
-                Text("Sp. Def: \(pokemon.baseStats.specialdefense)")
-                Spacer()
-                Text("Speed: \(pokemon.baseStats.speed)")
-            }
+    private var flavorTextSection: some View {
+        VStack {
+            Text(pokemon.flavorTexts.first!.flavor)
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.gray, lineWidth: 2)
+                )
+        }
+        .frame(maxWidth: .infinity)
+        .onTapGesture {
+            readDexEntry()
         }
     }
     
@@ -121,30 +127,29 @@ struct DexEntryView: View {
         .padding(.vertical, 2)
     }
     
-    private var evolutionSection: some View {
+    
+    private var statsSection: some View {
         VStack(alignment: .leading) {
-            Text("Evolution")
+            Text("Base Stats")
                 .font(.headline)
-            if let preEvolutions = pokemon.preevolutions, !preEvolutions.isEmpty {
-                ForEach(preEvolutions, id: \.species) { evolution in
-                    Text(evolution.species)
-                }
-            } else {
-                Text("No pre-evolutions")
+            HStack {
+                Text("HP: \(pokemon.baseStats.hp)")
+                Spacer()
+                Text("Attack: \(pokemon.baseStats.attack)")
+            }
+            HStack {
+                Text("Defense: \(pokemon.baseStats.defense)")
+                Spacer()
+                Text("Sp. Atk: \(pokemon.baseStats.specialattack)")
+            }
+            HStack {
+                Text("Sp. Def: \(pokemon.baseStats.specialdefense)")
+                Spacer()
+                Text("Speed: \(pokemon.baseStats.speed)")
             }
         }
     }
-    
-    private var flavorTextSection: some View {
-        VStack(alignment: .leading) {
-            Text("Flavor Text")
-                .font(.headline)
-            ForEach(pokemon.flavorTexts, id: \.flavor) { flavorText in
-                Text(flavorText.flavor)
-            }
-        }
-    }
-    
+        
     private func readDexEntry() {
         let audioSession = AVAudioSession()
         
@@ -154,7 +159,7 @@ struct DexEntryView: View {
         } catch let error {
             print(error.localizedDescription)
         }
-
+        
         let dexEntry = "\(pokemon.species). \(pokemon.types.count == 2 ? "\(pokemon.types.first!.name) and \(pokemon.types.last!.name) type." : "\(pokemon.types.first!.name) type.") \(((pokemon.preevolutions?.first) != nil) ? "The evolution of \(pokemon.preevolutions!.first!.species)." : "") \(pokemon.flavorTexts.first!.flavor)"
         
         let utterance = AVSpeechUtterance(string: dexEntry)

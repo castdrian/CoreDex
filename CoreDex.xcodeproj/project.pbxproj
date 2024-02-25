@@ -21,6 +21,7 @@
 		3ACEBA2B2B8B676500BFF4CF /* DexEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEBA2A2B8B676500BFF4CF /* DexEntryView.swift */; };
 		3ACEBA2E2B8B67B100BFF4CF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACEBA2D2B8B67B100BFF4CF /* Kingfisher */; };
 		3ACEBA312B8B8C4700BFF4CF /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACEBA302B8B8C4700BFF4CF /* Apollo */; };
+		3ACEBA372B8B9E8F00BFF4CF /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3AB6ED912B8A953A009B24B4 /* Gen9.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Gen9.mlmodel; sourceTree = "<group>"; };
 		3ACEBA282B8B62F700BFF4CF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3ACEBA2A2B8B676500BFF4CF /* DexEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexEntryView.swift; sourceTree = "<group>"; };
+		3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,15 +73,14 @@
 		3AB6ED5C2B8A5B41009B24B4 /* CoreDex */ = {
 			isa = PBXGroup;
 			children = (
+				3ACEBA352B8B9DC900BFF4CF /* Util */,
+				3ACEBA342B8B9DAB00BFF4CF /* Views */,
 				3AB6ED8B2B8A8F60009B24B4 /* CoreML */,
 				3AB6ED7D2B8A8327009B24B4 /* GraphQL */,
 				3AB6ED5D2B8A5B41009B24B4 /* CoreDexApp.swift */,
-				3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */,
 				3AB6ED612B8A5B42009B24B4 /* Assets.xcassets */,
 				3AB6ED632B8A5B42009B24B4 /* Preview Content */,
 				3AB6ED7B2B8A7D41009B24B4 /* Config.xcconfig */,
-				3ACEBA282B8B62F700BFF4CF /* ImagePicker.swift */,
-				3ACEBA2A2B8B676500BFF4CF /* DexEntryView.swift */,
 			);
 			path = CoreDex;
 			sourceTree = "<group>";
@@ -116,6 +117,24 @@
 				3AB6ED912B8A953A009B24B4 /* Gen9.mlmodel */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3ACEBA342B8B9DAB00BFF4CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */,
+				3ACEBA2A2B8B676500BFF4CF /* DexEntryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3ACEBA352B8B9DC900BFF4CF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3ACEBA282B8B62F700BFF4CF /* ImagePicker.swift */,
+				3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB6ED602B8A5B41009B24B4 /* ContentView.swift in Sources */,
+				3ACEBA372B8B9E8F00BFF4CF /* ColorUtils.swift in Sources */,
 				3AB6ED8D2B8A924E009B24B4 /* ImagePredictor.swift in Sources */,
 				3ACEBA292B8B62F700BFF4CF /* ImagePicker.swift in Sources */,
 				3AB6ED5E2B8A5B41009B24B4 /* CoreDexApp.swift in Sources */,
