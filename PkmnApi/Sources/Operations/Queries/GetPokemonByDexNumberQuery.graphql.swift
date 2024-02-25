@@ -7,7 +7,7 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
   public static let operationName: String = "GetPokemonByDexNumber"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query GetPokemonByDexNumber($number: Int!) { getPokemonByDexNumber(number: $number) { __typename abilities { __typename first { __typename name shortDesc desc serebiiPage smogonPage } second { __typename name shortDesc desc serebiiPage smogonPage } hidden { __typename name shortDesc desc serebiiPage smogonPage } } backSprite baseStats { __typename attack defense hp specialattack specialdefense speed } baseStatsTotal catchRate { __typename base percentageWithOrdinaryPokeballAtFullHealth } color eggGroups evYields { __typename attack defense hp specialattack specialdefense speed } evolutionLevel flavorTexts { __typename flavor game } gender { __typename female male } height num serebiiPage shinyBackSprite shinySprite smogonPage smogonTier species sprite types { __typename name } weight } }"#
+      #"query GetPokemonByDexNumber($number: Int!) { getPokemonByDexNumber(number: $number) { __typename abilities { __typename first { __typename name shortDesc desc serebiiPage smogonPage } second { __typename name shortDesc desc serebiiPage smogonPage } hidden { __typename name shortDesc desc serebiiPage smogonPage } } backSprite baseStats { __typename attack defense hp specialattack specialdefense speed } baseStatsTotal catchRate { __typename base percentageWithOrdinaryPokeballAtFullHealth } color eggGroups evYields { __typename attack defense hp specialattack specialdefense speed } evolutionLevel flavorTexts { __typename flavor game } gender { __typename female male } height num preevolutions { __typename species } serebiiPage shinyBackSprite shinySprite smogonPage smogonTier species sprite types { __typename name } weight } }"#
     ))
 
   public var number: Int
@@ -57,6 +57,7 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
         .field("gender", Gender.self),
         .field("height", Double.self),
         .field("num", Int.self),
+        .field("preevolutions", [Preevolution]?.self),
         .field("serebiiPage", String.self),
         .field("shinyBackSprite", String.self),
         .field("shinySprite", String.self),
@@ -94,6 +95,8 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
       public var height: Double { __data["height"] }
       /// The dex number for a Pokémon
       public var num: Int { __data["num"] }
+      /// The preevolutions for a Pokémon, if any
+      public var preevolutions: [Preevolution]? { __data["preevolutions"] }
       /// Serebii page for a Pokémon
       public var serebiiPage: String { __data["serebiiPage"] }
       /// The shiny back sprite for a Pokémon. For most Pokémon this will be the animated gif, with some exceptions that were older-gen exclusive
@@ -345,6 +348,23 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
         public var female: String { __data["female"] }
         /// The percentage of male occurrences
         public var male: String { __data["male"] }
+      }
+
+      /// GetPokemonByDexNumber.Preevolution
+      ///
+      /// Parent Type: `Pokemon`
+      public struct Preevolution: PkmnApi.SelectionSet {
+        public let __data: DataDict
+        public init(_dataDict: DataDict) { __data = _dataDict }
+
+        public static var __parentType: ApolloAPI.ParentType { PkmnApi.Objects.Pokemon }
+        public static var __selections: [ApolloAPI.Selection] { [
+          .field("__typename", String.self),
+          .field("species", String.self),
+        ] }
+
+        /// The species name for a Pokémon
+        public var species: String { __data["species"] }
       }
 
       /// GetPokemonByDexNumber.Type_SelectionSet

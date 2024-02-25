@@ -58,6 +58,9 @@ query GetPokemonByDexNumber($number: Int!) {
     }
     height
     num
+    preevolutions {
+      species
+    }
     serebiiPage
     shinyBackSprite
     shinySprite

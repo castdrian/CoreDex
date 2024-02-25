@@ -17,11 +17,11 @@ let imagePredictor = ImagePredictor()
 struct ContentView: View {
     @State private var synthesizer: AVSpeechSynthesizer?
     @State private var dexnum = 722
-
+    
     var body: some View {
         VStack {
             Stepper("PokéMon #\(dexnum)", value: $dexnum, in: 1...1025, step: 1)
-
+            
             Button("Check"){
                 DispatchQueue.global(qos: .userInitiated).async {
                     checkSpeechVoice { voiceExists in
@@ -39,28 +39,34 @@ struct ContentView: View {
     
     private func processImageAndReadDexEntry() {
         DispatchQueue.global(qos: .userInitiated).async {
-            imagePredictor.classifyImage(UIImage(named: "test")!) { result in
-                switch result {
-                case .success(let prediction):
-                    print(prediction.classification)
-                    print(prediction.confidence)
-                    
-                    apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: dexnum /*prediction.classification*/)) { result in
-                        guard let data = try? result.get().data else { return }
-                        
-                        UINotificationFeedbackGenerator().notificationOccurred(.success)
-                        
-                        readDexEntry(pkmn: data.getPokemonByDexNumber)
-                    }
-                case .failure(let error):
-                    print("Error predicting image: \(error)")
-                }
+            apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: dexnum)) { result in
+                guard let data = try? result.get().data else { return }
+                
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
+                
+                readDexEntry(pkmn: data.getPokemonByDexNumber)
+                //            imagePredictor.classifyImage(UIImage(named: "test")!) { result in
+                //                switch result {
+                //                case .success(let prediction):
+                //                    print(prediction.classification)
+                //                    print(prediction.confidence)
+                //
+                //                    apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: prediction.classification)) { result in
+                //                        guard let data = try? result.get().data else { return }
+                //
+                //                        UINotificationFeedbackGenerator().notificationOccurred(.success)
+                //
+                //                        readDexEntry(pkmn: data.getPokemonByDexNumber)
+                //                    }
+                //                case .failure(let error):
+                //                    print("Error predicting image: \(error)")
+                //                }
+                //            }
             }
         }
     }
     
     private func readDexEntry(pkmn: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber) {
-        print(pkmn.species)
         let audioSession = AVAudioSession()
         
         do {
@@ -72,10 +78,11 @@ struct ContentView: View {
         
         synthesizer = AVSpeechSynthesizer()
         
-        let dexEntry = "\(pkmn.species). \(pkmn.types.count == 2 ? "\(pkmn.types.first!.name) and \(pkmn.types.last!.name) type." : "\(pkmn.types.first!.name) type.") \( pkmn.flavorTexts.first!.flavor)"
+        let dexEntry = "\(pkmn.species). \(pkmn.types.count == 2 ? "\(pkmn.types.first!.name) and \(pkmn.types.last!.name) type." : "\(pkmn.types.first!.name) type.") \(((pkmn.preevolutions?.first) != nil) ? "The evolution of \(pkmn.preevolutions!.first!.species)." : "") \(pkmn.flavorTexts.first!.flavor)"
         
         let utterance = AVSpeechUtterance(string: dexEntry)
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
+        utterance.rate = 0.4
         synthesizer?.speak(utterance)
     }
     
