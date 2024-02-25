@@ -18,6 +18,50 @@ protocol AbilityDisplayable {
 extension GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber.Abilities.First: AbilityDisplayable {}
 extension GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber.Abilities.Second: AbilityDisplayable {}
 extension GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber.Abilities.Hidden: AbilityDisplayable {}
+extension GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber {
+    var baseStatsArray: [StatInfo] {
+        return [
+            StatInfo(name: "HP", value: CGFloat(baseStats.hp), maxValue: 255, color: .red),
+            StatInfo(name: "Atk", value: CGFloat(baseStats.attack), maxValue: 255, color: .orange),
+            StatInfo(name: "Def", value: CGFloat(baseStats.defense), maxValue: 255, color: .yellow),
+            StatInfo(name: "Sp.Atk", value: CGFloat(baseStats.specialattack), maxValue: 255, color: .green),
+            StatInfo(name: "Sp.Def", value: CGFloat(baseStats.specialdefense), maxValue: 255, color: .blue),
+            StatInfo(name: "Speed", value: CGFloat(baseStats.speed), maxValue: 255, color: .purple)
+        ]
+    }
+}
+
+struct StatInfo: Identifiable {
+    let id = UUID()
+    var name: String
+    var value: CGFloat
+    var maxValue: CGFloat
+    var color: Color
+}
+
+struct SpriteView: View {
+    let spriteURL: String
+    let shinySpriteURL: String
+    @Binding var showShinySprite: Bool
+    var playPokemonCry: () -> Void
+    
+    var body: some View {
+        HStack {
+            KFAnimatedImage(URL(string: showShinySprite ? shinySpriteURL : spriteURL))
+                .scaledToFit()
+                .frame(width: 150, height: 150)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            withAnimation {
+                playPokemonCry()
+                showShinySprite.toggle()
+            }
+        }
+    }
+}
 
 struct DexEntryView: View {
     let pokemon: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber
@@ -25,15 +69,16 @@ struct DexEntryView: View {
     @State private var audioPlayer: AVAudioPlayer?
     @State private var audioPlayerDelegate = AudioPlayerDelegate()
     @State private var showShinySprite = false
+    @State private var selectedAbilityIndex = 0
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 10) {
                 spriteSection
                 typeSection
                 flavorTextSection
-                statsSection
                 abilitiesSection
+                statsSection
             }
             .padding()
         }
@@ -46,21 +91,12 @@ struct DexEntryView: View {
     }
     
     private var spriteSection: some View {
-        HStack {
-            KFAnimatedImage(URL(string: showShinySprite ? pokemon.shinySprite : pokemon.sprite))
-                .scaledToFit()
-                .frame(width: 150, height: 150)
-            
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical)
-        .contentShape(Rectangle())
-        .onTapGesture {
-            withAnimation {
-                playPokemonCry()
-                showShinySprite.toggle()
-            }
-        }
+        SpriteView(spriteURL: pokemon.sprite,
+                   shinySpriteURL: pokemon.shinySprite,
+                   showShinySprite: $showShinySprite,
+                   playPokemonCry: {
+            playPokemonCry()
+        })
     }
     
     private var typeSection: some View {
@@ -102,52 +138,84 @@ struct DexEntryView: View {
         }
     }
     
+    private var abilities: [AbilityDisplayable] {
+        var abilitiesList: [AbilityDisplayable] = []
+        
+        abilitiesList.append(pokemon.abilities.first)
+        
+        if let second = pokemon.abilities.second {
+            abilitiesList.append(second)
+        }
+        if let hidden = pokemon.abilities.hidden {
+            abilitiesList.append(hidden)
+        }
+        return abilitiesList
+    }
+    
     private var abilitiesSection: some View {
         VStack(alignment: .leading) {
             Text("Abilities")
                 .font(.headline)
-            abilityView(ability: pokemon.abilities.first, title: "First Ability")
-            if let secondAbility = pokemon.abilities.second {
-                abilityView(ability: secondAbility, title: "Second Ability")
+            
+            TabView(selection: $selectedAbilityIndex) {
+                ForEach(0..<abilities.count, id: \.self) { index in
+                    abilityView(ability: abilities[index])
+                }
             }
-            if let hiddenAbility = pokemon.abilities.hidden {
-                abilityView(ability: hiddenAbility, title: "Hidden Ability")
-            }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .frame(height: 100)
         }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.gray, lineWidth: 2)
+        )
     }
     
-    private func abilityView(ability: AbilityDisplayable, title: String) -> some View {
+    private func abilityView(ability: AbilityDisplayable) -> some View {
         VStack(alignment: .leading) {
-            Text(title)
-                .font(.subheadline)
             Text(ability.name)
                 .fontWeight(.bold)
+                .frame(height: 20)
             Text(ability.shortDesc)
+                .frame(height: 60)
         }
-        .padding(.vertical, 2)
+        .padding()
+        .frame(maxWidth: .infinity)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
-    
     
     private var statsSection: some View {
         VStack(alignment: .leading) {
             Text("Base Stats")
                 .font(.headline)
-            HStack {
-                Text("HP: \(pokemon.baseStats.hp)")
-                Spacer()
-                Text("Attack: \(pokemon.baseStats.attack)")
-            }
-            HStack {
-                Text("Defense: \(pokemon.baseStats.defense)")
-                Spacer()
-                Text("Sp. Atk: \(pokemon.baseStats.specialattack)")
-            }
-            HStack {
-                Text("Sp. Def: \(pokemon.baseStats.specialdefense)")
-                Spacer()
-                Text("Speed: \(pokemon.baseStats.speed)")
+                .padding(.bottom, 4)
+            
+            ForEach(pokemon.baseStatsArray) { stat in
+                HStack {
+                    Text(stat.name)
+                        .frame(width: 60, alignment: .leading)
+                    Text("\(Int(stat.value))")
+                        .frame(width: 40, alignment: .leading)
+                    GeometryReader { geometry in
+                        ZStack(alignment: .leading) {
+                            Rectangle()
+                                .frame(width: geometry.size.width, height: 20)
+                                .foregroundColor(Color(.systemGray5))
+                            Rectangle()
+                                .frame(width: min(geometry.size.width * (stat.value / stat.maxValue), geometry.size.width), height: 20)
+                                .foregroundColor(stat.color)
+                        }
+                    }
+                }
+                .frame(height: 20)
             }
         }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.gray, lineWidth: 2)
+        )
     }
     
     private func playPokemonCry(completion: (() -> Void)? = nil) {
