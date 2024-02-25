@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 import Apollo
 import AVFoundation
 import Speech
@@ -17,6 +18,8 @@ let imagePredictor = ImagePredictor()
 struct ContentView: View {
     @State private var synthesizer: AVSpeechSynthesizer?
     @State private var dexnum = 722
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
     
     var body: some View {
         VStack {
@@ -26,18 +29,38 @@ struct ContentView: View {
                 DispatchQueue.global(qos: .userInitiated).async {
                     checkSpeechVoice { voiceExists in
                         if voiceExists {
-                            processImageAndReadDexEntry()
+                            getAndReadDexEntry()
                         } else {
                             print("Required voice is not available")
                         }
                     }
                 }
-            }
+            }.padding()
+            
+            Button("Scan (Gen 9 Starters)"){
+                DispatchQueue.global(qos: .userInitiated).async {
+                    checkSpeechVoice { voiceExists in
+                        if voiceExists {
+                            showingImagePicker.toggle()
+                        } else {
+                            print("Required voice is not available")
+                        }
+                    }
+                }
+            }.padding()
+                .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
+                                ImagePicker(image: self.$inputImage)
+                            }
         }
         .padding()
     }
     
-    private func processImageAndReadDexEntry() {
+    func processImage() {
+            guard let selectedImage = inputImage else { return }
+            processImageAndReadDexEntry(image: selectedImage)
+        }
+    
+    private func getAndReadDexEntry() {
         DispatchQueue.global(qos: .userInitiated).async {
             apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: dexnum)) { result in
                 guard let data = try? result.get().data else { return }
@@ -45,23 +68,29 @@ struct ContentView: View {
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
                 
                 readDexEntry(pkmn: data.getPokemonByDexNumber)
-                //            imagePredictor.classifyImage(UIImage(named: "test")!) { result in
-                //                switch result {
-                //                case .success(let prediction):
-                //                    print(prediction.classification)
-                //                    print(prediction.confidence)
-                //
-                //                    apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: prediction.classification)) { result in
-                //                        guard let data = try? result.get().data else { return }
-                //
-                //                        UINotificationFeedbackGenerator().notificationOccurred(.success)
-                //
-                //                        readDexEntry(pkmn: data.getPokemonByDexNumber)
-                //                    }
-                //                case .failure(let error):
-                //                    print("Error predicting image: \(error)")
-                //                }
-                //            }
+            }
+        }
+    }
+    
+    private func processImageAndReadDexEntry(image: UIImage) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            imagePredictor.classifyImage(image) { result in
+                switch result {
+                case .success(let prediction):
+                    print(prediction.classification)
+                    print(prediction.confidence)
+                    
+                    apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: prediction.classification)) { result in
+                        guard let data = try? result.get().data else { return }
+                        
+                        UINotificationFeedbackGenerator().notificationOccurred(.success)
+                        
+                        readDexEntry(pkmn: data.getPokemonByDexNumber)
+                    }
+                case .failure(let error):
+                    print("Error predicting image: \(error)")
+                }
+                
             }
         }
     }
