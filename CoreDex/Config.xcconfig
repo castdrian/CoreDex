@@ -5,5 +5,5 @@
 //  Created by Adrian Castro on 24.02.24.
 //
 
-BUILD_NUMBER = 1
-VERSION = 0.0.1
+BUILD_NUMBER = 2
+VERSION = 0.1.0
