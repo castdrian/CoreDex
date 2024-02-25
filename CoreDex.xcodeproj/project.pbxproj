@@ -11,8 +11,6 @@
 		3AB6ED602B8A5B41009B24B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */; };
 		3AB6ED622B8A5B42009B24B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED612B8A5B42009B24B4 /* Assets.xcassets */; };
 		3AB6ED652B8A5B42009B24B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED642B8A5B42009B24B4 /* Preview Assets.xcassets */; };
-		3AB6ED782B8A7D30009B24B4 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB6ED772B8A7D30009B24B4 /* Apollo */; };
-		3AB6ED7A2B8A7D30009B24B4 /* ApolloTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB6ED792B8A7D30009B24B4 /* ApolloTestSupport */; };
 		3AB6ED7C2B8A7D41009B24B4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED7B2B8A7D41009B24B4 /* Config.xcconfig */; };
 		3AB6ED812B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED802B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql */; };
 		3AB6ED832B8A8C91009B24B4 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED822B8A8C91009B24B4 /* schema.graphqls */; };
@@ -22,6 +20,7 @@
 		3ACEBA292B8B62F700BFF4CF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEBA282B8B62F700BFF4CF /* ImagePicker.swift */; };
 		3ACEBA2B2B8B676500BFF4CF /* DexEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEBA2A2B8B676500BFF4CF /* DexEntryView.swift */; };
 		3ACEBA2E2B8B67B100BFF4CF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACEBA2D2B8B67B100BFF4CF /* Kingfisher */; };
+		3ACEBA312B8B8C4700BFF4CF /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACEBA302B8B8C4700BFF4CF /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +44,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ACEBA2E2B8B67B100BFF4CF /* Kingfisher in Frameworks */,
+				3ACEBA312B8B8C4700BFF4CF /* Apollo in Frameworks */,
 				3AB6ED8A2B8A8E94009B24B4 /* PkmnApi in Frameworks */,
-				3AB6ED782B8A7D30009B24B4 /* Apollo in Frameworks */,
-				3AB6ED7A2B8A7D30009B24B4 /* ApolloTestSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,10 +135,9 @@
 			);
 			name = CoreDex;
 			packageProductDependencies = (
-				3AB6ED772B8A7D30009B24B4 /* Apollo */,
-				3AB6ED792B8A7D30009B24B4 /* ApolloTestSupport */,
 				3AB6ED892B8A8E94009B24B4 /* PkmnApi */,
 				3ACEBA2D2B8B67B100BFF4CF /* Kingfisher */,
+				3ACEBA302B8B8C4700BFF4CF /* Apollo */,
 			);
 			productName = CoreDex;
 			productReference = 3AB6ED5A2B8A5B41009B24B4 /* CoreDex.app */;
@@ -171,9 +168,9 @@
 			);
 			mainGroup = 3AB6ED512B8A5B41009B24B4;
 			packageReferences = (
-				3AB6ED762B8A7D30009B24B4 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				3AB6ED882B8A8E94009B24B4 /* XCLocalSwiftPackageReference "PkmnApi" */,
 				3ACEBA2C2B8B67B100BFF4CF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				3ACEBA2F2B8B8C4700BFF4CF /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 3AB6ED5B2B8A5B41009B24B4 /* Products */;
 			projectDirPath = "";
@@ -428,14 +425,6 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3AB6ED762B8A7D30009B24B4 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.9.0;
-			};
-		};
 		3ACEBA2C2B8B67B100BFF4CF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -444,19 +433,17 @@
 				minimumVersion = 7.11.0;
 			};
 		};
+		3ACEBA2F2B8B8C4700BFF4CF /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3AB6ED772B8A7D30009B24B4 /* Apollo */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3AB6ED762B8A7D30009B24B4 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = Apollo;
-		};
-		3AB6ED792B8A7D30009B24B4 /* ApolloTestSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3AB6ED762B8A7D30009B24B4 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = ApolloTestSupport;
-		};
 		3AB6ED892B8A8E94009B24B4 /* PkmnApi */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PkmnApi;
@@ -465,6 +452,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3ACEBA2C2B8B67B100BFF4CF /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		3ACEBA302B8B8C4700BFF4CF /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3ACEBA2F2B8B8C4700BFF4CF /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
