@@ -17,7 +17,7 @@
 		3AB6ED812B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED802B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql */; };
 		3AB6ED832B8A8C91009B24B4 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED822B8A8C91009B24B4 /* schema.graphqls */; };
 		3AB6ED8A2B8A8E94009B24B4 /* PkmnApi in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB6ED892B8A8E94009B24B4 /* PkmnApi */; };
-		3AB6ED8D2B8A924E009B24B4 /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED8C2B8A924E009B24B4 /* ImageClassifier.swift */; };
+		3AB6ED8D2B8A924E009B24B4 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED8C2B8A924E009B24B4 /* ImagePredictor.swift */; };
 		3AB6ED922B8A953A009B24B4 /* Gen9.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED912B8A953A009B24B4 /* Gen9.mlmodel */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		3AB6ED7B2B8A7D41009B24B4 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		3AB6ED802B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = getPokemonByDexNumber.graphql; sourceTree = "<group>"; };
 		3AB6ED822B8A8C91009B24B4 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
-		3AB6ED8C2B8A924E009B24B4 /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
+		3AB6ED8C2B8A924E009B24B4 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
 		3AB6ED912B8A953A009B24B4 /* Gen9.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Gen9.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB6ED8E2B8A93B2009B24B4 /* Models */,
-				3AB6ED8C2B8A924E009B24B4 /* ImageClassifier.swift */,
+				3AB6ED8C2B8A924E009B24B4 /* ImagePredictor.swift */,
 			);
 			path = CoreML;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB6ED602B8A5B41009B24B4 /* ContentView.swift in Sources */,
-				3AB6ED8D2B8A924E009B24B4 /* ImageClassifier.swift in Sources */,
+				3AB6ED8D2B8A924E009B24B4 /* ImagePredictor.swift in Sources */,
 				3AB6ED5E2B8A5B41009B24B4 /* CoreDexApp.swift in Sources */,
 				3AB6ED922B8A953A009B24B4 /* Gen9.mlmodel in Sources */,
 			);
