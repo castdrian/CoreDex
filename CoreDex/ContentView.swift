@@ -16,10 +16,13 @@ let imagePredictor = ImagePredictor()
 
 struct ContentView: View {
     @State private var synthesizer: AVSpeechSynthesizer?
-    
+    @State private var dexnum = 722
+
     var body: some View {
         VStack {
-            Button("CoreDex"){
+            Stepper("PokéMon #\(dexnum)", value: $dexnum, in: 1...1025, step: 1)
+
+            Button("Check"){
                 DispatchQueue.global(qos: .userInitiated).async {
                     checkSpeechVoice { voiceExists in
                         if voiceExists {
@@ -42,7 +45,7 @@ struct ContentView: View {
                     print(prediction.classification)
                     print(prediction.confidence)
                     
-                    apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: 718 /*prediction.classification*/)) { result in
+                    apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: dexnum /*prediction.classification*/)) { result in
                         guard let data = try? result.get().data else { return }
                         
                         UINotificationFeedbackGenerator().notificationOccurred(.success)
