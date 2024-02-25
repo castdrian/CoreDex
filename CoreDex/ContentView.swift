@@ -22,6 +22,7 @@ struct ContentView: View {
     @State private var inputImage: UIImage?
     @State private var pokemonData: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber?
     @State private var showDexEntryView = false
+    @State private var isVoiceAvailable = true
     
     var body: some View {
         NavigationStack {
@@ -30,25 +31,13 @@ struct ContentView: View {
                 
                 Button("Check"){
                     DispatchQueue.global(qos: .userInitiated).async {
-                        checkSpeechVoice { voiceExists in
-                            if voiceExists {
-                                getDexEntry()
-                            } else {
-                                print("Required voice is not available")
-                            }
-                        }
+                        getDexEntry()
                     }
                 }.padding()
                 
                 Button("Scan (Gen 9 Starters)"){
                     DispatchQueue.global(qos: .userInitiated).async {
-                        checkSpeechVoice { voiceExists in
-                            if voiceExists {
-                                showingImagePicker.toggle()
-                            } else {
-                                print("Required voice is not available")
-                            }
-                        }
+                        showingImagePicker.toggle()
                     }
                 }.padding()
                     .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
@@ -59,6 +48,14 @@ struct ContentView: View {
             .navigationDestination(isPresented: $showDexEntryView) {
                 if let pokemonData = pokemonData {
                     DexEntryView(pokemon: pokemonData)
+                }
+            }
+            .onAppear {
+                checkSpeechVoice { voiceExists in
+                    isVoiceAvailable = voiceExists
+                    if !isVoiceAvailable {
+                        showAlertForMissingVoice()
+                    }
                 }
             }
         }
@@ -132,10 +129,14 @@ struct ContentView: View {
         
         let alert = UIAlertController(
             title: "Voice not available",
-            message: "The Zoe (Premium) voice required for this app is not available. Please download it from Settings > Accessibility > Spoken Content > Voices and try again.",
+            message: "The Zoe (Premium) voice required for this app is not available. Please download it from Settings > Accessibility > Spoken Content > Voices to enable speech synthesis",
             preferredStyle: .alert
         )
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Go to Settings", style: .default) { _ in
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(url)
+                    }
+                })
         keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
     }
 }
