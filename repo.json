@@ -17,7 +17,7 @@
       "localizedDescription": "This application is a genuine PokéDex using CoreML.",
       "iconURL": "https://github.com/castdrian/CoreDex/blob/main/CoreDex/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png?raw=true",
       "tintColor": "",
-	  "screenShotUrls": []
+	  "screenShotURLs": []
     }
   ]
 }
