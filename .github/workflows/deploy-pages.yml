@@ -33,7 +33,7 @@ jobs:
       - name: Create pages directory
         run: |
           mkdir -p pages
-          mv README.md ../../pages/
+          mv README.md ../../pages/README.md
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
