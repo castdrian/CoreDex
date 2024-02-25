@@ -20,99 +20,90 @@ struct ContentView: View {
     @State private var dexnum = 722
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
+    @State private var pokemonData: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber?
+    @State private var showDexEntryView = false
     
     var body: some View {
-        VStack {
-            Stepper("PokéMon #\(dexnum)", value: $dexnum, in: 1...1025, step: 1)
-            
-            Button("Check"){
-                DispatchQueue.global(qos: .userInitiated).async {
-                    checkSpeechVoice { voiceExists in
-                        if voiceExists {
-                            getAndReadDexEntry()
-                        } else {
-                            print("Required voice is not available")
-                        }
-                    }
-                }
-            }.padding()
-            
-            Button("Scan (Gen 9 Starters)"){
-                DispatchQueue.global(qos: .userInitiated).async {
-                    checkSpeechVoice { voiceExists in
-                        if voiceExists {
-                            showingImagePicker.toggle()
-                        } else {
-                            print("Required voice is not available")
-                        }
-                    }
-                }
-            }.padding()
-                .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
-                                ImagePicker(image: self.$inputImage)
+        NavigationStack {
+            VStack {
+                Stepper("PokéMon #\(dexnum)", value: $dexnum, in: 1...1025, step: 1)
+                
+                Button("Check"){
+                    DispatchQueue.global(qos: .userInitiated).async {
+                        checkSpeechVoice { voiceExists in
+                            if voiceExists {
+                                getDexEntry()
+                            } else {
+                                print("Required voice is not available")
                             }
+                        }
+                    }
+                }.padding()
+                
+                Button("Scan (Gen 9 Starters)"){
+                    DispatchQueue.global(qos: .userInitiated).async {
+                        checkSpeechVoice { voiceExists in
+                            if voiceExists {
+                                showingImagePicker.toggle()
+                            } else {
+                                print("Required voice is not available")
+                            }
+                        }
+                    }
+                }.padding()
+                    .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
+                        ImagePicker(image: self.$inputImage)
+                    }
+            }
+            .padding()
+            .navigationDestination(isPresented: $showDexEntryView) {
+                if let pokemonData = pokemonData {
+                    DexEntryView(pokemon: pokemonData)
+                }
+            }
         }
-        .padding()
     }
     
     func processImage() {
-            guard let selectedImage = inputImage else { return }
-            processImageAndReadDexEntry(image: selectedImage)
-        }
+        guard let selectedImage = inputImage else { return }
+        processImageAndGetDexEntry(image: selectedImage)
+    }
     
-    private func getAndReadDexEntry() {
+    private func getDexEntry() {
         DispatchQueue.global(qos: .userInitiated).async {
             apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: dexnum)) { result in
                 guard let data = try? result.get().data else { return }
                 
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
                 
-                readDexEntry(pkmn: data.getPokemonByDexNumber)
+                DispatchQueue.main.async {
+                    self.pokemonData = data.getPokemonByDexNumber
+                    self.showDexEntryView = true
+                }
             }
         }
     }
     
-    private func processImageAndReadDexEntry(image: UIImage) {
+    private func processImageAndGetDexEntry(image: UIImage) {
         DispatchQueue.global(qos: .userInitiated).async {
             imagePredictor.classifyImage(image) { result in
                 switch result {
                 case .success(let prediction):
-                    print(prediction.classification)
-                    print(prediction.confidence)
-                    
                     apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: prediction.classification)) { result in
                         guard let data = try? result.get().data else { return }
                         
                         UINotificationFeedbackGenerator().notificationOccurred(.success)
                         
-                        readDexEntry(pkmn: data.getPokemonByDexNumber)
+                        DispatchQueue.main.async {
+                            self.pokemonData = data.getPokemonByDexNumber
+                            self.showDexEntryView = true
+                        }
                     }
                 case .failure(let error):
                     print("Error predicting image: \(error)")
                 }
-                
             }
         }
-    }
-    
-    private func readDexEntry(pkmn: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber) {
-        let audioSession = AVAudioSession()
-        
-        do {
-            try audioSession.setCategory(.playback, mode: .default, options: .duckOthers)
-            try audioSession.setActive(false)
-        } catch let error {
-            print(error.localizedDescription)
-        }
-        
-        synthesizer = AVSpeechSynthesizer()
-        
-        let dexEntry = "\(pkmn.species). \(pkmn.types.count == 2 ? "\(pkmn.types.first!.name) and \(pkmn.types.last!.name) type." : "\(pkmn.types.first!.name) type.") \(((pkmn.preevolutions?.first) != nil) ? "The evolution of \(pkmn.preevolutions!.first!.species)." : "") \(pkmn.flavorTexts.first!.flavor)"
-        
-        let utterance = AVSpeechUtterance(string: dexEntry)
-        utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
-        utterance.rate = 0.4
-        synthesizer?.speak(utterance)
     }
     
     private func checkSpeechVoice(completion: @escaping (Bool) -> Void) {
