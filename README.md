@@ -22,6 +22,8 @@ CoreDex uses the latest advancements in Apple's CoreML to provide a fast and acc
 ## Demo
 https://github.com/castdrian/CoreDex/assets/22133246/7a9d2e5b-7b70-46ac-8a16-f270fbe80f21
 
+https://github.com/castdrian/CoreDex/assets/22133246/ed54e765-7985-435e-823d-5e6465959dbd
+
 ## Credits
 
 CoreDex utilizes the [GraphQL Pokémon API](https://github.com/favware/graphql-pokemon) by [favware](https://github.com/favware).
