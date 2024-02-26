@@ -13,7 +13,6 @@ import Speech
 import PkmnApi
 
 let apolloClient = ApolloClient(url: URL(string: "https://graphqlpokemon.favware.tech/v8")!)
-let imagePredictor = ImagePredictor()
 
 struct ContentView: View {
     @State private var synthesizer: AVSpeechSynthesizer?
@@ -43,6 +42,8 @@ struct ContentView: View {
                 .frame(height: 150)
                 
                 Button(action: {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+
                     DispatchQueue.global(qos: .userInitiated).async {
                         getDexEntry()
                     }
@@ -66,38 +67,7 @@ struct ContentView: View {
                 )
                 .foregroundColor(Color.white)
                 
-                Button(action: {
-                    DispatchQueue.global(qos: .userInitiated).async {
-                        showingImagePicker.toggle()
-                    }
-                }) {
-                    Image(systemName: "camera")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 80, height: 80)
-                }
-                .padding(30)
-                .frame(width: 200, height: 200)
-                .background(
-                    Circle()
-                        .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .top, endPoint: .bottom))
-                )
-                .overlay(
-                    Circle()
-                        .stroke(Color.blue, lineWidth: 2)
-                )
-                .foregroundColor(Color.white)
-                .padding()
-                .scaleEffect(scale)
-                .onAppear {
-                    withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                        scale = 1.1
-                    }
-                }
-                .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
-                    ImagePicker(image: $inputImage)
-                }
-                
+                ScanButton()
                 Text("Scan currently Gen 9 starters only")
             }
             .padding()
@@ -117,11 +87,6 @@ struct ContentView: View {
         }
     }
     
-    func processImage() {
-        guard let selectedImage = inputImage else { return }
-        processImageAndGetDexEntry(image: selectedImage)
-    }
-    
     private func getDexEntry() {
         DispatchQueue.global(qos: .userInitiated).async {
             apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: selectedNumber)) { result in
@@ -132,28 +97,6 @@ struct ContentView: View {
                 DispatchQueue.main.async {
                     pokemonData = data.getPokemonByDexNumber
                     showDexEntryView = true
-                }
-            }
-        }
-    }
-    
-    private func processImageAndGetDexEntry(image: UIImage) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            imagePredictor.classifyImage(image) { result in
-                switch result {
-                case .success(let prediction):
-                    apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: prediction.classification)) { result in
-                        guard let data = try? result.get().data else { return }
-                        
-                        UINotificationFeedbackGenerator().notificationOccurred(.success)
-                        
-                        DispatchQueue.main.async {
-                            pokemonData = data.getPokemonByDexNumber
-                            showDexEntryView = true
-                        }
-                    }
-                case .failure(let error):
-                    print("Error predicting image: \(error)")
                 }
             }
         }
