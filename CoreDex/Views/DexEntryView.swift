@@ -88,6 +88,9 @@ struct DexEntryView: View {
                 readDexEntry()
             }
         }
+        .onDisappear {
+            stopAudioPlayback()
+        }
     }
     
     private var spriteSection: some View {
@@ -251,6 +254,7 @@ struct DexEntryView: View {
             }
         }.resume()
     }
+    
     private func readDexEntry() {
         let audioSession = AVAudioSession()
         
@@ -262,12 +266,28 @@ struct DexEntryView: View {
         }
         
         let classificationText = getClassification(forNumber: pokemon.num).map { "The \($0)." } ?? ""
-
+        
         let dexEntry = "\(pokemon.species). \(classificationText) \(pokemon.types.count == 2 ? "\(pokemon.types.first!.name) and \(pokemon.types.last!.name) type." : "\(pokemon.types.first!.name) type.") \(((pokemon.preevolutions?.first) != nil) ? "The evolution of \(pokemon.preevolutions!.first!.species)." : "") \(pokemon.flavorTexts.first!.flavor)"
         
         let utterance = AVSpeechUtterance(string: dexEntry)
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
         utterance.rate = 0.4
         synthesizer.speak(utterance)
+    }
+    
+    private func stopAudioPlayback() {
+        if synthesizer.isSpeaking {
+            synthesizer.stopSpeaking(at: .immediate)
+        }
+        
+        if let player = audioPlayer, player.isPlaying {
+            player.stop()
+        }
+        
+        do {
+            try AVAudioSession.sharedInstance().setActive(false)
+        } catch {
+            print("Error stopping audio session: \(error)")
+        }
     }
 }

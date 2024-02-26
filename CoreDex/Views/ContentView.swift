@@ -17,23 +17,50 @@ let imagePredictor = ImagePredictor()
 
 struct ContentView: View {
     @State private var synthesizer: AVSpeechSynthesizer?
-    @State private var dexnum = 722
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State private var pokemonData: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber?
     @State private var showDexEntryView = false
     @State private var isVoiceAvailable = true
+    @State private var selectedNumber: Int = 722
+    @State private var isAnimating = false
+    
+    let numberRange = Array(1...1025)
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Stepper("PokéMon #\(dexnum)", value: $dexnum, in: 1...1025, step: 1)
+            VStack(spacing: 20) {
+                Text("Pokémon #\(selectedNumber)")
+                    .font(.headline)
+                    .padding(.top, 20)
                 
-                Button("Check"){
+                Picker(String(), selection: $selectedNumber) {
+                    ForEach(numberRange, id: \.self) {
+                        Text("#\($0)").tag($0)
+                    }
+                }
+                .pickerStyle(WheelPickerStyle())
+                .frame(height: 150)
+                
+                Button("Check") {
                     DispatchQueue.global(qos: .userInitiated).async {
                         getDexEntry()
                     }
-                }.padding()
+                }
+                .padding(15)
+                .frame(width: 100, height: 100)
+                .background(
+                    ZStack {
+                        Circle()
+                            .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .top, endPoint: .bottom)) // Gradient fill
+                            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                        
+                        Circle()
+                            .stroke(Color.blue, lineWidth: 2)
+                    }
+                )
+                .foregroundColor(Color.white)
+                
                 
                 Button("Scan (Gen 9 Starters)"){
                     DispatchQueue.global(qos: .userInitiated).async {
@@ -68,7 +95,7 @@ struct ContentView: View {
     
     private func getDexEntry() {
         DispatchQueue.global(qos: .userInitiated).async {
-            apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: dexnum)) { result in
+            apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: selectedNumber)) { result in
                 guard let data = try? result.get().data else { return }
                 
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
@@ -133,10 +160,10 @@ struct ContentView: View {
             preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(title: "Go to Settings", style: .default) { _ in
-                    if let url = URL(string: UIApplication.openSettingsURLString) {
-                        UIApplication.shared.open(url)
-                    }
-                })
+            if let url = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(url)
+            }
+        })
         keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
     }
 }
