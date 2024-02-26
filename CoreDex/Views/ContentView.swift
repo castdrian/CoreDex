@@ -23,6 +23,7 @@ struct ContentView: View {
     @State private var showDexEntryView = false
     @State private var isVoiceAvailable = true
     @State private var selectedNumber: Int = 722
+    @State private var scale: CGFloat = 1
     
     let numberRange = Array(1...1025)
     
@@ -67,7 +68,7 @@ struct ContentView: View {
                 
                 Button(action: {
                     DispatchQueue.global(qos: .userInitiated).async {
-                        showingImagePicker.toggle()
+                        self.showingImagePicker.toggle()
                     }
                 }) {
                     Image(systemName: "camera")
@@ -87,6 +88,12 @@ struct ContentView: View {
                 )
                 .foregroundColor(Color.white)
                 .padding()
+                .scaleEffect(scale)
+                .onAppear {
+                    withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
+                        self.scale = 1.1
+                    }
+                }
                 .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
                     ImagePicker(image: self.$inputImage)
                 }
