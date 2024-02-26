@@ -68,7 +68,7 @@ struct ContentView: View {
                 
                 Button(action: {
                     DispatchQueue.global(qos: .userInitiated).async {
-                        self.showingImagePicker.toggle()
+                        showingImagePicker.toggle()
                     }
                 }) {
                     Image(systemName: "camera")
@@ -91,11 +91,11 @@ struct ContentView: View {
                 .scaleEffect(scale)
                 .onAppear {
                     withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                        self.scale = 1.1
+                        scale = 1.1
                     }
                 }
                 .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
-                    ImagePicker(image: self.$inputImage)
+                    ImagePicker(image: $inputImage)
                 }
                 
                 Text("Scan currently Gen 9 starters only")
@@ -130,8 +130,8 @@ struct ContentView: View {
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
                 
                 DispatchQueue.main.async {
-                    self.pokemonData = data.getPokemonByDexNumber
-                    self.showDexEntryView = true
+                    pokemonData = data.getPokemonByDexNumber
+                    showDexEntryView = true
                 }
             }
         }
@@ -148,8 +148,8 @@ struct ContentView: View {
                         UINotificationFeedbackGenerator().notificationOccurred(.success)
                         
                         DispatchQueue.main.async {
-                            self.pokemonData = data.getPokemonByDexNumber
-                            self.showDexEntryView = true
+                            pokemonData = data.getPokemonByDexNumber
+                            showDexEntryView = true
                         }
                     }
                 case .failure(let error):
