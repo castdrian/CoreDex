@@ -13,7 +13,7 @@ let imagePredictor = ImagePredictor()
 struct RingSegment: Shape {
     let startAngle: Angle
     let endAngle: Angle
-
+    
     func path(in rect: CGRect) -> Path {
         var path = Path()
         path.addArc(center: CGPoint(x: rect.midX, y: rect.midY), radius: rect.width / 2, startAngle: startAngle, endAngle: endAngle, clockwise: false)
@@ -27,7 +27,7 @@ struct RotatingRing: View {
     let segmentGap: Double
     let rotationDuration: Double
     @Binding var rotationAngle: Double
-
+    
     var body: some View {
         ZStack {
             ForEach(0..<ringCount, id: \.self) { index in
@@ -56,7 +56,7 @@ struct ScanButton: View {
     @State private var rotateInnerAngle = 0.0
     @State private var pokemonData: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber?
     @State private var showDexEntryView = false
-
+    
     func processImage() {
         guard let selectedImage = inputImage else { return }
         processImageAndGetDexEntry(image: selectedImage)
@@ -74,6 +74,7 @@ struct ScanButton: View {
                         
                         DispatchQueue.main.async {
                             pokemonData = data.getPokemonByDexNumber
+                            showingScanner = false
                             showDexEntryView = true
                         }
                     }
@@ -83,7 +84,7 @@ struct ScanButton: View {
             }
         }
     }
-
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -133,7 +134,9 @@ struct ScanButton: View {
             }
         }
         .sheet(isPresented: $showingScanner) {
-            ScannerView()
+            ScannerView(onImageCaptured: { image in
+                processImageAndGetDexEntry(image: image)
+            })
         }
         .navigationDestination(isPresented: $showDexEntryView) {
             if let pokemonData = pokemonData {
