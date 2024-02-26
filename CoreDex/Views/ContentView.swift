@@ -23,7 +23,6 @@ struct ContentView: View {
     @State private var showDexEntryView = false
     @State private var isVoiceAvailable = true
     @State private var selectedNumber: Int = 722
-    @State private var isAnimating = false
     
     let numberRange = Array(1...1025)
     
@@ -42,17 +41,22 @@ struct ContentView: View {
                 .pickerStyle(WheelPickerStyle())
                 .frame(height: 150)
                 
-                Button("Check") {
+                Button(action: {
                     DispatchQueue.global(qos: .userInitiated).async {
                         getDexEntry()
                     }
+                }) {
+                    Image(systemName: "magnifyingglass")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 40)
                 }
                 .padding(15)
                 .frame(width: 100, height: 100)
                 .background(
                     ZStack {
                         Circle()
-                            .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .top, endPoint: .bottom)) // Gradient fill
+                            .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .top, endPoint: .bottom))
                             .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
                         
                         Circle()
@@ -61,15 +65,33 @@ struct ContentView: View {
                 )
                 .foregroundColor(Color.white)
                 
-                
-                Button("Scan (Gen 9 Starters)"){
+                Button(action: {
                     DispatchQueue.global(qos: .userInitiated).async {
                         showingImagePicker.toggle()
                     }
-                }.padding()
-                    .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
-                        ImagePicker(image: self.$inputImage)
-                    }
+                }) {
+                    Image(systemName: "camera")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 80)
+                }
+                .padding(30)
+                .frame(width: 200, height: 200)
+                .background(
+                    Circle()
+                        .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .top, endPoint: .bottom))
+                )
+                .overlay(
+                    Circle()
+                        .stroke(Color.blue, lineWidth: 2)
+                )
+                .foregroundColor(Color.white)
+                .padding()
+                .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
+                    ImagePicker(image: self.$inputImage)
+                }
+                
+                Text("Scan currently Gen 9 starters only")
             }
             .padding()
             .navigationDestination(isPresented: $showDexEntryView) {
