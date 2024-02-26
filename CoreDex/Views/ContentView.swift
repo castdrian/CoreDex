@@ -129,7 +129,7 @@ struct ContentView: View {
         
         let alert = UIAlertController(
             title: "Voice not available",
-            message: "The Zoe (Premium) voice required for this app is not available. Please download it from Settings > Accessibility > Spoken Content > Voices to enable speech synthesis",
+            message: "The Zoe (Premium) voice required for this app is not available. Please download it from Settings > Accessibility > Spoken Content > Voices",
             preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(title: "Go to Settings", style: .default) { _ in
