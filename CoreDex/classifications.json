@@ -1,0 +1,5257 @@
+[
+    {
+        "number": 1,
+        "name": "Bulbasaur",
+        "classification": "Seed Pok\u00e9mon"
+    },
+    {
+        "number": 2,
+        "name": "Ivysaur",
+        "classification": "Seed Pok\u00e9mon"
+    },
+    {
+        "number": 3,
+        "name": "Venusaur",
+        "classification": "Seed Pok\u00e9mon"
+    },
+    {
+        "number": 4,
+        "name": "Charmander",
+        "classification": "Lizard Pok\u00e9mon"
+    },
+    {
+        "number": 5,
+        "name": "Charmeleon",
+        "classification": "Flame Pok\u00e9mon"
+    },
+    {
+        "number": 6,
+        "name": "Charizard",
+        "classification": "Flame Pok\u00e9mon"
+    },
+    {
+        "number": 7,
+        "name": "Squirtle",
+        "classification": "Tiny Turtle Pok\u00e9mon"
+    },
+    {
+        "number": 8,
+        "name": "Wartortle",
+        "classification": "Turtle Pok\u00e9mon"
+    },
+    {
+        "number": 9,
+        "name": "Blastoise",
+        "classification": "Shellfish Pok\u00e9mon"
+    },
+    {
+        "number": 10,
+        "name": "Caterpie",
+        "classification": "Worm Pok\u00e9mon"
+    },
+    {
+        "number": 11,
+        "name": "Metapod",
+        "classification": "Cocoon Pok\u00e9mon"
+    },
+    {
+        "number": 12,
+        "name": "Butterfree",
+        "classification": "Butterfly Pok\u00e9mon"
+    },
+    {
+        "number": 13,
+        "name": "Weedle",
+        "classification": "Hairy Bug Pok\u00e9mon"
+    },
+    {
+        "number": 14,
+        "name": "Kakuna",
+        "classification": "Cocoon Pok\u00e9mon"
+    },
+    {
+        "number": 15,
+        "name": "Beedrill",
+        "classification": "Poison Bee Pok\u00e9mon"
+    },
+    {
+        "number": 16,
+        "name": "Pidgey",
+        "classification": "Tiny Bird Pok\u00e9mon"
+    },
+    {
+        "number": 17,
+        "name": "Pidgeotto",
+        "classification": "Bird Pok\u00e9mon"
+    },
+    {
+        "number": 18,
+        "name": "Pidgeot",
+        "classification": "Bird Pok\u00e9mon"
+    },
+    {
+        "number": 19,
+        "name": "Rattata",
+        "classification": "Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 20,
+        "name": "Raticate",
+        "classification": "Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 21,
+        "name": "Spearow",
+        "classification": "Tiny Bird Pok\u00e9mon"
+    },
+    {
+        "number": 22,
+        "name": "Fearow",
+        "classification": "Beak Pok\u00e9mon"
+    },
+    {
+        "number": 23,
+        "name": "Ekans",
+        "classification": "Snake Pok\u00e9mon"
+    },
+    {
+        "number": 24,
+        "name": "Arbok",
+        "classification": "Cobra Pok\u00e9mon"
+    },
+    {
+        "number": 25,
+        "name": "Pikachu",
+        "classification": "Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 26,
+        "name": "Raichu",
+        "classification": "Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 27,
+        "name": "Sandshrew",
+        "classification": "Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 28,
+        "name": "Sandslash",
+        "classification": "Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 29,
+        "name": "Nidoran\u2640",
+        "classification": "Poison Pin Pok\u00e9mon"
+    },
+    {
+        "number": 30,
+        "name": "Nidorina",
+        "classification": "Poison Pin Pok\u00e9mon"
+    },
+    {
+        "number": 31,
+        "name": "Nidoqueen",
+        "classification": "Drill Pok\u00e9mon"
+    },
+    {
+        "number": 32,
+        "name": "Nidoran\u2642",
+        "classification": "Poison Pin Pok\u00e9mon"
+    },
+    {
+        "number": 33,
+        "name": "Nidorino",
+        "classification": "Poison Pin Pok\u00e9mon"
+    },
+    {
+        "number": 34,
+        "name": "Nidoking",
+        "classification": "Drill Pok\u00e9mon"
+    },
+    {
+        "number": 35,
+        "name": "Clefairy",
+        "classification": "Fairy Pok\u00e9mon"
+    },
+    {
+        "number": 36,
+        "name": "Clefable",
+        "classification": "Fairy Pok\u00e9mon"
+    },
+    {
+        "number": 37,
+        "name": "Vulpix",
+        "classification": "Fox Pok\u00e9mon"
+    },
+    {
+        "number": 38,
+        "name": "Ninetales",
+        "classification": "Fox Pok\u00e9mon"
+    },
+    {
+        "number": 39,
+        "name": "Jigglypuff",
+        "classification": "Balloon Pok\u00e9mon"
+    },
+    {
+        "number": 40,
+        "name": "Wigglytuff",
+        "classification": "Balloon Pok\u00e9mon"
+    },
+    {
+        "number": 41,
+        "name": "Zubat",
+        "classification": "Bat Pok\u00e9mon"
+    },
+    {
+        "number": 42,
+        "name": "Golbat",
+        "classification": "Bat Pok\u00e9mon"
+    },
+    {
+        "number": 43,
+        "name": "Oddish",
+        "classification": "Weed Pok\u00e9mon"
+    },
+    {
+        "number": 44,
+        "name": "Gloom",
+        "classification": "Weed Pok\u00e9mon"
+    },
+    {
+        "number": 45,
+        "name": "Vileplume",
+        "classification": "Flower Pok\u00e9mon"
+    },
+    {
+        "number": 46,
+        "name": "Paras",
+        "classification": "Mushroom Pok\u00e9mon"
+    },
+    {
+        "number": 47,
+        "name": "Parasect",
+        "classification": "Mushroom Pok\u00e9mon"
+    },
+    {
+        "number": 48,
+        "name": "Venonat",
+        "classification": "Insect Pok\u00e9mon"
+    },
+    {
+        "number": 49,
+        "name": "Venomoth",
+        "classification": "Poison Moth Pok\u00e9mon"
+    },
+    {
+        "number": 50,
+        "name": "Diglett",
+        "classification": "Mole Pok\u00e9mon"
+    },
+    {
+        "number": 51,
+        "name": "Dugtrio",
+        "classification": "Mole Pok\u00e9mon"
+    },
+    {
+        "number": 52,
+        "name": "Meowth",
+        "classification": "Scratch Cat Pok\u00e9mon"
+    },
+    {
+        "number": 53,
+        "name": "Persian",
+        "classification": "Classy Cat Pok\u00e9mon"
+    },
+    {
+        "number": 54,
+        "name": "Psyduck",
+        "classification": "Duck Pok\u00e9mon"
+    },
+    {
+        "number": 55,
+        "name": "Golduck",
+        "classification": "Duck Pok\u00e9mon"
+    },
+    {
+        "number": 56,
+        "name": "Mankey",
+        "classification": "Pig Monkey Pok\u00e9mon"
+    },
+    {
+        "number": 57,
+        "name": "Primeape",
+        "classification": "Pig Monkey Pok\u00e9mon"
+    },
+    {
+        "number": 58,
+        "name": "Growlithe",
+        "classification": "Puppy Pok\u00e9mon"
+    },
+    {
+        "number": 58,
+        "name": "GrowlitheHisuian Form",
+        "classification": "Scout Pok\u00e9mon"
+    },
+    {
+        "number": 59,
+        "name": "Arcanine",
+        "classification": "Legendary Pok\u00e9mon"
+    },
+    {
+        "number": 60,
+        "name": "Poliwag",
+        "classification": "Tadpole Pok\u00e9mon"
+    },
+    {
+        "number": 61,
+        "name": "Poliwhirl",
+        "classification": "Tadpole Pok\u00e9mon"
+    },
+    {
+        "number": 62,
+        "name": "Poliwrath",
+        "classification": "Tadpole Pok\u00e9mon"
+    },
+    {
+        "number": 63,
+        "name": "Abra",
+        "classification": "Psi Pok\u00e9mon"
+    },
+    {
+        "number": 64,
+        "name": "Kadabra",
+        "classification": "Psi Pok\u00e9mon"
+    },
+    {
+        "number": 65,
+        "name": "Alakazam",
+        "classification": "Psi Pok\u00e9mon"
+    },
+    {
+        "number": 66,
+        "name": "Machop",
+        "classification": "Superpower Pok\u00e9mon"
+    },
+    {
+        "number": 67,
+        "name": "Machoke",
+        "classification": "Superpower Pok\u00e9mon"
+    },
+    {
+        "number": 68,
+        "name": "Machamp",
+        "classification": "Superpower Pok\u00e9mon"
+    },
+    {
+        "number": 69,
+        "name": "Bellsprout",
+        "classification": "Flower Pok\u00e9mon"
+    },
+    {
+        "number": 70,
+        "name": "Weepinbell",
+        "classification": "Flycatcher Pok\u00e9mon"
+    },
+    {
+        "number": 71,
+        "name": "Victreebel",
+        "classification": "Flycatcher Pok\u00e9mon"
+    },
+    {
+        "number": 72,
+        "name": "Tentacool",
+        "classification": "Jellyfish Pok\u00e9mon"
+    },
+    {
+        "number": 73,
+        "name": "Tentacruel",
+        "classification": "Jellyfish Pok\u00e9mon"
+    },
+    {
+        "number": 74,
+        "name": "Geodude",
+        "classification": "Rock Pok\u00e9mon"
+    },
+    {
+        "number": 75,
+        "name": "Graveler",
+        "classification": "Rock Pok\u00e9mon"
+    },
+    {
+        "number": 76,
+        "name": "Golem",
+        "classification": "Megaton Pok\u00e9mon"
+    },
+    {
+        "number": 77,
+        "name": "Ponyta",
+        "classification": "Fire Horse Pok\u00e9mon"
+    },
+    {
+        "number": 77,
+        "name": "PonytaGalarian Form",
+        "classification": "Unique Horn Pok\u00e9mon"
+    },
+    {
+        "number": 78,
+        "name": "Rapidash",
+        "classification": "Fire Horse Pok\u00e9mon"
+    },
+    {
+        "number": 78,
+        "name": "RapidashGalarian Form",
+        "classification": "Unique Horn Pok\u00e9mon"
+    },
+    {
+        "number": 79,
+        "name": "Slowpoke",
+        "classification": "Dopey Pok\u00e9mon"
+    },
+    {
+        "number": 80,
+        "name": "Slowbro",
+        "classification": "Hermit Crab Pok\u00e9mon"
+    },
+    {
+        "number": 81,
+        "name": "Magnemite",
+        "classification": "Magnet Pok\u00e9mon"
+    },
+    {
+        "number": 82,
+        "name": "Magneton",
+        "classification": "Magnet Pok\u00e9mon"
+    },
+    {
+        "number": 83,
+        "name": "Farfetch'd",
+        "classification": "Wild Duck Pok\u00e9mon"
+    },
+    {
+        "number": 84,
+        "name": "Doduo",
+        "classification": "Twin Bird Pok\u00e9mon"
+    },
+    {
+        "number": 85,
+        "name": "Dodrio",
+        "classification": "Triple Bird Pok\u00e9mon"
+    },
+    {
+        "number": 86,
+        "name": "Seel",
+        "classification": "Sea Lion Pok\u00e9mon"
+    },
+    {
+        "number": 87,
+        "name": "Dewgong",
+        "classification": "Sea Lion Pok\u00e9mon"
+    },
+    {
+        "number": 88,
+        "name": "Grimer",
+        "classification": "Sludge Pok\u00e9mon"
+    },
+    {
+        "number": 89,
+        "name": "Muk",
+        "classification": "Sludge Pok\u00e9mon"
+    },
+    {
+        "number": 90,
+        "name": "Shellder",
+        "classification": "Bivalve Pok\u00e9mon"
+    },
+    {
+        "number": 91,
+        "name": "Cloyster",
+        "classification": "Bivalve Pok\u00e9mon"
+    },
+    {
+        "number": 92,
+        "name": "Gastly",
+        "classification": "Gas Pok\u00e9mon"
+    },
+    {
+        "number": 93,
+        "name": "Haunter",
+        "classification": "Gas Pok\u00e9mon"
+    },
+    {
+        "number": 94,
+        "name": "Gengar",
+        "classification": "Shadow Pok\u00e9mon"
+    },
+    {
+        "number": 95,
+        "name": "Onix",
+        "classification": "Rock Snake Pok\u00e9mon"
+    },
+    {
+        "number": 96,
+        "name": "Drowzee",
+        "classification": "Hypnosis Pok\u00e9mon"
+    },
+    {
+        "number": 97,
+        "name": "Hypno",
+        "classification": "Hypnosis Pok\u00e9mon"
+    },
+    {
+        "number": 98,
+        "name": "Krabby",
+        "classification": "River Crab Pok\u00e9mon"
+    },
+    {
+        "number": 99,
+        "name": "Kingler",
+        "classification": "Pincer Pok\u00e9mon"
+    },
+    {
+        "number": 100,
+        "name": "Voltorb",
+        "classification": "Ball Pok\u00e9mon"
+    },
+    {
+        "number": 100,
+        "name": "VoltorbHisuian Form",
+        "classification": "Sphere Pok\u00e9mon"
+    },
+    {
+        "number": 101,
+        "name": "Electrode",
+        "classification": "Ball Pok\u00e9mon"
+    },
+    {
+        "number": 101,
+        "name": "ElectrodeHisuian Form",
+        "classification": "Sphere Pok\u00e9mon"
+    },
+    {
+        "number": 102,
+        "name": "Exeggcute",
+        "classification": "Egg Pok\u00e9mon"
+    },
+    {
+        "number": 103,
+        "name": "Exeggutor",
+        "classification": "Coconut Pok\u00e9mon"
+    },
+    {
+        "number": 104,
+        "name": "Cubone",
+        "classification": "Lonely Pok\u00e9mon"
+    },
+    {
+        "number": 105,
+        "name": "Marowak",
+        "classification": "Bone Keeper Pok\u00e9mon"
+    },
+    {
+        "number": 106,
+        "name": "Hitmonlee",
+        "classification": "Kicking Pok\u00e9mon"
+    },
+    {
+        "number": 107,
+        "name": "Hitmonchan",
+        "classification": "Punching Pok\u00e9mon"
+    },
+    {
+        "number": 108,
+        "name": "Lickitung",
+        "classification": "Licking Pok\u00e9mon"
+    },
+    {
+        "number": 109,
+        "name": "Koffing",
+        "classification": "Poison Gas Pok\u00e9mon"
+    },
+    {
+        "number": 110,
+        "name": "Weezing",
+        "classification": "Poison Gas Pok\u00e9mon"
+    },
+    {
+        "number": 111,
+        "name": "Rhyhorn",
+        "classification": "Spikes Pok\u00e9mon"
+    },
+    {
+        "number": 112,
+        "name": "Rhydon",
+        "classification": "Drill Pok\u00e9mon"
+    },
+    {
+        "number": 113,
+        "name": "Chansey",
+        "classification": "Egg Pok\u00e9mon"
+    },
+    {
+        "number": 114,
+        "name": "Tangela",
+        "classification": "Vine Pok\u00e9mon"
+    },
+    {
+        "number": 115,
+        "name": "Kangaskhan",
+        "classification": "Parent Pok\u00e9mon"
+    },
+    {
+        "number": 116,
+        "name": "Horsea",
+        "classification": "Dragon Pok\u00e9mon"
+    },
+    {
+        "number": 117,
+        "name": "Seadra",
+        "classification": "Dragon Pok\u00e9mon"
+    },
+    {
+        "number": 118,
+        "name": "Goldeen",
+        "classification": "Goldfish Pok\u00e9mon"
+    },
+    {
+        "number": 119,
+        "name": "Seaking",
+        "classification": "Goldfish Pok\u00e9mon"
+    },
+    {
+        "number": 120,
+        "name": "Staryu",
+        "classification": "Star Shape Pok\u00e9mon"
+    },
+    {
+        "number": 121,
+        "name": "Starmie",
+        "classification": "Mysterious Pok\u00e9mon"
+    },
+    {
+        "number": 122,
+        "name": "Mr. Mime",
+        "classification": "Barrier Pok\u00e9mon"
+    },
+    {
+        "number": 122,
+        "name": "Mr. MimeGalarian Form",
+        "classification": "Dancing Pok\u00e9mon"
+    },
+    {
+        "number": 123,
+        "name": "Scyther",
+        "classification": "Mantis Pok\u00e9mon"
+    },
+    {
+        "number": 124,
+        "name": "Jynx",
+        "classification": "Human Shape Pok\u00e9mon"
+    },
+    {
+        "number": 125,
+        "name": "Electabuzz",
+        "classification": "Electric Pok\u00e9mon"
+    },
+    {
+        "number": 126,
+        "name": "Magmar",
+        "classification": "Spitfire Pok\u00e9mon"
+    },
+    {
+        "number": 127,
+        "name": "Pinsir",
+        "classification": "Stag Beetle Pok\u00e9mon"
+    },
+    {
+        "number": 128,
+        "name": "Tauros",
+        "classification": "Wild Bull Pok\u00e9mon"
+    },
+    {
+        "number": 129,
+        "name": "Magikarp",
+        "classification": "Fish Pok\u00e9mon"
+    },
+    {
+        "number": 130,
+        "name": "Gyarados",
+        "classification": "Atrocious Pok\u00e9mon"
+    },
+    {
+        "number": 131,
+        "name": "Lapras",
+        "classification": "Transport Pok\u00e9mon"
+    },
+    {
+        "number": 132,
+        "name": "Ditto",
+        "classification": "Transform Pok\u00e9mon"
+    },
+    {
+        "number": 133,
+        "name": "Eevee",
+        "classification": "Evolution Pok\u00e9mon"
+    },
+    {
+        "number": 134,
+        "name": "Vaporeon",
+        "classification": "Bubble Jet Pok\u00e9mon"
+    },
+    {
+        "number": 135,
+        "name": "Jolteon",
+        "classification": "Lightning Pok\u00e9mon"
+    },
+    {
+        "number": 136,
+        "name": "Flareon",
+        "classification": "Flame Pok\u00e9mon"
+    },
+    {
+        "number": 137,
+        "name": "Porygon",
+        "classification": "Virtual Pok\u00e9mon"
+    },
+    {
+        "number": 138,
+        "name": "Omanyte",
+        "classification": "Spiral Pok\u00e9mon"
+    },
+    {
+        "number": 139,
+        "name": "Omastar",
+        "classification": "Spiral Pok\u00e9mon"
+    },
+    {
+        "number": 140,
+        "name": "Kabuto",
+        "classification": "Shellfish Pok\u00e9mon"
+    },
+    {
+        "number": 141,
+        "name": "Kabutops",
+        "classification": "Shellfish Pok\u00e9mon"
+    },
+    {
+        "number": 142,
+        "name": "Aerodactyl",
+        "classification": "Fossil Pok\u00e9mon"
+    },
+    {
+        "number": 143,
+        "name": "Snorlax",
+        "classification": "Sleeping Pok\u00e9mon"
+    },
+    {
+        "number": 144,
+        "name": "Articuno",
+        "classification": "Freeze Pok\u00e9mon"
+    },
+    {
+        "number": 144,
+        "name": "ArticunoGalarian Form",
+        "classification": "Cruel Pok\u00e9mon"
+    },
+    {
+        "number": 145,
+        "name": "Zapdos",
+        "classification": "Electric Pok\u00e9mon"
+    },
+    {
+        "number": 145,
+        "name": "ZapdosGalarian Form",
+        "classification": "Strong Legs Pok\u00e9mon"
+    },
+    {
+        "number": 146,
+        "name": "Moltres",
+        "classification": "Flame Pok\u00e9mon"
+    },
+    {
+        "number": 146,
+        "name": "MoltresGalarian Form",
+        "classification": "Malevolent Pok\u00e9mon"
+    },
+    {
+        "number": 147,
+        "name": "Dratini",
+        "classification": "Dragon Pok\u00e9mon"
+    },
+    {
+        "number": 148,
+        "name": "Dragonair",
+        "classification": "Dragon Pok\u00e9mon"
+    },
+    {
+        "number": 149,
+        "name": "Dragonite",
+        "classification": "Dragon Pok\u00e9mon"
+    },
+    {
+        "number": 150,
+        "name": "Mewtwo",
+        "classification": "Genetic Pok\u00e9mon"
+    },
+    {
+        "number": 151,
+        "name": "Mew",
+        "classification": "New Species Pok\u00e9mon"
+    },
+    {
+        "number": 152,
+        "name": "Chikorita",
+        "classification": "Leaf Pok\u00e9mon"
+    },
+    {
+        "number": 153,
+        "name": "Bayleef",
+        "classification": "Leaf Pok\u00e9mon"
+    },
+    {
+        "number": 154,
+        "name": "Meganium",
+        "classification": "Herb Pok\u00e9mon"
+    },
+    {
+        "number": 155,
+        "name": "Cyndaquil",
+        "classification": "Fire Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 156,
+        "name": "Quilava",
+        "classification": "Volcano Pok\u00e9mon"
+    },
+    {
+        "number": 157,
+        "name": "Typhlosion",
+        "classification": "Volcano Pok\u00e9mon"
+    },
+    {
+        "number": 157,
+        "name": "TyphlosionHisuian Form",
+        "classification": "Ghost Flame Pok\u00e9mon"
+    },
+    {
+        "number": 158,
+        "name": "Totodile",
+        "classification": "Big Jaw Pok\u00e9mon"
+    },
+    {
+        "number": 159,
+        "name": "Croconaw",
+        "classification": "Big Jaw Pok\u00e9mon"
+    },
+    {
+        "number": 160,
+        "name": "Feraligatr",
+        "classification": "Big Jaw Pok\u00e9mon"
+    },
+    {
+        "number": 161,
+        "name": "Sentret",
+        "classification": "Scout Pok\u00e9mon"
+    },
+    {
+        "number": 162,
+        "name": "Furret",
+        "classification": "Long Body Pok\u00e9mon"
+    },
+    {
+        "number": 163,
+        "name": "Hoothoot",
+        "classification": "Owl Pok\u00e9mon"
+    },
+    {
+        "number": 164,
+        "name": "Noctowl",
+        "classification": "Owl Pok\u00e9mon"
+    },
+    {
+        "number": 165,
+        "name": "Ledyba",
+        "classification": "Five Star Pok\u00e9mon"
+    },
+    {
+        "number": 166,
+        "name": "Ledian",
+        "classification": "Five Star Pok\u00e9mon"
+    },
+    {
+        "number": 167,
+        "name": "Spinarak",
+        "classification": "String Spit Pok\u00e9mon"
+    },
+    {
+        "number": 168,
+        "name": "Ariados",
+        "classification": "Long Leg Pok\u00e9mon"
+    },
+    {
+        "number": 169,
+        "name": "Crobat",
+        "classification": "Bat Pok\u00e9mon"
+    },
+    {
+        "number": 170,
+        "name": "Chinchou",
+        "classification": "Angler Pok\u00e9mon"
+    },
+    {
+        "number": 171,
+        "name": "Lanturn",
+        "classification": "Light Pok\u00e9mon"
+    },
+    {
+        "number": 172,
+        "name": "Pichu",
+        "classification": "Tiny Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 173,
+        "name": "Cleffa",
+        "classification": "Star Shape Pok\u00e9mon"
+    },
+    {
+        "number": 174,
+        "name": "Igglybuff",
+        "classification": "Balloon Pok\u00e9mon"
+    },
+    {
+        "number": 175,
+        "name": "Togepi",
+        "classification": "Spike Ball Pok\u00e9mon"
+    },
+    {
+        "number": 176,
+        "name": "Togetic",
+        "classification": "Happiness Pok\u00e9mon"
+    },
+    {
+        "number": 177,
+        "name": "Natu",
+        "classification": "Tiny Bird Pok\u00e9mon"
+    },
+    {
+        "number": 178,
+        "name": "Xatu",
+        "classification": "Mystic Pok\u00e9mon"
+    },
+    {
+        "number": 179,
+        "name": "Mareep",
+        "classification": "Wool Pok\u00e9mon"
+    },
+    {
+        "number": 180,
+        "name": "Flaaffy",
+        "classification": "Wool Pok\u00e9mon"
+    },
+    {
+        "number": 181,
+        "name": "Ampharos",
+        "classification": "Light Pok\u00e9mon"
+    },
+    {
+        "number": 182,
+        "name": "Bellossom",
+        "classification": "Flower Pok\u00e9mon"
+    },
+    {
+        "number": 183,
+        "name": "Marill",
+        "classification": "Aqua Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 184,
+        "name": "Azumarill",
+        "classification": "Aqua Rabbit Pok\u00e9mon"
+    },
+    {
+        "number": 185,
+        "name": "Sudowoodo",
+        "classification": "Imitation Pok\u00e9mon"
+    },
+    {
+        "number": 186,
+        "name": "Politoed",
+        "classification": "Frog Pok\u00e9mon"
+    },
+    {
+        "number": 187,
+        "name": "Hoppip",
+        "classification": "Cottonweed Pok\u00e9mon"
+    },
+    {
+        "number": 188,
+        "name": "Skiploom",
+        "classification": "Cottonweed Pok\u00e9mon"
+    },
+    {
+        "number": 189,
+        "name": "Jumpluff",
+        "classification": "Cottonweed Pok\u00e9mon"
+    },
+    {
+        "number": 190,
+        "name": "Aipom",
+        "classification": "Long Tail Pok\u00e9mon"
+    },
+    {
+        "number": 191,
+        "name": "Sunkern",
+        "classification": "Seed Pok\u00e9mon"
+    },
+    {
+        "number": 192,
+        "name": "Sunflora",
+        "classification": "Sun Pok\u00e9mon"
+    },
+    {
+        "number": 193,
+        "name": "Yanma",
+        "classification": "Clear Wing Pok\u00e9mon"
+    },
+    {
+        "number": 194,
+        "name": "Wooper",
+        "classification": "Water Fish Pok\u00e9mon"
+    },
+    {
+        "number": 194,
+        "name": "WooperPaldean Form",
+        "classification": "Poison Fish Pok\u00e9mon"
+    },
+    {
+        "number": 195,
+        "name": "Quagsire",
+        "classification": "Water Fish Pok\u00e9mon"
+    },
+    {
+        "number": 196,
+        "name": "Espeon",
+        "classification": "Sun Pok\u00e9mon"
+    },
+    {
+        "number": 197,
+        "name": "Umbreon",
+        "classification": "Moonlight Pok\u00e9mon"
+    },
+    {
+        "number": 198,
+        "name": "Murkrow",
+        "classification": "Darkness Pok\u00e9mon"
+    },
+    {
+        "number": 199,
+        "name": "Slowking",
+        "classification": "Royal Pok\u00e9mon"
+    },
+    {
+        "number": 199,
+        "name": "SlowkingGalarian Form",
+        "classification": "Hexpert Pok\u00e9mon"
+    },
+    {
+        "number": 200,
+        "name": "Misdreavus",
+        "classification": "Screech Pok\u00e9mon"
+    },
+    {
+        "number": 201,
+        "name": "Unown",
+        "classification": "Symbol Pok\u00e9mon"
+    },
+    {
+        "number": 202,
+        "name": "Wobbuffet",
+        "classification": "Patient Pok\u00e9mon"
+    },
+    {
+        "number": 203,
+        "name": "Girafarig",
+        "classification": "Long Neck Pok\u00e9mon"
+    },
+    {
+        "number": 204,
+        "name": "Pineco",
+        "classification": "Bagworm Pok\u00e9mon"
+    },
+    {
+        "number": 205,
+        "name": "Forretress",
+        "classification": "Bagworm Pok\u00e9mon"
+    },
+    {
+        "number": 206,
+        "name": "Dunsparce",
+        "classification": "Land Snake Pok\u00e9mon"
+    },
+    {
+        "number": 207,
+        "name": "Gligar",
+        "classification": "Fly Scorpion Pok\u00e9mon"
+    },
+    {
+        "number": 208,
+        "name": "Steelix",
+        "classification": "Iron Snake Pok\u00e9mon"
+    },
+    {
+        "number": 209,
+        "name": "Snubbull",
+        "classification": "Fairy Pok\u00e9mon"
+    },
+    {
+        "number": 210,
+        "name": "Granbull",
+        "classification": "Fairy Pok\u00e9mon"
+    },
+    {
+        "number": 211,
+        "name": "Qwilfish",
+        "classification": "Balloon Pok\u00e9mon"
+    },
+    {
+        "number": 212,
+        "name": "Scizor",
+        "classification": "Pincer Pok\u00e9mon"
+    },
+    {
+        "number": 213,
+        "name": "Shuckle",
+        "classification": "Mold Pok\u00e9mon"
+    },
+    {
+        "number": 214,
+        "name": "Heracross",
+        "classification": "Single Horn Pok\u00e9mon"
+    },
+    {
+        "number": 215,
+        "name": "Sneasel",
+        "classification": "Sharp Claw Pok\u00e9mon"
+    },
+    {
+        "number": 216,
+        "name": "Teddiursa",
+        "classification": "Little Bear Pok\u00e9mon"
+    },
+    {
+        "number": 217,
+        "name": "Ursaring",
+        "classification": "Hibernator Pok\u00e9mon"
+    },
+    {
+        "number": 218,
+        "name": "Slugma",
+        "classification": "Lava Pok\u00e9mon"
+    },
+    {
+        "number": 219,
+        "name": "Magcargo",
+        "classification": "Lava Pok\u00e9mon"
+    },
+    {
+        "number": 220,
+        "name": "Swinub",
+        "classification": "Pig Pok\u00e9mon"
+    },
+    {
+        "number": 221,
+        "name": "Piloswine",
+        "classification": "Swine Pok\u00e9mon"
+    },
+    {
+        "number": 222,
+        "name": "Corsola",
+        "classification": "Coral Pok\u00e9mon"
+    },
+    {
+        "number": 223,
+        "name": "Remoraid",
+        "classification": "Jet Pok\u00e9mon"
+    },
+    {
+        "number": 224,
+        "name": "Octillery",
+        "classification": "Jet Pok\u00e9mon"
+    },
+    {
+        "number": 225,
+        "name": "Delibird",
+        "classification": "Delivery Pok\u00e9mon"
+    },
+    {
+        "number": 226,
+        "name": "Mantine",
+        "classification": "Kite Pok\u00e9mon"
+    },
+    {
+        "number": 227,
+        "name": "Skarmory",
+        "classification": "Armor Bird Pok\u00e9mon"
+    },
+    {
+        "number": 228,
+        "name": "Houndour",
+        "classification": "Dark Pok\u00e9mon"
+    },
+    {
+        "number": 229,
+        "name": "Houndoom",
+        "classification": "Dark Pok\u00e9mon"
+    },
+    {
+        "number": 230,
+        "name": "Kingdra",
+        "classification": "Dragon Pok\u00e9mon"
+    },
+    {
+        "number": 231,
+        "name": "Phanpy",
+        "classification": "Long Nose Pok\u00e9mon"
+    },
+    {
+        "number": 232,
+        "name": "Donphan",
+        "classification": "Armor Pok\u00e9mon"
+    },
+    {
+        "number": 233,
+        "name": "Porygon2",
+        "classification": "Virtual Pok\u00e9mon"
+    },
+    {
+        "number": 234,
+        "name": "Stantler",
+        "classification": "Big Horn Pok\u00e9mon"
+    },
+    {
+        "number": 235,
+        "name": "Smeargle",
+        "classification": "Painter Pok\u00e9mon"
+    },
+    {
+        "number": 236,
+        "name": "Tyrogue",
+        "classification": "Scuffle Pok\u00e9mon"
+    },
+    {
+        "number": 237,
+        "name": "Hitmontop",
+        "classification": "Handstand Pok\u00e9mon"
+    },
+    {
+        "number": 238,
+        "name": "Smoochum",
+        "classification": "Kiss Pok\u00e9mon"
+    },
+    {
+        "number": 239,
+        "name": "Elekid",
+        "classification": "Electric Pok\u00e9mon"
+    },
+    {
+        "number": 240,
+        "name": "Magby",
+        "classification": "Live Coal Pok\u00e9mon"
+    },
+    {
+        "number": 241,
+        "name": "Miltank",
+        "classification": "Milk Cow Pok\u00e9mon"
+    },
+    {
+        "number": 242,
+        "name": "Blissey",
+        "classification": "Happiness Pok\u00e9mon"
+    },
+    {
+        "number": 243,
+        "name": "Raikou",
+        "classification": "Thunder Pok\u00e9mon"
+    },
+    {
+        "number": 244,
+        "name": "Entei",
+        "classification": "Volcano Pok\u00e9mon"
+    },
+    {
+        "number": 245,
+        "name": "Suicune",
+        "classification": "Aurora Pok\u00e9mon"
+    },
+    {
+        "number": 246,
+        "name": "Larvitar",
+        "classification": "Rock Skin Pok\u00e9mon"
+    },
+    {
+        "number": 247,
+        "name": "Pupitar",
+        "classification": "Hard Shell Pok\u00e9mon"
+    },
+    {
+        "number": 248,
+        "name": "Tyranitar",
+        "classification": "Armor Pok\u00e9mon"
+    },
+    {
+        "number": 249,
+        "name": "Lugia",
+        "classification": "Diving Pok\u00e9mon"
+    },
+    {
+        "number": 250,
+        "name": "Ho-Oh",
+        "classification": "Rainbow Pok\u00e9mon"
+    },
+    {
+        "number": 251,
+        "name": "Celebi",
+        "classification": "Time Travel Pok\u00e9mon"
+    },
+    {
+        "number": 252,
+        "name": "Treecko",
+        "classification": "Wood Gecko Pok\u00e9mon"
+    },
+    {
+        "number": 253,
+        "name": "Grovyle",
+        "classification": "Wood Gecko Pok\u00e9mon"
+    },
+    {
+        "number": 254,
+        "name": "Sceptile",
+        "classification": "Forest Pok\u00e9mon"
+    },
+    {
+        "number": 255,
+        "name": "Torchic",
+        "classification": "Chick Pok\u00e9mon"
+    },
+    {
+        "number": 256,
+        "name": "Combusken",
+        "classification": "Young Fowl Pok\u00e9mon"
+    },
+    {
+        "number": 257,
+        "name": "Blaziken",
+        "classification": "Blaze Pok\u00e9mon"
+    },
+    {
+        "number": 258,
+        "name": "Mudkip",
+        "classification": "Mud Fish Pok\u00e9mon"
+    },
+    {
+        "number": 259,
+        "name": "Marshtomp",
+        "classification": "Mud Fish Pok\u00e9mon"
+    },
+    {
+        "number": 260,
+        "name": "Swampert",
+        "classification": "Mud Fish Pok\u00e9mon"
+    },
+    {
+        "number": 261,
+        "name": "Poochyena",
+        "classification": "Bite Pok\u00e9mon"
+    },
+    {
+        "number": 262,
+        "name": "Mightyena",
+        "classification": "Bite Pok\u00e9mon"
+    },
+    {
+        "number": 263,
+        "name": "Zigzagoon",
+        "classification": "Tiny Raccoon Pok\u00e9mon"
+    },
+    {
+        "number": 264,
+        "name": "Linoone",
+        "classification": "Rushing Pok\u00e9mon"
+    },
+    {
+        "number": 265,
+        "name": "Wurmple",
+        "classification": "Worm Pok\u00e9mon"
+    },
+    {
+        "number": 266,
+        "name": "Silcoon",
+        "classification": "Cocoon Pok\u00e9mon"
+    },
+    {
+        "number": 267,
+        "name": "Beautifly",
+        "classification": "Butterfly Pok\u00e9mon"
+    },
+    {
+        "number": 268,
+        "name": "Cascoon",
+        "classification": "Cocoon Pok\u00e9mon"
+    },
+    {
+        "number": 269,
+        "name": "Dustox",
+        "classification": "Poison Moth Pok\u00e9mon"
+    },
+    {
+        "number": 270,
+        "name": "Lotad",
+        "classification": "Water Weed Pok\u00e9mon"
+    },
+    {
+        "number": 271,
+        "name": "Lombre",
+        "classification": "Jolly Pok\u00e9mon"
+    },
+    {
+        "number": 272,
+        "name": "Ludicolo",
+        "classification": "Carefree Pok\u00e9mon"
+    },
+    {
+        "number": 273,
+        "name": "Seedot",
+        "classification": "Acorn Pok\u00e9mon"
+    },
+    {
+        "number": 274,
+        "name": "Nuzleaf",
+        "classification": "Wily Pok\u00e9mon"
+    },
+    {
+        "number": 275,
+        "name": "Shiftry",
+        "classification": "Wicked Pok\u00e9mon"
+    },
+    {
+        "number": 276,
+        "name": "Taillow",
+        "classification": "Tiny Swallow Pok\u00e9mon"
+    },
+    {
+        "number": 277,
+        "name": "Swellow",
+        "classification": "Swallow Pok\u00e9mon"
+    },
+    {
+        "number": 278,
+        "name": "Wingull",
+        "classification": "Seagull Pok\u00e9mon"
+    },
+    {
+        "number": 279,
+        "name": "Pelipper",
+        "classification": "Water Bird Pok\u00e9mon"
+    },
+    {
+        "number": 280,
+        "name": "Ralts",
+        "classification": "Feeling Pok\u00e9mon"
+    },
+    {
+        "number": 281,
+        "name": "Kirlia",
+        "classification": "Emotion Pok\u00e9mon"
+    },
+    {
+        "number": 282,
+        "name": "Gardevoir",
+        "classification": "Embrace Pok\u00e9mon"
+    },
+    {
+        "number": 283,
+        "name": "Surskit",
+        "classification": "Pond Skater Pok\u00e9mon"
+    },
+    {
+        "number": 284,
+        "name": "Masquerain",
+        "classification": "Eyeball Pok\u00e9mon"
+    },
+    {
+        "number": 285,
+        "name": "Shroomish",
+        "classification": "Mushroom Pok\u00e9mon"
+    },
+    {
+        "number": 286,
+        "name": "Breloom",
+        "classification": "Mushroom Pok\u00e9mon"
+    },
+    {
+        "number": 287,
+        "name": "Slakoth",
+        "classification": "Slacker Pok\u00e9mon"
+    },
+    {
+        "number": 288,
+        "name": "Vigoroth",
+        "classification": "Wild Monkey Pok\u00e9mon"
+    },
+    {
+        "number": 289,
+        "name": "Slaking",
+        "classification": "Lazy Pok\u00e9mon"
+    },
+    {
+        "number": 290,
+        "name": "Nincada",
+        "classification": "Trainee Pok\u00e9mon"
+    },
+    {
+        "number": 291,
+        "name": "Ninjask",
+        "classification": "Ninja Pok\u00e9mon"
+    },
+    {
+        "number": 292,
+        "name": "Shedinja",
+        "classification": "Shed Pok\u00e9mon"
+    },
+    {
+        "number": 293,
+        "name": "Whismur",
+        "classification": "Whisper Pok\u00e9mon"
+    },
+    {
+        "number": 294,
+        "name": "Loudred",
+        "classification": "Big Voice Pok\u00e9mon"
+    },
+    {
+        "number": 295,
+        "name": "Exploud",
+        "classification": "Loud Noise Pok\u00e9mon"
+    },
+    {
+        "number": 296,
+        "name": "Makuhita",
+        "classification": "Guts Pok\u00e9mon"
+    },
+    {
+        "number": 297,
+        "name": "Hariyama",
+        "classification": "Arm Thrust Pok\u00e9mon"
+    },
+    {
+        "number": 298,
+        "name": "Azurill",
+        "classification": "Polka Dot Pok\u00e9mon"
+    },
+    {
+        "number": 299,
+        "name": "Nosepass",
+        "classification": "Compass Pok\u00e9mon"
+    },
+    {
+        "number": 300,
+        "name": "Skitty",
+        "classification": "Kitten Pok\u00e9mon"
+    },
+    {
+        "number": 301,
+        "name": "Delcatty",
+        "classification": "Prim Pok\u00e9mon"
+    },
+    {
+        "number": 302,
+        "name": "Sableye",
+        "classification": "Darkness Pok\u00e9mon"
+    },
+    {
+        "number": 303,
+        "name": "Mawile",
+        "classification": "Deceiver Pok\u00e9mon"
+    },
+    {
+        "number": 304,
+        "name": "Aron",
+        "classification": "Iron Armor Pok\u00e9mon"
+    },
+    {
+        "number": 305,
+        "name": "Lairon",
+        "classification": "Iron Armor Pok\u00e9mon"
+    },
+    {
+        "number": 306,
+        "name": "Aggron",
+        "classification": "Iron Armor Pok\u00e9mon"
+    },
+    {
+        "number": 307,
+        "name": "Meditite",
+        "classification": "Meditate Pok\u00e9mon"
+    },
+    {
+        "number": 308,
+        "name": "Medicham",
+        "classification": "Meditate Pok\u00e9mon"
+    },
+    {
+        "number": 309,
+        "name": "Electrike",
+        "classification": "Lightning Pok\u00e9mon"
+    },
+    {
+        "number": 310,
+        "name": "Manectric",
+        "classification": "Discharge Pok\u00e9mon"
+    },
+    {
+        "number": 311,
+        "name": "Plusle",
+        "classification": "Cheering Pok\u00e9mon"
+    },
+    {
+        "number": 312,
+        "name": "Minun",
+        "classification": "Cheering Pok\u00e9mon"
+    },
+    {
+        "number": 313,
+        "name": "Volbeat",
+        "classification": "Firefly Pok\u00e9mon"
+    },
+    {
+        "number": 314,
+        "name": "Illumise",
+        "classification": "Firefly Pok\u00e9mon"
+    },
+    {
+        "number": 315,
+        "name": "Roselia",
+        "classification": "Thorn Pok\u00e9mon"
+    },
+    {
+        "number": 316,
+        "name": "Gulpin",
+        "classification": "Stomach Pok\u00e9mon"
+    },
+    {
+        "number": 317,
+        "name": "Swalot",
+        "classification": "Poison Bag Pok\u00e9mon"
+    },
+    {
+        "number": 318,
+        "name": "Carvanha",
+        "classification": "Savage Pok\u00e9mon"
+    },
+    {
+        "number": 319,
+        "name": "Sharpedo",
+        "classification": "Brutal Pok\u00e9mon"
+    },
+    {
+        "number": 320,
+        "name": "Wailmer",
+        "classification": "Ball Whale Pok\u00e9mon"
+    },
+    {
+        "number": 321,
+        "name": "Wailord",
+        "classification": "Float Whale Pok\u00e9mon"
+    },
+    {
+        "number": 322,
+        "name": "Numel",
+        "classification": "Numb Pok\u00e9mon"
+    },
+    {
+        "number": 323,
+        "name": "Camerupt",
+        "classification": "Eruption Pok\u00e9mon"
+    },
+    {
+        "number": 324,
+        "name": "Torkoal",
+        "classification": "Coal Pok\u00e9mon"
+    },
+    {
+        "number": 325,
+        "name": "Spoink",
+        "classification": "Bounce Pok\u00e9mon"
+    },
+    {
+        "number": 326,
+        "name": "Grumpig",
+        "classification": "Manipulate Pok\u00e9mon"
+    },
+    {
+        "number": 327,
+        "name": "Spinda",
+        "classification": "Spot Panda Pok\u00e9mon"
+    },
+    {
+        "number": 328,
+        "name": "Trapinch",
+        "classification": "Ant Pit Pok\u00e9mon"
+    },
+    {
+        "number": 329,
+        "name": "Vibrava",
+        "classification": "Vibration Pok\u00e9mon"
+    },
+    {
+        "number": 330,
+        "name": "Flygon",
+        "classification": "Mystic Pok\u00e9mon"
+    },
+    {
+        "number": 331,
+        "name": "Cacnea",
+        "classification": "Cactus Pok\u00e9mon"
+    },
+    {
+        "number": 332,
+        "name": "Cacturne",
+        "classification": "Scarecrow Pok\u00e9mon"
+    },
+    {
+        "number": 333,
+        "name": "Swablu",
+        "classification": "Cotton Bird Pok\u00e9mon"
+    },
+    {
+        "number": 334,
+        "name": "Altaria",
+        "classification": "Humming Pok\u00e9mon"
+    },
+    {
+        "number": 335,
+        "name": "Zangoose",
+        "classification": "Cat Ferret Pok\u00e9mon"
+    },
+    {
+        "number": 336,
+        "name": "Seviper",
+        "classification": "Fang Snake Pok\u00e9mon"
+    },
+    {
+        "number": 337,
+        "name": "Lunatone",
+        "classification": "Meteorite Pok\u00e9mon"
+    },
+    {
+        "number": 338,
+        "name": "Solrock",
+        "classification": "Meteorite Pok\u00e9mon"
+    },
+    {
+        "number": 339,
+        "name": "Barboach",
+        "classification": "Whiskers Pok\u00e9mon"
+    },
+    {
+        "number": 340,
+        "name": "Whiscash",
+        "classification": "Whiskers Pok\u00e9mon"
+    },
+    {
+        "number": 341,
+        "name": "Corphish",
+        "classification": "Ruffian Pok\u00e9mon"
+    },
+    {
+        "number": 342,
+        "name": "Crawdaunt",
+        "classification": "Rogue Pok\u00e9mon"
+    },
+    {
+        "number": 343,
+        "name": "Baltoy",
+        "classification": "Clay Doll Pok\u00e9mon"
+    },
+    {
+        "number": 344,
+        "name": "Claydol",
+        "classification": "Clay Doll Pok\u00e9mon"
+    },
+    {
+        "number": 345,
+        "name": "Lileep",
+        "classification": "Sea Lily Pok\u00e9mon"
+    },
+    {
+        "number": 346,
+        "name": "Cradily",
+        "classification": "Barnacle Pok\u00e9mon"
+    },
+    {
+        "number": 347,
+        "name": "Anorith",
+        "classification": "Old Shrimp Pok\u00e9mon"
+    },
+    {
+        "number": 348,
+        "name": "Armaldo",
+        "classification": "Plate Pok\u00e9mon"
+    },
+    {
+        "number": 349,
+        "name": "Feebas",
+        "classification": "Fish Pok\u00e9mon"
+    },
+    {
+        "number": 350,
+        "name": "Milotic",
+        "classification": "Tender Pok\u00e9mon"
+    },
+    {
+        "number": 351,
+        "name": "Castform",
+        "classification": "Weather Pok\u00e9mon"
+    },
+    {
+        "number": 352,
+        "name": "Kecleon",
+        "classification": "Color Swap Pok\u00e9mon"
+    },
+    {
+        "number": 353,
+        "name": "Shuppet",
+        "classification": "Puppet Pok\u00e9mon"
+    },
+    {
+        "number": 354,
+        "name": "Banette",
+        "classification": "Marionette Pok\u00e9mon"
+    },
+    {
+        "number": 355,
+        "name": "Duskull",
+        "classification": "Requiem Pok\u00e9mon"
+    },
+    {
+        "number": 356,
+        "name": "Dusclops",
+        "classification": "Beckon Pok\u00e9mon"
+    },
+    {
+        "number": 357,
+        "name": "Tropius",
+        "classification": "Fruit Pok\u00e9mon"
+    },
+    {
+        "number": 358,
+        "name": "Chimecho",
+        "classification": "Wind Chime Pok\u00e9mon"
+    },
+    {
+        "number": 359,
+        "name": "Absol",
+        "classification": "Disaster Pok\u00e9mon"
+    },
+    {
+        "number": 360,
+        "name": "Wynaut",
+        "classification": "Bright Pok\u00e9mon"
+    },
+    {
+        "number": 361,
+        "name": "Snorunt",
+        "classification": "Snow Hat Pok\u00e9mon"
+    },
+    {
+        "number": 362,
+        "name": "Glalie",
+        "classification": "Face Pok\u00e9mon"
+    },
+    {
+        "number": 363,
+        "name": "Spheal",
+        "classification": "Clap Pok\u00e9mon"
+    },
+    {
+        "number": 364,
+        "name": "Sealeo",
+        "classification": "Ball Roll Pok\u00e9mon"
+    },
+    {
+        "number": 365,
+        "name": "Walrein",
+        "classification": "Ice Break Pok\u00e9mon"
+    },
+    {
+        "number": 366,
+        "name": "Clamperl",
+        "classification": "Bivalve Pok\u00e9mon"
+    },
+    {
+        "number": 367,
+        "name": "Huntail",
+        "classification": "Deep Sea Pok\u00e9mon"
+    },
+    {
+        "number": 368,
+        "name": "Gorebyss",
+        "classification": "South Sea Pok\u00e9mon"
+    },
+    {
+        "number": 369,
+        "name": "Relicanth",
+        "classification": "Longevity Pok\u00e9mon"
+    },
+    {
+        "number": 370,
+        "name": "Luvdisc",
+        "classification": "Rendezvous Pok\u00e9mon"
+    },
+    {
+        "number": 371,
+        "name": "Bagon",
+        "classification": "Rock Head Pok\u00e9mon"
+    },
+    {
+        "number": 372,
+        "name": "Shelgon",
+        "classification": "Endurance Pok\u00e9mon"
+    },
+    {
+        "number": 373,
+        "name": "Salamence",
+        "classification": "Dragon Pok\u00e9mon"
+    },
+    {
+        "number": 374,
+        "name": "Beldum",
+        "classification": "Iron Ball Pok\u00e9mon"
+    },
+    {
+        "number": 375,
+        "name": "Metang",
+        "classification": "Iron Claw Pok\u00e9mon"
+    },
+    {
+        "number": 376,
+        "name": "Metagross",
+        "classification": "Iron Leg Pok\u00e9mon"
+    },
+    {
+        "number": 377,
+        "name": "Regirock",
+        "classification": "Rock Peak Pok\u00e9mon"
+    },
+    {
+        "number": 378,
+        "name": "Regice",
+        "classification": "Iceberg Pok\u00e9mon"
+    },
+    {
+        "number": 379,
+        "name": "Registeel",
+        "classification": "Iron Pok\u00e9mon"
+    },
+    {
+        "number": 380,
+        "name": "Latias",
+        "classification": "Eon Pok\u00e9mon"
+    },
+    {
+        "number": 381,
+        "name": "Latios",
+        "classification": "Eon Pok\u00e9mon"
+    },
+    {
+        "number": 382,
+        "name": "Kyogre",
+        "classification": "Sea Basin Pok\u00e9mon"
+    },
+    {
+        "number": 383,
+        "name": "Groudon",
+        "classification": "Continent Pok\u00e9mon"
+    },
+    {
+        "number": 384,
+        "name": "Rayquaza",
+        "classification": "Sky High Pok\u00e9mon"
+    },
+    {
+        "number": 385,
+        "name": "Jirachi",
+        "classification": "Wish Pok\u00e9mon"
+    },
+    {
+        "number": 386,
+        "name": "Deoxys",
+        "classification": "DNA Pok\u00e9mon"
+    },
+    {
+        "number": 387,
+        "name": "Turtwig",
+        "classification": "Tiny Leaf Pok\u00e9mon"
+    },
+    {
+        "number": 388,
+        "name": "Grotle",
+        "classification": "Grove Pok\u00e9mon"
+    },
+    {
+        "number": 389,
+        "name": "Torterra",
+        "classification": "Continent Pok\u00e9mon"
+    },
+    {
+        "number": 390,
+        "name": "Chimchar",
+        "classification": "Chimp Pok\u00e9mon"
+    },
+    {
+        "number": 391,
+        "name": "Monferno",
+        "classification": "Playful Pok\u00e9mon"
+    },
+    {
+        "number": 392,
+        "name": "Infernape",
+        "classification": "Flame Pok\u00e9mon"
+    },
+    {
+        "number": 393,
+        "name": "Piplup",
+        "classification": "Penguin Pok\u00e9mon"
+    },
+    {
+        "number": 394,
+        "name": "Prinplup",
+        "classification": "Penguin Pok\u00e9mon"
+    },
+    {
+        "number": 395,
+        "name": "Empoleon",
+        "classification": "Emperor Pok\u00e9mon"
+    },
+    {
+        "number": 396,
+        "name": "Starly",
+        "classification": "Starling Pok\u00e9mon"
+    },
+    {
+        "number": 397,
+        "name": "Staravia",
+        "classification": "Starling Pok\u00e9mon"
+    },
+    {
+        "number": 398,
+        "name": "Staraptor",
+        "classification": "Predator Pok\u00e9mon"
+    },
+    {
+        "number": 399,
+        "name": "Bidoof",
+        "classification": "Plump Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 400,
+        "name": "Bibarel",
+        "classification": "Beaver Pok\u00e9mon"
+    },
+    {
+        "number": 401,
+        "name": "Kricketot",
+        "classification": "Cricket Pok\u00e9mon"
+    },
+    {
+        "number": 402,
+        "name": "Kricketune",
+        "classification": "Cricket Pok\u00e9mon"
+    },
+    {
+        "number": 403,
+        "name": "Shinx",
+        "classification": "Flash Pok\u00e9mon"
+    },
+    {
+        "number": 404,
+        "name": "Luxio",
+        "classification": "Spark Pok\u00e9mon"
+    },
+    {
+        "number": 405,
+        "name": "Luxray",
+        "classification": "Gleam Eyes Pok\u00e9mon"
+    },
+    {
+        "number": 406,
+        "name": "Budew",
+        "classification": "Bud Pok\u00e9mon"
+    },
+    {
+        "number": 407,
+        "name": "Roserade",
+        "classification": "Bouquet Pok\u00e9mon"
+    },
+    {
+        "number": 408,
+        "name": "Cranidos",
+        "classification": "Head Butt Pok\u00e9mon"
+    },
+    {
+        "number": 409,
+        "name": "Rampardos",
+        "classification": "Head Butt Pok\u00e9mon"
+    },
+    {
+        "number": 410,
+        "name": "Shieldon",
+        "classification": "Shield Pok\u00e9mon"
+    },
+    {
+        "number": 411,
+        "name": "Bastiodon",
+        "classification": "Shield Pok\u00e9mon"
+    },
+    {
+        "number": 412,
+        "name": "Burmy",
+        "classification": "Bagworm Pok\u00e9mon"
+    },
+    {
+        "number": 413,
+        "name": "Wormadam",
+        "classification": "Bagworm Pok\u00e9mon"
+    },
+    {
+        "number": 414,
+        "name": "Mothim",
+        "classification": "Moth Pok\u00e9mon"
+    },
+    {
+        "number": 415,
+        "name": "Combee",
+        "classification": "Tiny Bee Pok\u00e9mon"
+    },
+    {
+        "number": 416,
+        "name": "Vespiquen",
+        "classification": "Beehive Pok\u00e9mon"
+    },
+    {
+        "number": 417,
+        "name": "Pachirisu",
+        "classification": "EleSquirrel Pok\u00e9mon"
+    },
+    {
+        "number": 418,
+        "name": "Buizel",
+        "classification": "Sea Weasel Pok\u00e9mon"
+    },
+    {
+        "number": 419,
+        "name": "Floatzel",
+        "classification": "Sea Weasel Pok\u00e9mon"
+    },
+    {
+        "number": 420,
+        "name": "Cherubi",
+        "classification": "Cherry Pok\u00e9mon"
+    },
+    {
+        "number": 421,
+        "name": "Cherrim",
+        "classification": "Blossom Pok\u00e9mon"
+    },
+    {
+        "number": 422,
+        "name": "Shellos",
+        "classification": "Sea Slug Pok\u00e9mon"
+    },
+    {
+        "number": 423,
+        "name": "Gastrodon",
+        "classification": "Sea Slug Pok\u00e9mon"
+    },
+    {
+        "number": 424,
+        "name": "Ambipom",
+        "classification": "Long Tail Pok\u00e9mon"
+    },
+    {
+        "number": 425,
+        "name": "Drifloon",
+        "classification": "Balloon Pok\u00e9mon"
+    },
+    {
+        "number": 426,
+        "name": "Drifblim",
+        "classification": "Blimp Pok\u00e9mon"
+    },
+    {
+        "number": 427,
+        "name": "Buneary",
+        "classification": "Rabbit Pok\u00e9mon"
+    },
+    {
+        "number": 428,
+        "name": "Lopunny",
+        "classification": "Rabbit Pok\u00e9mon"
+    },
+    {
+        "number": 429,
+        "name": "Mismagius",
+        "classification": "Magical Pok\u00e9mon"
+    },
+    {
+        "number": 430,
+        "name": "Honchkrow",
+        "classification": "Big Boss Pok\u00e9mon"
+    },
+    {
+        "number": 431,
+        "name": "Glameow",
+        "classification": "Catty Pok\u00e9mon"
+    },
+    {
+        "number": 432,
+        "name": "Purugly",
+        "classification": "Tiger Cat Pok\u00e9mon"
+    },
+    {
+        "number": 433,
+        "name": "Chingling",
+        "classification": "Bell Pok\u00e9mon"
+    },
+    {
+        "number": 434,
+        "name": "Stunky",
+        "classification": "Skunk Pok\u00e9mon"
+    },
+    {
+        "number": 435,
+        "name": "Skuntank",
+        "classification": "Skunk Pok\u00e9mon"
+    },
+    {
+        "number": 436,
+        "name": "Bronzor",
+        "classification": "Bronze Pok\u00e9mon"
+    },
+    {
+        "number": 437,
+        "name": "Bronzong",
+        "classification": "Bronze Bell Pok\u00e9mon"
+    },
+    {
+        "number": 438,
+        "name": "Bonsly",
+        "classification": "Bonsai Pok\u00e9mon"
+    },
+    {
+        "number": 439,
+        "name": "Mime Jr.",
+        "classification": "Mime Pok\u00e9mon"
+    },
+    {
+        "number": 440,
+        "name": "Happiny",
+        "classification": "Playhouse Pok\u00e9mon"
+    },
+    {
+        "number": 441,
+        "name": "Chatot",
+        "classification": "Music Note Pok\u00e9mon"
+    },
+    {
+        "number": 442,
+        "name": "Spiritomb",
+        "classification": "Forbidden Pok\u00e9mon"
+    },
+    {
+        "number": 443,
+        "name": "Gible",
+        "classification": "Land Shark Pok\u00e9mon"
+    },
+    {
+        "number": 444,
+        "name": "Gabite",
+        "classification": "Cave Pok\u00e9mon"
+    },
+    {
+        "number": 445,
+        "name": "Garchomp",
+        "classification": "Mach Pok\u00e9mon"
+    },
+    {
+        "number": 446,
+        "name": "Munchlax",
+        "classification": "Big Eater Pok\u00e9mon"
+    },
+    {
+        "number": 447,
+        "name": "Riolu",
+        "classification": "Emanation Pok\u00e9mon"
+    },
+    {
+        "number": 448,
+        "name": "Lucario",
+        "classification": "Aura Pok\u00e9mon"
+    },
+    {
+        "number": 449,
+        "name": "Hippopotas",
+        "classification": "Hippo Pok\u00e9mon"
+    },
+    {
+        "number": 450,
+        "name": "Hippowdon",
+        "classification": "Heavyweight Pok\u00e9mon"
+    },
+    {
+        "number": 451,
+        "name": "Skorupi",
+        "classification": "Scorpion Pok\u00e9mon"
+    },
+    {
+        "number": 452,
+        "name": "Drapion",
+        "classification": "Ogre Scorpion Pok\u00e9mon"
+    },
+    {
+        "number": 453,
+        "name": "Croagunk",
+        "classification": "Toxic Mouth Pok\u00e9mon"
+    },
+    {
+        "number": 454,
+        "name": "Toxicroak",
+        "classification": "Toxic Mouth Pok\u00e9mon"
+    },
+    {
+        "number": 455,
+        "name": "Carnivine",
+        "classification": "Bug Catcher Pok\u00e9mon"
+    },
+    {
+        "number": 456,
+        "name": "Finneon",
+        "classification": "Wing Fish Pok\u00e9mon"
+    },
+    {
+        "number": 457,
+        "name": "Lumineon",
+        "classification": "Neon Pok\u00e9mon"
+    },
+    {
+        "number": 458,
+        "name": "Mantyke",
+        "classification": "Kite Pok\u00e9mon"
+    },
+    {
+        "number": 459,
+        "name": "Snover",
+        "classification": "Frost Tree Pok\u00e9mon"
+    },
+    {
+        "number": 460,
+        "name": "Abomasnow",
+        "classification": "Frost Tree Pok\u00e9mon"
+    },
+    {
+        "number": 461,
+        "name": "Weavile",
+        "classification": "Sharp Claw Pok\u00e9mon"
+    },
+    {
+        "number": 462,
+        "name": "Magnezone",
+        "classification": "Magnet Area Pok\u00e9mon"
+    },
+    {
+        "number": 463,
+        "name": "Lickilicky",
+        "classification": "Licking Pok\u00e9mon"
+    },
+    {
+        "number": 464,
+        "name": "Rhyperior",
+        "classification": "Drill Pok\u00e9mon"
+    },
+    {
+        "number": 465,
+        "name": "Tangrowth",
+        "classification": "Vine Pok\u00e9mon"
+    },
+    {
+        "number": 466,
+        "name": "Electivire",
+        "classification": "Thunderbolt Pok\u00e9mon"
+    },
+    {
+        "number": 467,
+        "name": "Magmortar",
+        "classification": "Blast Pok\u00e9mon"
+    },
+    {
+        "number": 468,
+        "name": "Togekiss",
+        "classification": "Jubilee Pok\u00e9mon"
+    },
+    {
+        "number": 469,
+        "name": "Yanmega",
+        "classification": "Ogre Darner Pok\u00e9mon"
+    },
+    {
+        "number": 470,
+        "name": "Leafeon",
+        "classification": "Verdant Pok\u00e9mon"
+    },
+    {
+        "number": 471,
+        "name": "Glaceon",
+        "classification": "Fresh Snow Pok\u00e9mon"
+    },
+    {
+        "number": 472,
+        "name": "Gliscor",
+        "classification": "Fang Scorpion Pok\u00e9mon"
+    },
+    {
+        "number": 473,
+        "name": "Mamoswine",
+        "classification": "Twin Tusk Pok\u00e9mon"
+    },
+    {
+        "number": 474,
+        "name": "Porygon-Z",
+        "classification": "Virtual Pok\u00e9mon"
+    },
+    {
+        "number": 475,
+        "name": "Gallade",
+        "classification": "Blade Pok\u00e9mon"
+    },
+    {
+        "number": 476,
+        "name": "Probopass",
+        "classification": "Compass Pok\u00e9mon"
+    },
+    {
+        "number": 477,
+        "name": "Dusknoir",
+        "classification": "Gripper Pok\u00e9mon"
+    },
+    {
+        "number": 478,
+        "name": "Froslass",
+        "classification": "Snow Land Pok\u00e9mon"
+    },
+    {
+        "number": 479,
+        "name": "Rotom",
+        "classification": "Plasma Pok\u00e9mon"
+    },
+    {
+        "number": 480,
+        "name": "Uxie",
+        "classification": "Knowledge Pok\u00e9mon"
+    },
+    {
+        "number": 481,
+        "name": "Mesprit",
+        "classification": "Emotion Pok\u00e9mon"
+    },
+    {
+        "number": 482,
+        "name": "Azelf",
+        "classification": "Willpower Pok\u00e9mon"
+    },
+    {
+        "number": 483,
+        "name": "Dialga",
+        "classification": "Temporal Pok\u00e9mon"
+    },
+    {
+        "number": 484,
+        "name": "Palkia",
+        "classification": "Spatial Pok\u00e9mon"
+    },
+    {
+        "number": 485,
+        "name": "Heatran",
+        "classification": "Lava Dome Pok\u00e9mon"
+    },
+    {
+        "number": 486,
+        "name": "Regigigas",
+        "classification": "Colossal Pok\u00e9mon"
+    },
+    {
+        "number": 487,
+        "name": "Giratina",
+        "classification": "Renegade Pok\u00e9mon"
+    },
+    {
+        "number": 488,
+        "name": "Cresselia",
+        "classification": "Lunar Pok\u00e9mon"
+    },
+    {
+        "number": 489,
+        "name": "Phione",
+        "classification": "Sea Drifter Pok\u00e9mon"
+    },
+    {
+        "number": 490,
+        "name": "Manaphy",
+        "classification": "Seafaring Pok\u00e9mon"
+    },
+    {
+        "number": 491,
+        "name": "Darkrai",
+        "classification": "Pitch-Black Pok\u00e9mon"
+    },
+    {
+        "number": 492,
+        "name": "Shaymin",
+        "classification": "Gratitude Pok\u00e9mon"
+    },
+    {
+        "number": 493,
+        "name": "Arceus",
+        "classification": "Alpha Pok\u00e9mon"
+    },
+    {
+        "number": 494,
+        "name": "Victini",
+        "classification": "Victory Pok\u00e9mon"
+    },
+    {
+        "number": 495,
+        "name": "Snivy",
+        "classification": "Grass Snake Pok\u00e9mon"
+    },
+    {
+        "number": 496,
+        "name": "Servine",
+        "classification": "Grass Snake Pok\u00e9mon"
+    },
+    {
+        "number": 497,
+        "name": "Serperior",
+        "classification": "Regal Pok\u00e9mon"
+    },
+    {
+        "number": 498,
+        "name": "Tepig",
+        "classification": "Fire Pig Pok\u00e9mon"
+    },
+    {
+        "number": 499,
+        "name": "Pignite",
+        "classification": "Fire Pig Pok\u00e9mon"
+    },
+    {
+        "number": 500,
+        "name": "Emboar",
+        "classification": "Mega Fire Pig Pok\u00e9mon"
+    },
+    {
+        "number": 501,
+        "name": "Oshawott",
+        "classification": "Sea Otter Pok\u00e9mon"
+    },
+    {
+        "number": 502,
+        "name": "Dewott",
+        "classification": "Discipline Pok\u00e9mon"
+    },
+    {
+        "number": 503,
+        "name": "Samurott",
+        "classification": "Formidable Pok\u00e9mon"
+    },
+    {
+        "number": 504,
+        "name": "Patrat",
+        "classification": "Scout Pok\u00e9mon"
+    },
+    {
+        "number": 505,
+        "name": "Watchog",
+        "classification": "Lookout Pok\u00e9mon"
+    },
+    {
+        "number": 506,
+        "name": "Lillipup",
+        "classification": "Puppy Pok\u00e9mon"
+    },
+    {
+        "number": 507,
+        "name": "Herdier",
+        "classification": "Loyal Dog Pok\u00e9mon"
+    },
+    {
+        "number": 508,
+        "name": "Stoutland",
+        "classification": "Big-Hearted Pok\u00e9mon"
+    },
+    {
+        "number": 509,
+        "name": "Purrloin",
+        "classification": "Devious Pok\u00e9mon"
+    },
+    {
+        "number": 510,
+        "name": "Liepard",
+        "classification": "Cruel Pok\u00e9mon"
+    },
+    {
+        "number": 511,
+        "name": "Pansage",
+        "classification": "Grass Monkey Pok\u00e9mon"
+    },
+    {
+        "number": 512,
+        "name": "Simisage",
+        "classification": "Thorn Monkey Pok\u00e9mon"
+    },
+    {
+        "number": 513,
+        "name": "Pansear",
+        "classification": "High Temp Pok\u00e9mon"
+    },
+    {
+        "number": 514,
+        "name": "Simisear",
+        "classification": "Ember Pok\u00e9mon"
+    },
+    {
+        "number": 515,
+        "name": "Panpour",
+        "classification": "Spray Pok\u00e9mon"
+    },
+    {
+        "number": 516,
+        "name": "Simipour",
+        "classification": "Geyser Pok\u00e9mon"
+    },
+    {
+        "number": 517,
+        "name": "Munna",
+        "classification": "Dream Eater Pok\u00e9mon"
+    },
+    {
+        "number": 518,
+        "name": "Musharna",
+        "classification": "Drowsing Pok\u00e9mon"
+    },
+    {
+        "number": 519,
+        "name": "Pidove",
+        "classification": "Tiny Pigeon Pok\u00e9mon"
+    },
+    {
+        "number": 520,
+        "name": "Tranquill",
+        "classification": "Wild Pigeon Pok\u00e9mon"
+    },
+    {
+        "number": 521,
+        "name": "Unfezant",
+        "classification": "Proud Pok\u00e9mon"
+    },
+    {
+        "number": 522,
+        "name": "Blitzle",
+        "classification": "Electrified Pok\u00e9mon"
+    },
+    {
+        "number": 523,
+        "name": "Zebstrika",
+        "classification": "Thunderbolt Pok\u00e9mon"
+    },
+    {
+        "number": 524,
+        "name": "Roggenrola",
+        "classification": "Mantle Pok\u00e9mon"
+    },
+    {
+        "number": 525,
+        "name": "Boldore",
+        "classification": "Ore Pok\u00e9mon"
+    },
+    {
+        "number": 526,
+        "name": "Gigalith",
+        "classification": "Compressed Pok\u00e9mon"
+    },
+    {
+        "number": 527,
+        "name": "Woobat",
+        "classification": "Bat Pok\u00e9mon"
+    },
+    {
+        "number": 528,
+        "name": "Swoobat",
+        "classification": "Courting Pok\u00e9mon"
+    },
+    {
+        "number": 529,
+        "name": "Drilbur",
+        "classification": "Mole Pok\u00e9mon"
+    },
+    {
+        "number": 530,
+        "name": "Excadrill",
+        "classification": "Subterrene Pok\u00e9mon"
+    },
+    {
+        "number": 531,
+        "name": "Audino",
+        "classification": "Hearing Pok\u00e9mon"
+    },
+    {
+        "number": 532,
+        "name": "Timburr",
+        "classification": "Muscular Pok\u00e9mon"
+    },
+    {
+        "number": 533,
+        "name": "Gurdurr",
+        "classification": "Muscular Pok\u00e9mon"
+    },
+    {
+        "number": 534,
+        "name": "Conkeldurr",
+        "classification": "Muscular Pok\u00e9mon"
+    },
+    {
+        "number": 535,
+        "name": "Tympole",
+        "classification": "Tadpole Pok\u00e9mon"
+    },
+    {
+        "number": 536,
+        "name": "Palpitoad",
+        "classification": "Vibration Pok\u00e9mon"
+    },
+    {
+        "number": 537,
+        "name": "Seismitoad",
+        "classification": "Vibration Pok\u00e9mon"
+    },
+    {
+        "number": 538,
+        "name": "Throh",
+        "classification": "Judo Pok\u00e9mon"
+    },
+    {
+        "number": 539,
+        "name": "Sawk",
+        "classification": "Karate Pok\u00e9mon"
+    },
+    {
+        "number": 540,
+        "name": "Sewaddle",
+        "classification": "Sewing Pok\u00e9mon"
+    },
+    {
+        "number": 541,
+        "name": "Swadloon",
+        "classification": "Leaf-Wrapped Pok\u00e9mon"
+    },
+    {
+        "number": 542,
+        "name": "Leavanny",
+        "classification": "Nurturing Pok\u00e9mon"
+    },
+    {
+        "number": 543,
+        "name": "Venipede",
+        "classification": "Centipede Pok\u00e9mon"
+    },
+    {
+        "number": 544,
+        "name": "Whirlipede",
+        "classification": "Curlipede Pok\u00e9mon"
+    },
+    {
+        "number": 545,
+        "name": "Scolipede",
+        "classification": "Megapede Pok\u00e9mon"
+    },
+    {
+        "number": 546,
+        "name": "Cottonee",
+        "classification": "Cotton Puff Pok\u00e9mon"
+    },
+    {
+        "number": 547,
+        "name": "Whimsicott",
+        "classification": "Windveiled Pok\u00e9mon"
+    },
+    {
+        "number": 548,
+        "name": "Petilil",
+        "classification": "Bulb Pok\u00e9mon"
+    },
+    {
+        "number": 549,
+        "name": "Lilligant",
+        "classification": "Flowering Pok\u00e9mon"
+    },
+    {
+        "number": 549,
+        "name": "LilligantHisuian Form",
+        "classification": "Spinning Pok\u00e9mon"
+    },
+    {
+        "number": 550,
+        "name": "Basculin",
+        "classification": "Hostile Pok\u00e9mon"
+    },
+    {
+        "number": 550,
+        "name": "BasculinWhite-Striped Form",
+        "classification": "Mellow Pok\u00e9mon"
+    },
+    {
+        "number": 551,
+        "name": "Sandile",
+        "classification": "Desert Croc Pok\u00e9mon"
+    },
+    {
+        "number": 552,
+        "name": "Krokorok",
+        "classification": "Desert Croc Pok\u00e9mon"
+    },
+    {
+        "number": 553,
+        "name": "Krookodile",
+        "classification": "Intimidation Pok\u00e9mon"
+    },
+    {
+        "number": 554,
+        "name": "Darumaka",
+        "classification": "Zen Charm Pok\u00e9mon"
+    },
+    {
+        "number": 555,
+        "name": "Darmanitan",
+        "classification": "Blazing Pok\u00e9mon"
+    },
+    {
+        "number": 555,
+        "name": "DarmanitanGalarian Form",
+        "classification": "Zen Charm Pok\u00e9mon"
+    },
+    {
+        "number": 555,
+        "name": "DarmanitanGalarian FormZen Mode",
+        "classification": "Blazing Pok\u00e9mon"
+    },
+    {
+        "number": 556,
+        "name": "Maractus",
+        "classification": "Cactus Pok\u00e9mon"
+    },
+    {
+        "number": 557,
+        "name": "Dwebble",
+        "classification": "Rock Inn Pok\u00e9mon"
+    },
+    {
+        "number": 558,
+        "name": "Crustle",
+        "classification": "Stone Home Pok\u00e9mon"
+    },
+    {
+        "number": 559,
+        "name": "Scraggy",
+        "classification": "Shedding Pok\u00e9mon"
+    },
+    {
+        "number": 560,
+        "name": "Scrafty",
+        "classification": "Hoodlum Pok\u00e9mon"
+    },
+    {
+        "number": 561,
+        "name": "Sigilyph",
+        "classification": "Avianoid Pok\u00e9mon"
+    },
+    {
+        "number": 562,
+        "name": "Yamask",
+        "classification": "Spirit Pok\u00e9mon"
+    },
+    {
+        "number": 563,
+        "name": "Cofagrigus",
+        "classification": "Coffin Pok\u00e9mon"
+    },
+    {
+        "number": 564,
+        "name": "Tirtouga",
+        "classification": "Prototurtle Pok\u00e9mon"
+    },
+    {
+        "number": 565,
+        "name": "Carracosta",
+        "classification": "Prototurtle Pok\u00e9mon"
+    },
+    {
+        "number": 566,
+        "name": "Archen",
+        "classification": "First Bird Pok\u00e9mon"
+    },
+    {
+        "number": 567,
+        "name": "Archeops",
+        "classification": "First Bird Pok\u00e9mon"
+    },
+    {
+        "number": 568,
+        "name": "Trubbish",
+        "classification": "Trash Bag Pok\u00e9mon"
+    },
+    {
+        "number": 569,
+        "name": "Garbodor",
+        "classification": "Trash Heap Pok\u00e9mon"
+    },
+    {
+        "number": 570,
+        "name": "Zorua",
+        "classification": "Tricky Fox Pok\u00e9mon"
+    },
+    {
+        "number": 570,
+        "name": "ZoruaHisuian Form",
+        "classification": "Spiteful Fox Pok\u00e9mon"
+    },
+    {
+        "number": 571,
+        "name": "Zoroark",
+        "classification": "Illusion Fox Pok\u00e9mon"
+    },
+    {
+        "number": 571,
+        "name": "ZoroarkHisuian Form",
+        "classification": "Baneful Fox Pok\u00e9mon"
+    },
+    {
+        "number": 572,
+        "name": "Minccino",
+        "classification": "Chinchilla Pok\u00e9mon"
+    },
+    {
+        "number": 573,
+        "name": "Cinccino",
+        "classification": "Scarf Pok\u00e9mon"
+    },
+    {
+        "number": 574,
+        "name": "Gothita",
+        "classification": "Fixation Pok\u00e9mon"
+    },
+    {
+        "number": 575,
+        "name": "Gothorita",
+        "classification": "Manipulate Pok\u00e9mon"
+    },
+    {
+        "number": 576,
+        "name": "Gothitelle",
+        "classification": "Astral Body Pok\u00e9mon"
+    },
+    {
+        "number": 577,
+        "name": "Solosis",
+        "classification": "Cell Pok\u00e9mon"
+    },
+    {
+        "number": 578,
+        "name": "Duosion",
+        "classification": "Mitosis Pok\u00e9mon"
+    },
+    {
+        "number": 579,
+        "name": "Reuniclus",
+        "classification": "Multiplying Pok\u00e9mon"
+    },
+    {
+        "number": 580,
+        "name": "Ducklett",
+        "classification": "Water Bird Pok\u00e9mon"
+    },
+    {
+        "number": 581,
+        "name": "Swanna",
+        "classification": "White Bird Pok\u00e9mon"
+    },
+    {
+        "number": 582,
+        "name": "Vanillite",
+        "classification": "Fresh Snow Pok\u00e9mon"
+    },
+    {
+        "number": 583,
+        "name": "Vanillish",
+        "classification": "Icy Snow Pok\u00e9mon"
+    },
+    {
+        "number": 584,
+        "name": "Vanilluxe",
+        "classification": "Snowstorm Pok\u00e9mon"
+    },
+    {
+        "number": 585,
+        "name": "Deerling",
+        "classification": "Season Pok\u00e9mon"
+    },
+    {
+        "number": 586,
+        "name": "Sawsbuck",
+        "classification": "Season Pok\u00e9mon"
+    },
+    {
+        "number": 587,
+        "name": "Emolga",
+        "classification": "Sky Squirrel Pok\u00e9mon"
+    },
+    {
+        "number": 588,
+        "name": "Karrablast",
+        "classification": "Clamping Pok\u00e9mon"
+    },
+    {
+        "number": 589,
+        "name": "Escavalier",
+        "classification": "Cavalry Pok\u00e9mon"
+    },
+    {
+        "number": 590,
+        "name": "Foongus",
+        "classification": "Mushroom Pok\u00e9mon"
+    },
+    {
+        "number": 591,
+        "name": "Amoonguss",
+        "classification": "Mushroom Pok\u00e9mon"
+    },
+    {
+        "number": 592,
+        "name": "Frillish",
+        "classification": "Floating Pok\u00e9mon"
+    },
+    {
+        "number": 593,
+        "name": "Jellicent",
+        "classification": "Floating Pok\u00e9mon"
+    },
+    {
+        "number": 594,
+        "name": "Alomomola",
+        "classification": "Caring Pok\u00e9mon"
+    },
+    {
+        "number": 595,
+        "name": "Joltik",
+        "classification": "Attaching Pok\u00e9mon"
+    },
+    {
+        "number": 596,
+        "name": "Galvantula",
+        "classification": "EleSpider Pok\u00e9mon"
+    },
+    {
+        "number": 597,
+        "name": "Ferroseed",
+        "classification": "Thorn Seed Pok\u00e9mon"
+    },
+    {
+        "number": 598,
+        "name": "Ferrothorn",
+        "classification": "Thorn Pod Pok\u00e9mon"
+    },
+    {
+        "number": 599,
+        "name": "Klink",
+        "classification": "Gear Pok\u00e9mon"
+    },
+    {
+        "number": 600,
+        "name": "Klang",
+        "classification": "Gear Pok\u00e9mon"
+    },
+    {
+        "number": 601,
+        "name": "Klinklang",
+        "classification": "Gear Pok\u00e9mon"
+    },
+    {
+        "number": 602,
+        "name": "Tynamo",
+        "classification": "EleFish Pok\u00e9mon"
+    },
+    {
+        "number": 603,
+        "name": "Eelektrik",
+        "classification": "EleFish Pok\u00e9mon"
+    },
+    {
+        "number": 604,
+        "name": "Eelektross",
+        "classification": "EleFish Pok\u00e9mon"
+    },
+    {
+        "number": 605,
+        "name": "Elgyem",
+        "classification": "Cerebral Pok\u00e9mon"
+    },
+    {
+        "number": 606,
+        "name": "Beheeyem",
+        "classification": "Cerebral Pok\u00e9mon"
+    },
+    {
+        "number": 607,
+        "name": "Litwick",
+        "classification": "Candle Pok\u00e9mon"
+    },
+    {
+        "number": 608,
+        "name": "Lampent",
+        "classification": "Lamp Pok\u00e9mon"
+    },
+    {
+        "number": 609,
+        "name": "Chandelure",
+        "classification": "Luring Pok\u00e9mon"
+    },
+    {
+        "number": 610,
+        "name": "Axew",
+        "classification": "Tusk Pok\u00e9mon"
+    },
+    {
+        "number": 611,
+        "name": "Fraxure",
+        "classification": "Axe Jaw Pok\u00e9mon"
+    },
+    {
+        "number": 612,
+        "name": "Haxorus",
+        "classification": "Axe Jaw Pok\u00e9mon"
+    },
+    {
+        "number": 613,
+        "name": "Cubchoo",
+        "classification": "Chill Pok\u00e9mon"
+    },
+    {
+        "number": 614,
+        "name": "Beartic",
+        "classification": "Freezing Pok\u00e9mon"
+    },
+    {
+        "number": 615,
+        "name": "Cryogonal",
+        "classification": "Crystallizing Pok\u00e9mon"
+    },
+    {
+        "number": 616,
+        "name": "Shelmet",
+        "classification": "Snail Pok\u00e9mon"
+    },
+    {
+        "number": 617,
+        "name": "Accelgor",
+        "classification": "Shell Out Pok\u00e9mon"
+    },
+    {
+        "number": 618,
+        "name": "Stunfisk",
+        "classification": "Trap Pok\u00e9mon"
+    },
+    {
+        "number": 619,
+        "name": "Mienfoo",
+        "classification": "Martial Arts Pok\u00e9mon"
+    },
+    {
+        "number": 620,
+        "name": "Mienshao",
+        "classification": "Martial Arts Pok\u00e9mon"
+    },
+    {
+        "number": 621,
+        "name": "Druddigon",
+        "classification": "Cave Pok\u00e9mon"
+    },
+    {
+        "number": 622,
+        "name": "Golett",
+        "classification": "Automaton Pok\u00e9mon"
+    },
+    {
+        "number": 623,
+        "name": "Golurk",
+        "classification": "Automaton Pok\u00e9mon"
+    },
+    {
+        "number": 624,
+        "name": "Pawniard",
+        "classification": "Sharp Blade Pok\u00e9mon"
+    },
+    {
+        "number": 625,
+        "name": "Bisharp",
+        "classification": "Sword Blade Pok\u00e9mon"
+    },
+    {
+        "number": 626,
+        "name": "Bouffalant",
+        "classification": "Bash Buffalo Pok\u00e9mon"
+    },
+    {
+        "number": 627,
+        "name": "Rufflet",
+        "classification": "Eaglet Pok\u00e9mon"
+    },
+    {
+        "number": 628,
+        "name": "Braviary",
+        "classification": "Valiant Pok\u00e9mon"
+    },
+    {
+        "number": 628,
+        "name": "BraviaryHisuian Form",
+        "classification": "Battle Cry Pok\u00e9mon"
+    },
+    {
+        "number": 629,
+        "name": "Vullaby",
+        "classification": "Diapered Pok\u00e9mon"
+    },
+    {
+        "number": 630,
+        "name": "Mandibuzz",
+        "classification": "Bone Vulture Pok\u00e9mon"
+    },
+    {
+        "number": 631,
+        "name": "Heatmor",
+        "classification": "Anteater Pok\u00e9mon"
+    },
+    {
+        "number": 632,
+        "name": "Durant",
+        "classification": "Iron Ant Pok\u00e9mon"
+    },
+    {
+        "number": 633,
+        "name": "Deino",
+        "classification": "Irate Pok\u00e9mon"
+    },
+    {
+        "number": 634,
+        "name": "Zweilous",
+        "classification": "Hostile Pok\u00e9mon"
+    },
+    {
+        "number": 635,
+        "name": "Hydreigon",
+        "classification": "Brutal Pok\u00e9mon"
+    },
+    {
+        "number": 636,
+        "name": "Larvesta",
+        "classification": "Torch Pok\u00e9mon"
+    },
+    {
+        "number": 637,
+        "name": "Volcarona",
+        "classification": "Sun Pok\u00e9mon"
+    },
+    {
+        "number": 638,
+        "name": "Cobalion",
+        "classification": "Iron Will Pok\u00e9mon"
+    },
+    {
+        "number": 639,
+        "name": "Terrakion",
+        "classification": "Cavern Pok\u00e9mon"
+    },
+    {
+        "number": 640,
+        "name": "Virizion",
+        "classification": "Grassland Pok\u00e9mon"
+    },
+    {
+        "number": 641,
+        "name": "Tornadus",
+        "classification": "Cyclone Pok\u00e9mon"
+    },
+    {
+        "number": 642,
+        "name": "Thundurus",
+        "classification": "Bolt Strike Pok\u00e9mon"
+    },
+    {
+        "number": 643,
+        "name": "Reshiram",
+        "classification": "Vast White Pok\u00e9mon"
+    },
+    {
+        "number": 644,
+        "name": "Zekrom",
+        "classification": "Deep Black Pok\u00e9mon"
+    },
+    {
+        "number": 645,
+        "name": "Landorus",
+        "classification": "Abundance Pok\u00e9mon"
+    },
+    {
+        "number": 646,
+        "name": "Kyurem",
+        "classification": "Boundary Pok\u00e9mon"
+    },
+    {
+        "number": 647,
+        "name": "Keldeo",
+        "classification": "Colt Pok\u00e9mon"
+    },
+    {
+        "number": 648,
+        "name": "Meloetta",
+        "classification": "Melody Pok\u00e9mon"
+    },
+    {
+        "number": 649,
+        "name": "Genesect",
+        "classification": "Paleozoic Pok\u00e9mon"
+    },
+    {
+        "number": 650,
+        "name": "Chespin",
+        "classification": "Spiny Nut Pok\u00e9mon"
+    },
+    {
+        "number": 651,
+        "name": "Quilladin",
+        "classification": "Spiny Armor Pok\u00e9mon"
+    },
+    {
+        "number": 652,
+        "name": "Chesnaught",
+        "classification": "Spiny Armor Pok\u00e9mon"
+    },
+    {
+        "number": 653,
+        "name": "Fennekin",
+        "classification": "Fox Pok\u00e9mon"
+    },
+    {
+        "number": 654,
+        "name": "Braixen",
+        "classification": "Fox Pok\u00e9mon"
+    },
+    {
+        "number": 655,
+        "name": "Delphox",
+        "classification": "Fox Pok\u00e9mon"
+    },
+    {
+        "number": 656,
+        "name": "Froakie",
+        "classification": "Bubble Frog Pok\u00e9mon"
+    },
+    {
+        "number": 657,
+        "name": "Frogadier",
+        "classification": "Bubble Frog Pok\u00e9mon"
+    },
+    {
+        "number": 658,
+        "name": "Greninja",
+        "classification": "Ninja Pok\u00e9mon"
+    },
+    {
+        "number": 659,
+        "name": "Bunnelby",
+        "classification": "Digging Pok\u00e9mon"
+    },
+    {
+        "number": 660,
+        "name": "Diggersby",
+        "classification": "Digging Pok\u00e9mon"
+    },
+    {
+        "number": 661,
+        "name": "Fletchling",
+        "classification": "Tiny Robin Pok\u00e9mon"
+    },
+    {
+        "number": 662,
+        "name": "Fletchinder",
+        "classification": "Ember Pok\u00e9mon"
+    },
+    {
+        "number": 663,
+        "name": "Talonflame",
+        "classification": "Scorching Pok\u00e9mon"
+    },
+    {
+        "number": 664,
+        "name": "Scatterbug",
+        "classification": "Scatterdust Pok\u00e9mon"
+    },
+    {
+        "number": 665,
+        "name": "Spewpa",
+        "classification": "Scatterdust Pok\u00e9mon"
+    },
+    {
+        "number": 666,
+        "name": "Vivillon",
+        "classification": "Scale Pok\u00e9mon"
+    },
+    {
+        "number": 667,
+        "name": "Litleo",
+        "classification": "Lion Cub Pok\u00e9mon"
+    },
+    {
+        "number": 668,
+        "name": "Pyroar",
+        "classification": "Royal Pok\u00e9mon"
+    },
+    {
+        "number": 669,
+        "name": "Flab\u00e9b\u00e9",
+        "classification": "Single Bloom Pok\u00e9mon"
+    },
+    {
+        "number": 670,
+        "name": "Floette",
+        "classification": "Single Bloom Pok\u00e9mon"
+    },
+    {
+        "number": 671,
+        "name": "Florges",
+        "classification": "Garden Pok\u00e9mon"
+    },
+    {
+        "number": 672,
+        "name": "Skiddo",
+        "classification": "Mount Pok\u00e9mon"
+    },
+    {
+        "number": 673,
+        "name": "Gogoat",
+        "classification": "Mount Pok\u00e9mon"
+    },
+    {
+        "number": 674,
+        "name": "Pancham",
+        "classification": "Playful Pok\u00e9mon"
+    },
+    {
+        "number": 675,
+        "name": "Pangoro",
+        "classification": "Daunting Pok\u00e9mon"
+    },
+    {
+        "number": 676,
+        "name": "Furfrou",
+        "classification": "Poodle Pok\u00e9mon"
+    },
+    {
+        "number": 677,
+        "name": "Espurr",
+        "classification": "Restraint Pok\u00e9mon"
+    },
+    {
+        "number": 678,
+        "name": "Meowstic",
+        "classification": "Constraint Pok\u00e9mon"
+    },
+    {
+        "number": 679,
+        "name": "Honedge",
+        "classification": "Sword Pok\u00e9mon"
+    },
+    {
+        "number": 680,
+        "name": "Doublade",
+        "classification": "Sword Pok\u00e9mon"
+    },
+    {
+        "number": 681,
+        "name": "Aegislash",
+        "classification": "Royal Sword Pok\u00e9mon"
+    },
+    {
+        "number": 682,
+        "name": "Spritzee",
+        "classification": "Perfume Pok\u00e9mon"
+    },
+    {
+        "number": 683,
+        "name": "Aromatisse",
+        "classification": "Fragrance Pok\u00e9mon"
+    },
+    {
+        "number": 684,
+        "name": "Swirlix",
+        "classification": "Cotton Candy Pok\u00e9mon"
+    },
+    {
+        "number": 685,
+        "name": "Slurpuff",
+        "classification": "Meringue Pok\u00e9mon"
+    },
+    {
+        "number": 686,
+        "name": "Inkay",
+        "classification": "Revolving Pok\u00e9mon"
+    },
+    {
+        "number": 687,
+        "name": "Malamar",
+        "classification": "Overturning Pok\u00e9mon"
+    },
+    {
+        "number": 688,
+        "name": "Binacle",
+        "classification": "Two-Handed Pok\u00e9mon"
+    },
+    {
+        "number": 689,
+        "name": "Barbaracle",
+        "classification": "Collective Pok\u00e9mon"
+    },
+    {
+        "number": 690,
+        "name": "Skrelp",
+        "classification": "Mock Kelp Pok\u00e9mon"
+    },
+    {
+        "number": 691,
+        "name": "Dragalge",
+        "classification": "Mock Kelp Pok\u00e9mon"
+    },
+    {
+        "number": 692,
+        "name": "Clauncher",
+        "classification": "Water Gun Pok\u00e9mon"
+    },
+    {
+        "number": 693,
+        "name": "Clawitzer",
+        "classification": "Howitzer Pok\u00e9mon"
+    },
+    {
+        "number": 694,
+        "name": "Helioptile",
+        "classification": "Generator Pok\u00e9mon"
+    },
+    {
+        "number": 695,
+        "name": "Heliolisk",
+        "classification": "Generator Pok\u00e9mon"
+    },
+    {
+        "number": 696,
+        "name": "Tyrunt",
+        "classification": "Royal Heir Pok\u00e9mon"
+    },
+    {
+        "number": 697,
+        "name": "Tyrantrum",
+        "classification": "Despot Pok\u00e9mon"
+    },
+    {
+        "number": 698,
+        "name": "Amaura",
+        "classification": "Tundra Pok\u00e9mon"
+    },
+    {
+        "number": 699,
+        "name": "Aurorus",
+        "classification": "Tundra Pok\u00e9mon"
+    },
+    {
+        "number": 700,
+        "name": "Sylveon",
+        "classification": "Intertwining Pok\u00e9mon"
+    },
+    {
+        "number": 701,
+        "name": "Hawlucha",
+        "classification": "Wrestling Pok\u00e9mon"
+    },
+    {
+        "number": 702,
+        "name": "Dedenne",
+        "classification": "Antenna Pok\u00e9mon"
+    },
+    {
+        "number": 703,
+        "name": "Carbink",
+        "classification": "Jewel Pok\u00e9mon"
+    },
+    {
+        "number": 704,
+        "name": "Goomy",
+        "classification": "Soft Tissue Pok\u00e9mon"
+    },
+    {
+        "number": 705,
+        "name": "Sliggoo",
+        "classification": "Soft Tissue Pok\u00e9mon"
+    },
+    {
+        "number": 705,
+        "name": "SliggooHisuian Form",
+        "classification": "Snail Pok\u00e9mon"
+    },
+    {
+        "number": 706,
+        "name": "Goodra",
+        "classification": "Dragon Pok\u00e9mon"
+    },
+    {
+        "number": 706,
+        "name": "GoodraHisuian Form",
+        "classification": "Shell Bunker Pok\u00e9mon"
+    },
+    {
+        "number": 707,
+        "name": "Klefki",
+        "classification": "Key Ring Pok\u00e9mon"
+    },
+    {
+        "number": 708,
+        "name": "Phantump",
+        "classification": "Stump Pok\u00e9mon"
+    },
+    {
+        "number": 709,
+        "name": "Trevenant",
+        "classification": "Elder Tree Pok\u00e9mon"
+    },
+    {
+        "number": 710,
+        "name": "Pumpkaboo",
+        "classification": "Pumpkin Pok\u00e9mon"
+    },
+    {
+        "number": 711,
+        "name": "Gourgeist",
+        "classification": "Pumpkin Pok\u00e9mon"
+    },
+    {
+        "number": 712,
+        "name": "Bergmite",
+        "classification": "Ice Chunk Pok\u00e9mon"
+    },
+    {
+        "number": 713,
+        "name": "Avalugg",
+        "classification": "Iceberg Pok\u00e9mon"
+    },
+    {
+        "number": 714,
+        "name": "Noibat",
+        "classification": "Sound Wave Pok\u00e9mon"
+    },
+    {
+        "number": 715,
+        "name": "Noivern",
+        "classification": "Sound Wave Pok\u00e9mon"
+    },
+    {
+        "number": 716,
+        "name": "Xerneas",
+        "classification": "Life Pok\u00e9mon"
+    },
+    {
+        "number": 717,
+        "name": "Yveltal",
+        "classification": "Destruction Pok\u00e9mon"
+    },
+    {
+        "number": 718,
+        "name": "Zygarde",
+        "classification": "Order Pok\u00e9mon"
+    },
+    {
+        "number": 719,
+        "name": "Diancie",
+        "classification": "Jewel Pok\u00e9mon"
+    },
+    {
+        "number": 720,
+        "name": "HoopaHoopa Confined",
+        "classification": "Mischief Pok\u00e9mon"
+    },
+    {
+        "number": 720,
+        "name": "HoopaHoopa Unbound",
+        "classification": "Djinn Pok\u00e9mon"
+    },
+    {
+        "number": 721,
+        "name": "Volcanion",
+        "classification": "Steam Pok\u00e9mon"
+    },
+    {
+        "number": 722,
+        "name": "Rowlet",
+        "classification": "Grass Quill Pok\u00e9mon"
+    },
+    {
+        "number": 723,
+        "name": "Dartrix",
+        "classification": "Blade Quill Pok\u00e9mon"
+    },
+    {
+        "number": 724,
+        "name": "Decidueye",
+        "classification": "Arrow Quill Pok\u00e9mon"
+    },
+    {
+        "number": 725,
+        "name": "Litten",
+        "classification": "Fire Cat Pok\u00e9mon"
+    },
+    {
+        "number": 726,
+        "name": "Torracat",
+        "classification": "Fire Cat Pok\u00e9mon"
+    },
+    {
+        "number": 727,
+        "name": "Incineroar",
+        "classification": "Heel Pok\u00e9mon"
+    },
+    {
+        "number": 728,
+        "name": "Popplio",
+        "classification": "Sea Lion Pok\u00e9mon"
+    },
+    {
+        "number": 729,
+        "name": "Brionne",
+        "classification": "Pop Star Pok\u00e9mon"
+    },
+    {
+        "number": 730,
+        "name": "Primarina",
+        "classification": "Soloist Pok\u00e9mon"
+    },
+    {
+        "number": 731,
+        "name": "Pikipek",
+        "classification": "Woodpecker Pok\u00e9mon"
+    },
+    {
+        "number": 732,
+        "name": "Trumbeak",
+        "classification": "Bugle Beak Pok\u00e9mon"
+    },
+    {
+        "number": 733,
+        "name": "Toucannon",
+        "classification": "Cannon Pok\u00e9mon"
+    },
+    {
+        "number": 734,
+        "name": "Yungoos",
+        "classification": "Loitering Pok\u00e9mon"
+    },
+    {
+        "number": 735,
+        "name": "Gumshoos",
+        "classification": "Stakeout Pok\u00e9mon"
+    },
+    {
+        "number": 736,
+        "name": "Grubbin",
+        "classification": "Larva Pok\u00e9mon"
+    },
+    {
+        "number": 737,
+        "name": "Charjabug",
+        "classification": "Battery Pok\u00e9mon"
+    },
+    {
+        "number": 738,
+        "name": "Vikavolt",
+        "classification": "Stag Beetle Pok\u00e9mon"
+    },
+    {
+        "number": 739,
+        "name": "Crabrawler",
+        "classification": "Boxing Pok\u00e9mon"
+    },
+    {
+        "number": 740,
+        "name": "Crabominable",
+        "classification": "Woolly Crab Pok\u00e9mon"
+    },
+    {
+        "number": 741,
+        "name": "Oricorio",
+        "classification": "Dancing Pok\u00e9mon"
+    },
+    {
+        "number": 742,
+        "name": "Cutiefly",
+        "classification": "Bee Fly Pok\u00e9mon"
+    },
+    {
+        "number": 743,
+        "name": "Ribombee",
+        "classification": "Bee Fly Pok\u00e9mon"
+    },
+    {
+        "number": 744,
+        "name": "Rockruff",
+        "classification": "Puppy Pok\u00e9mon"
+    },
+    {
+        "number": 745,
+        "name": "Lycanroc",
+        "classification": "Wolf Pok\u00e9mon"
+    },
+    {
+        "number": 746,
+        "name": "Wishiwashi",
+        "classification": "Small Fry Pok\u00e9mon"
+    },
+    {
+        "number": 747,
+        "name": "Mareanie",
+        "classification": "Brutal Star Pok\u00e9mon"
+    },
+    {
+        "number": 748,
+        "name": "Toxapex",
+        "classification": "Brutal Star Pok\u00e9mon"
+    },
+    {
+        "number": 749,
+        "name": "Mudbray",
+        "classification": "Donkey Pok\u00e9mon"
+    },
+    {
+        "number": 750,
+        "name": "Mudsdale",
+        "classification": "Draft Horse Pok\u00e9mon"
+    },
+    {
+        "number": 751,
+        "name": "Dewpider",
+        "classification": "Water Bubble Pok\u00e9mon"
+    },
+    {
+        "number": 752,
+        "name": "Araquanid",
+        "classification": "Water Bubble Pok\u00e9mon"
+    },
+    {
+        "number": 753,
+        "name": "Fomantis",
+        "classification": "Sickle Grass Pok\u00e9mon"
+    },
+    {
+        "number": 754,
+        "name": "Lurantis",
+        "classification": "Bloom Sickle Pok\u00e9mon"
+    },
+    {
+        "number": 755,
+        "name": "Morelull",
+        "classification": "Illuminating Pok\u00e9mon"
+    },
+    {
+        "number": 756,
+        "name": "Shiinotic",
+        "classification": "Illuminating Pok\u00e9mon"
+    },
+    {
+        "number": 757,
+        "name": "Salandit",
+        "classification": "Toxic Lizard Pok\u00e9mon"
+    },
+    {
+        "number": 758,
+        "name": "Salazzle",
+        "classification": "Toxic Lizard Pok\u00e9mon"
+    },
+    {
+        "number": 759,
+        "name": "Stufful",
+        "classification": "Flailing Pok\u00e9mon"
+    },
+    {
+        "number": 760,
+        "name": "Bewear",
+        "classification": "Strong Arm Pok\u00e9mon"
+    },
+    {
+        "number": 761,
+        "name": "Bounsweet",
+        "classification": "Fruit Pok\u00e9mon"
+    },
+    {
+        "number": 762,
+        "name": "Steenee",
+        "classification": "Fruit Pok\u00e9mon"
+    },
+    {
+        "number": 763,
+        "name": "Tsareena",
+        "classification": "Fruit Pok\u00e9mon"
+    },
+    {
+        "number": 764,
+        "name": "Comfey",
+        "classification": "Posy Picker Pok\u00e9mon"
+    },
+    {
+        "number": 765,
+        "name": "Oranguru",
+        "classification": "Sage Pok\u00e9mon"
+    },
+    {
+        "number": 766,
+        "name": "Passimian",
+        "classification": "Teamwork Pok\u00e9mon"
+    },
+    {
+        "number": 767,
+        "name": "Wimpod",
+        "classification": "Turn Tail Pok\u00e9mon"
+    },
+    {
+        "number": 768,
+        "name": "Golisopod",
+        "classification": "Hard Scale Pok\u00e9mon"
+    },
+    {
+        "number": 769,
+        "name": "Sandygast",
+        "classification": "Sand Heap Pok\u00e9mon"
+    },
+    {
+        "number": 770,
+        "name": "Palossand",
+        "classification": "Sand Castle Pok\u00e9mon"
+    },
+    {
+        "number": 771,
+        "name": "Pyukumuku",
+        "classification": "Sea Cucumber Pok\u00e9mon"
+    },
+    {
+        "number": 772,
+        "name": "Type: Null",
+        "classification": "Synthetic Pok\u00e9mon"
+    },
+    {
+        "number": 773,
+        "name": "Silvally",
+        "classification": "Synthetic Pok\u00e9mon"
+    },
+    {
+        "number": 774,
+        "name": "Minior",
+        "classification": "Meteor Pok\u00e9mon"
+    },
+    {
+        "number": 775,
+        "name": "Komala",
+        "classification": "Drowsing Pok\u00e9mon"
+    },
+    {
+        "number": 776,
+        "name": "Turtonator",
+        "classification": "Blast Turtle Pok\u00e9mon"
+    },
+    {
+        "number": 777,
+        "name": "Togedemaru",
+        "classification": "Roly-Poly Pok\u00e9mon"
+    },
+    {
+        "number": 778,
+        "name": "Mimikyu",
+        "classification": "Disguise Pok\u00e9mon"
+    },
+    {
+        "number": 779,
+        "name": "Bruxish",
+        "classification": "Gnash Teeth Pok\u00e9mon"
+    },
+    {
+        "number": 780,
+        "name": "Drampa",
+        "classification": "Placid Pok\u00e9mon"
+    },
+    {
+        "number": 781,
+        "name": "Dhelmise",
+        "classification": "Sea Creeper Pok\u00e9mon"
+    },
+    {
+        "number": 782,
+        "name": "Jangmo-o",
+        "classification": "Scaly Pok\u00e9mon"
+    },
+    {
+        "number": 783,
+        "name": "Hakamo-o",
+        "classification": "Scaly Pok\u00e9mon"
+    },
+    {
+        "number": 784,
+        "name": "Kommo-o",
+        "classification": "Scaly Pok\u00e9mon"
+    },
+    {
+        "number": 785,
+        "name": "Tapu Koko",
+        "classification": "Land Spirit Pok\u00e9mon"
+    },
+    {
+        "number": 786,
+        "name": "Tapu Lele",
+        "classification": "Land Spirit Pok\u00e9mon"
+    },
+    {
+        "number": 787,
+        "name": "Tapu Bulu",
+        "classification": "Land Spirit Pok\u00e9mon"
+    },
+    {
+        "number": 788,
+        "name": "Tapu Fini",
+        "classification": "Land Spirit Pok\u00e9mon"
+    },
+    {
+        "number": 789,
+        "name": "Cosmog",
+        "classification": "Nebula Pok\u00e9mon"
+    },
+    {
+        "number": 790,
+        "name": "Cosmoem",
+        "classification": "Protostar Pok\u00e9mon"
+    },
+    {
+        "number": 791,
+        "name": "Solgaleo",
+        "classification": "Sunne Pok\u00e9mon"
+    },
+    {
+        "number": 792,
+        "name": "Lunala",
+        "classification": "Moone Pok\u00e9mon"
+    },
+    {
+        "number": 793,
+        "name": "Nihilego",
+        "classification": "Parasite Pok\u00e9mon"
+    },
+    {
+        "number": 794,
+        "name": "Buzzwole",
+        "classification": "Swollen Pok\u00e9mon"
+    },
+    {
+        "number": 795,
+        "name": "Pheromosa",
+        "classification": "Lissome Pok\u00e9mon"
+    },
+    {
+        "number": 796,
+        "name": "Xurkitree",
+        "classification": "Glowing Pok\u00e9mon"
+    },
+    {
+        "number": 797,
+        "name": "Celesteela",
+        "classification": "Launch Pok\u00e9mon"
+    },
+    {
+        "number": 798,
+        "name": "Kartana",
+        "classification": "Drawn Sword Pok\u00e9mon"
+    },
+    {
+        "number": 799,
+        "name": "Guzzlord",
+        "classification": "Junkivore Pok\u00e9mon"
+    },
+    {
+        "number": 800,
+        "name": "Necrozma",
+        "classification": "Prism Pok\u00e9mon"
+    },
+    {
+        "number": 801,
+        "name": "Magearna",
+        "classification": "Artificial Pok\u00e9mon"
+    },
+    {
+        "number": 802,
+        "name": "Marshadow",
+        "classification": "Gloomdweller Pok\u00e9mon"
+    },
+    {
+        "number": 803,
+        "name": "Poipole",
+        "classification": "Poison Pin Pok\u00e9mon"
+    },
+    {
+        "number": 804,
+        "name": "Naganadel",
+        "classification": "Poison Pin Pok\u00e9mon"
+    },
+    {
+        "number": 805,
+        "name": "Stakataka",
+        "classification": "Rampart Pok\u00e9mon"
+    },
+    {
+        "number": 806,
+        "name": "Blacephalon",
+        "classification": "Fireworks Pok\u00e9mon"
+    },
+    {
+        "number": 807,
+        "name": "Zeraora",
+        "classification": "Thunderclap Pok\u00e9mon"
+    },
+    {
+        "number": 808,
+        "name": "Meltan",
+        "classification": "Hex Nut Pok\u00e9mon"
+    },
+    {
+        "number": 809,
+        "name": "Melmetal",
+        "classification": "Hex Nut Pok\u00e9mon"
+    },
+    {
+        "number": 810,
+        "name": "Grookey",
+        "classification": "Chimp Pok\u00e9mon"
+    },
+    {
+        "number": 811,
+        "name": "Thwackey",
+        "classification": "Beat Pok\u00e9mon"
+    },
+    {
+        "number": 812,
+        "name": "Rillaboom",
+        "classification": "Drummer Pok\u00e9mon"
+    },
+    {
+        "number": 813,
+        "name": "Scorbunny",
+        "classification": "Rabbit Pok\u00e9mon"
+    },
+    {
+        "number": 814,
+        "name": "Raboot",
+        "classification": "Rabbit Pok\u00e9mon"
+    },
+    {
+        "number": 815,
+        "name": "Cinderace",
+        "classification": "Striker Pok\u00e9mon"
+    },
+    {
+        "number": 816,
+        "name": "Sobble",
+        "classification": "Water Lizard Pok\u00e9mon"
+    },
+    {
+        "number": 817,
+        "name": "Drizzile",
+        "classification": "Water Lizard Pok\u00e9mon"
+    },
+    {
+        "number": 818,
+        "name": "Inteleon",
+        "classification": "Secret Agent Pok\u00e9mon"
+    },
+    {
+        "number": 819,
+        "name": "Skwovet",
+        "classification": "Cheeky Pok\u00e9mon"
+    },
+    {
+        "number": 820,
+        "name": "Greedent",
+        "classification": "Greedy Pok\u00e9mon"
+    },
+    {
+        "number": 821,
+        "name": "Rookidee",
+        "classification": "Tiny Bird Pok\u00e9mon"
+    },
+    {
+        "number": 822,
+        "name": "Corvisquire",
+        "classification": "Raven Pok\u00e9mon"
+    },
+    {
+        "number": 823,
+        "name": "Corviknight",
+        "classification": "Raven Pok\u00e9mon"
+    },
+    {
+        "number": 824,
+        "name": "Blipbug",
+        "classification": "Larva Pok\u00e9mon"
+    },
+    {
+        "number": 825,
+        "name": "Dottler",
+        "classification": "Radome Pok\u00e9mon"
+    },
+    {
+        "number": 826,
+        "name": "Orbeetle",
+        "classification": "Seven Spot Pok\u00e9mon"
+    },
+    {
+        "number": 827,
+        "name": "Nickit",
+        "classification": "Fox Pok\u00e9mon"
+    },
+    {
+        "number": 828,
+        "name": "Thievul",
+        "classification": "Fox Pok\u00e9mon"
+    },
+    {
+        "number": 829,
+        "name": "Gossifleur",
+        "classification": "Flowering Pok\u00e9mon"
+    },
+    {
+        "number": 830,
+        "name": "Eldegoss",
+        "classification": "Cotton Bloom Pok\u00e9mon"
+    },
+    {
+        "number": 831,
+        "name": "Wooloo",
+        "classification": "Sheep Pok\u00e9mon"
+    },
+    {
+        "number": 832,
+        "name": "Dubwool",
+        "classification": "Sheep Pok\u00e9mon"
+    },
+    {
+        "number": 833,
+        "name": "Chewtle",
+        "classification": "Snapping Pok\u00e9mon"
+    },
+    {
+        "number": 834,
+        "name": "Drednaw",
+        "classification": "Bite Pok\u00e9mon"
+    },
+    {
+        "number": 835,
+        "name": "Yamper",
+        "classification": "Puppy Pok\u00e9mon"
+    },
+    {
+        "number": 836,
+        "name": "Boltund",
+        "classification": "Dog Pok\u00e9mon"
+    },
+    {
+        "number": 837,
+        "name": "Rolycoly",
+        "classification": "Coal Pok\u00e9mon"
+    },
+    {
+        "number": 838,
+        "name": "Carkol",
+        "classification": "Coal Pok\u00e9mon"
+    },
+    {
+        "number": 839,
+        "name": "Coalossal",
+        "classification": "Coal Pok\u00e9mon"
+    },
+    {
+        "number": 840,
+        "name": "Applin",
+        "classification": "Apple Core Pok\u00e9mon"
+    },
+    {
+        "number": 841,
+        "name": "Flapple",
+        "classification": "Apple Wing Pok\u00e9mon"
+    },
+    {
+        "number": 842,
+        "name": "Appletun",
+        "classification": "Apple Nectar Pok\u00e9mon"
+    },
+    {
+        "number": 843,
+        "name": "Silicobra",
+        "classification": "Sand Snake Pok\u00e9mon"
+    },
+    {
+        "number": 844,
+        "name": "Sandaconda",
+        "classification": "Sand Snake Pok\u00e9mon"
+    },
+    {
+        "number": 845,
+        "name": "Cramorant",
+        "classification": "Gulp Pok\u00e9mon"
+    },
+    {
+        "number": 846,
+        "name": "Arrokuda",
+        "classification": "Rush Pok\u00e9mon"
+    },
+    {
+        "number": 847,
+        "name": "Barraskewda",
+        "classification": "Skewer Pok\u00e9mon"
+    },
+    {
+        "number": 848,
+        "name": "Toxel",
+        "classification": "Baby Pok\u00e9mon"
+    },
+    {
+        "number": 849,
+        "name": "Toxtricity",
+        "classification": "Punk Pok\u00e9mon"
+    },
+    {
+        "number": 850,
+        "name": "Sizzlipede",
+        "classification": "Radiator Pok\u00e9mon"
+    },
+    {
+        "number": 851,
+        "name": "Centiskorch",
+        "classification": "Radiator Pok\u00e9mon"
+    },
+    {
+        "number": 852,
+        "name": "Clobbopus",
+        "classification": "Tantrum Pok\u00e9mon"
+    },
+    {
+        "number": 853,
+        "name": "Grapploct",
+        "classification": "Jujitsu Pok\u00e9mon"
+    },
+    {
+        "number": 854,
+        "name": "Sinistea",
+        "classification": "Black Tea Pok\u00e9mon"
+    },
+    {
+        "number": 855,
+        "name": "Polteageist",
+        "classification": "Black Tea Pok\u00e9mon"
+    },
+    {
+        "number": 856,
+        "name": "Hatenna",
+        "classification": "Calm Pok\u00e9mon"
+    },
+    {
+        "number": 857,
+        "name": "Hattrem",
+        "classification": "Serene Pok\u00e9mon"
+    },
+    {
+        "number": 858,
+        "name": "Hatterene",
+        "classification": "Silent Pok\u00e9mon"
+    },
+    {
+        "number": 859,
+        "name": "Impidimp",
+        "classification": "Wily Pok\u00e9mon"
+    },
+    {
+        "number": 860,
+        "name": "Morgrem",
+        "classification": "Devious Pok\u00e9mon"
+    },
+    {
+        "number": 861,
+        "name": "Grimmsnarl",
+        "classification": "Bulk Up Pok\u00e9mon"
+    },
+    {
+        "number": 862,
+        "name": "Obstagoon",
+        "classification": "Blocking Pok\u00e9mon"
+    },
+    {
+        "number": 863,
+        "name": "Perrserker",
+        "classification": "Viking Pok\u00e9mon"
+    },
+    {
+        "number": 864,
+        "name": "Cursola",
+        "classification": "Coral Pok\u00e9mon"
+    },
+    {
+        "number": 865,
+        "name": "Sirfetch'd",
+        "classification": "Wild Duck Pok\u00e9mon"
+    },
+    {
+        "number": 866,
+        "name": "Mr. Rime",
+        "classification": "Comedian Pok\u00e9mon"
+    },
+    {
+        "number": 867,
+        "name": "Runerigus",
+        "classification": "Grudge Pok\u00e9mon"
+    },
+    {
+        "number": 868,
+        "name": "Milcery",
+        "classification": "Cream Pok\u00e9mon"
+    },
+    {
+        "number": 869,
+        "name": "Alcremie",
+        "classification": "Cream Pok\u00e9mon"
+    },
+    {
+        "number": 870,
+        "name": "Falinks",
+        "classification": "Formation Pok\u00e9mon"
+    },
+    {
+        "number": 871,
+        "name": "Pincurchin",
+        "classification": "Sea Urchin Pok\u00e9mon"
+    },
+    {
+        "number": 872,
+        "name": "Snom",
+        "classification": "Worm Pok\u00e9mon"
+    },
+    {
+        "number": 873,
+        "name": "Frosmoth",
+        "classification": "Frost Moth Pok\u00e9mon"
+    },
+    {
+        "number": 874,
+        "name": "Stonjourner",
+        "classification": "Big Rock Pok\u00e9mon"
+    },
+    {
+        "number": 875,
+        "name": "Eiscue",
+        "classification": "Penguin Pok\u00e9mon"
+    },
+    {
+        "number": 876,
+        "name": "Indeedee",
+        "classification": "Emotion Pok\u00e9mon"
+    },
+    {
+        "number": 877,
+        "name": "Morpeko",
+        "classification": "Two-Sided Pok\u00e9mon"
+    },
+    {
+        "number": 878,
+        "name": "Cufant",
+        "classification": "Copperderm Pok\u00e9mon"
+    },
+    {
+        "number": 879,
+        "name": "Copperajah",
+        "classification": "Copperderm Pok\u00e9mon"
+    },
+    {
+        "number": 880,
+        "name": "Dracozolt",
+        "classification": "Fossil Pok\u00e9mon"
+    },
+    {
+        "number": 881,
+        "name": "Arctozolt",
+        "classification": "Fossil Pok\u00e9mon"
+    },
+    {
+        "number": 882,
+        "name": "Dracovish",
+        "classification": "Fossil Pok\u00e9mon"
+    },
+    {
+        "number": 883,
+        "name": "Arctovish",
+        "classification": "Fossil Pok\u00e9mon"
+    },
+    {
+        "number": 884,
+        "name": "Duraludon",
+        "classification": "Alloy Pok\u00e9mon"
+    },
+    {
+        "number": 885,
+        "name": "Dreepy",
+        "classification": "Lingering Pok\u00e9mon"
+    },
+    {
+        "number": 886,
+        "name": "Drakloak",
+        "classification": "Caretaker Pok\u00e9mon"
+    },
+    {
+        "number": 887,
+        "name": "Dragapult",
+        "classification": "Stealth Pok\u00e9mon"
+    },
+    {
+        "number": 888,
+        "name": "Zacian",
+        "classification": "Warrior Pok\u00e9mon"
+    },
+    {
+        "number": 889,
+        "name": "Zamazenta",
+        "classification": "Warrior Pok\u00e9mon"
+    },
+    {
+        "number": 890,
+        "name": "Eternatus",
+        "classification": "Gigantic Pok\u00e9mon"
+    },
+    {
+        "number": 891,
+        "name": "Kubfu",
+        "classification": "Wushu Pok\u00e9mon"
+    },
+    {
+        "number": 892,
+        "name": "Urshifu",
+        "classification": "Wushu Pok\u00e9mon"
+    },
+    {
+        "number": 893,
+        "name": "Zarude",
+        "classification": "Rogue Monkey Pok\u00e9mon"
+    },
+    {
+        "number": 894,
+        "name": "Regieleki",
+        "classification": "Electron Pok\u00e9mon"
+    },
+    {
+        "number": 895,
+        "name": "Regidrago",
+        "classification": "Dragon Orb Pok\u00e9mon"
+    },
+    {
+        "number": 896,
+        "name": "Glastrier",
+        "classification": "Wild Horse Pok\u00e9mon"
+    },
+    {
+        "number": 897,
+        "name": "Spectrier",
+        "classification": "Swift Horse Pok\u00e9mon"
+    },
+    {
+        "number": 898,
+        "name": "Calyrex",
+        "classification": "King Pok\u00e9mon"
+    },
+    {
+        "number": 898,
+        "name": "CalyrexIce Rider",
+        "classification": "High King Pok\u00e9mon"
+    },
+    {
+        "number": 898,
+        "name": "CalyrexShadow Rider",
+        "classification": "High King Pok\u00e9mon"
+    },
+    {
+        "number": 899,
+        "name": "Wyrdeer",
+        "classification": "Big Horn Pok\u00e9mon"
+    },
+    {
+        "number": 900,
+        "name": "Kleavor",
+        "classification": "Axe Pok\u00e9mon"
+    },
+    {
+        "number": 901,
+        "name": "Ursaluna",
+        "classification": "Peat Pok\u00e9mon"
+    },
+    {
+        "number": 902,
+        "name": "Basculegion",
+        "classification": "Big Fish Pok\u00e9mon"
+    },
+    {
+        "number": 903,
+        "name": "Sneasler",
+        "classification": "Free Climb Pok\u00e9mon"
+    },
+    {
+        "number": 904,
+        "name": "Overqwil",
+        "classification": "Pin Cluster Pok\u00e9mon"
+    },
+    {
+        "number": 905,
+        "name": "Enamorus",
+        "classification": "Love-Hate Pok\u00e9mon"
+    },
+    {
+        "number": 906,
+        "name": "Sprigatito",
+        "classification": "Grass Cat Pok\u00e9mon"
+    },
+    {
+        "number": 907,
+        "name": "Floragato",
+        "classification": "Grass Cat Pok\u00e9mon"
+    },
+    {
+        "number": 908,
+        "name": "Meowscarada",
+        "classification": "Magician Pok\u00e9mon"
+    },
+    {
+        "number": 909,
+        "name": "Fuecoco",
+        "classification": "Fire Croc Pok\u00e9mon"
+    },
+    {
+        "number": 910,
+        "name": "Crocalor",
+        "classification": "Fire Croc Pok\u00e9mon"
+    },
+    {
+        "number": 911,
+        "name": "Skeledirge",
+        "classification": "Singer Pok\u00e9mon"
+    },
+    {
+        "number": 912,
+        "name": "Quaxly",
+        "classification": "Duckling Pok\u00e9mon"
+    },
+    {
+        "number": 913,
+        "name": "Quaxwell",
+        "classification": "Practicing Pok\u00e9mon"
+    },
+    {
+        "number": 914,
+        "name": "Quaquaval",
+        "classification": "Dancer Pok\u00e9mon"
+    },
+    {
+        "number": 915,
+        "name": "Lechonk",
+        "classification": "Hog Pok\u00e9mon"
+    },
+    {
+        "number": 916,
+        "name": "Oinkologne",
+        "classification": "Hog Pok\u00e9mon"
+    },
+    {
+        "number": 917,
+        "name": "Tarountula",
+        "classification": "String Ball Pok\u00e9mon"
+    },
+    {
+        "number": 918,
+        "name": "Spidops",
+        "classification": "Trap Pok\u00e9mon"
+    },
+    {
+        "number": 919,
+        "name": "Nymble",
+        "classification": "Grasshopper Pok\u00e9mon"
+    },
+    {
+        "number": 920,
+        "name": "Lokix",
+        "classification": "Grasshopper Pok\u00e9mon"
+    },
+    {
+        "number": 921,
+        "name": "Pawmi",
+        "classification": "Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 922,
+        "name": "Pawmo",
+        "classification": "Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 923,
+        "name": "Pawmot",
+        "classification": "Hands-On Pok\u00e9mon"
+    },
+    {
+        "number": 924,
+        "name": "Tandemaus",
+        "classification": "Couple Pok\u00e9mon"
+    },
+    {
+        "number": 925,
+        "name": "Maushold",
+        "classification": "Family Pok\u00e9mon"
+    },
+    {
+        "number": 926,
+        "name": "Fidough",
+        "classification": "Puppy Pok\u00e9mon"
+    },
+    {
+        "number": 927,
+        "name": "Dachsbun",
+        "classification": "Dog Pok\u00e9mon"
+    },
+    {
+        "number": 928,
+        "name": "Smoliv",
+        "classification": "Olive Pok\u00e9mon"
+    },
+    {
+        "number": 929,
+        "name": "Dolliv",
+        "classification": "Olive Pok\u00e9mon"
+    },
+    {
+        "number": 930,
+        "name": "Arboliva",
+        "classification": "Olive Pok\u00e9mon"
+    },
+    {
+        "number": 931,
+        "name": "Squawkabilly",
+        "classification": "Parrot Pok\u00e9mon"
+    },
+    {
+        "number": 932,
+        "name": "Nacli",
+        "classification": "Rock Salt Pok\u00e9mon"
+    },
+    {
+        "number": 933,
+        "name": "Naclstack",
+        "classification": "Rock Salt Pok\u00e9mon"
+    },
+    {
+        "number": 934,
+        "name": "Garganacl",
+        "classification": "Rock Salt Pok\u00e9mon"
+    },
+    {
+        "number": 935,
+        "name": "Charcadet",
+        "classification": "Fire Child Pok\u00e9mon"
+    },
+    {
+        "number": 936,
+        "name": "Armarouge",
+        "classification": "Fire Warrior Pok\u00e9mon"
+    },
+    {
+        "number": 937,
+        "name": "Ceruledge",
+        "classification": "Fire Blades Pok\u00e9mon"
+    },
+    {
+        "number": 938,
+        "name": "Tadbulb",
+        "classification": "EleTadpole Pok\u00e9mon"
+    },
+    {
+        "number": 939,
+        "name": "Bellibolt",
+        "classification": "EleFrog Pok\u00e9mon"
+    },
+    {
+        "number": 940,
+        "name": "Wattrel",
+        "classification": "Storm Petrel Pok\u00e9mon"
+    },
+    {
+        "number": 941,
+        "name": "Kilowattrel",
+        "classification": "Frigatebird Pok\u00e9mon"
+    },
+    {
+        "number": 942,
+        "name": "Maschiff",
+        "classification": "Rascal Pok\u00e9mon"
+    },
+    {
+        "number": 943,
+        "name": "Mabosstiff",
+        "classification": "Boss Pok\u00e9mon"
+    },
+    {
+        "number": 944,
+        "name": "Shroodle",
+        "classification": "Toxic Mouse Pok\u00e9mon"
+    },
+    {
+        "number": 945,
+        "name": "Grafaiai",
+        "classification": "Toxic Monkey Pok\u00e9mon"
+    },
+    {
+        "number": 946,
+        "name": "Bramblin",
+        "classification": "Tumbleweed Pok\u00e9mon"
+    },
+    {
+        "number": 947,
+        "name": "Brambleghast",
+        "classification": "Tumbleweed Pok\u00e9mon"
+    },
+    {
+        "number": 948,
+        "name": "Toedscool",
+        "classification": "Woodear Pok\u00e9mon"
+    },
+    {
+        "number": 949,
+        "name": "Toedscruel",
+        "classification": "Woodear Pok\u00e9mon"
+    },
+    {
+        "number": 950,
+        "name": "Klawf",
+        "classification": "Ambush Pok\u00e9mon"
+    },
+    {
+        "number": 951,
+        "name": "Capsakid",
+        "classification": "Spicy Pepper Pok\u00e9mon"
+    },
+    {
+        "number": 952,
+        "name": "Scovillain",
+        "classification": "Spicy Pepper Pok\u00e9mon"
+    },
+    {
+        "number": 953,
+        "name": "Rellor",
+        "classification": "Rolling Pok\u00e9mon"
+    },
+    {
+        "number": 954,
+        "name": "Rabsca",
+        "classification": "Rolling Pok\u00e9mon"
+    },
+    {
+        "number": 955,
+        "name": "Flittle",
+        "classification": "Frill Pok\u00e9mon"
+    },
+    {
+        "number": 956,
+        "name": "Espathra",
+        "classification": "Ostrich Pok\u00e9mon"
+    },
+    {
+        "number": 957,
+        "name": "Tinkatink",
+        "classification": "Metalsmith Pok\u00e9mon"
+    },
+    {
+        "number": 958,
+        "name": "Tinkatuff",
+        "classification": "Hammer Pok\u00e9mon"
+    },
+    {
+        "number": 959,
+        "name": "Tinkaton",
+        "classification": "Hammer Pok\u00e9mon"
+    },
+    {
+        "number": 960,
+        "name": "Wiglett",
+        "classification": "Garden Eel Pok\u00e9mon"
+    },
+    {
+        "number": 961,
+        "name": "Wugtrio",
+        "classification": "Garden Eel Pok\u00e9mon"
+    },
+    {
+        "number": 962,
+        "name": "Bombirdier",
+        "classification": "Item Drop Pok\u00e9mon"
+    },
+    {
+        "number": 963,
+        "name": "Finizen",
+        "classification": "Dolphin Pok\u00e9mon"
+    },
+    {
+        "number": 964,
+        "name": "PalafinZero Form",
+        "classification": "Dolphin Pok\u00e9mon"
+    },
+    {
+        "number": 964,
+        "name": "PalafinHero Form",
+        "classification": "Hero Pok\u00e9mon"
+    },
+    {
+        "number": 965,
+        "name": "Varoom",
+        "classification": "Single-Cyl Pok\u00e9mon"
+    },
+    {
+        "number": 966,
+        "name": "Revavroom",
+        "classification": "Multi-Cyl Pok\u00e9mon"
+    },
+    {
+        "number": 967,
+        "name": "Cyclizar",
+        "classification": "Mount Pok\u00e9mon"
+    },
+    {
+        "number": 968,
+        "name": "Orthworm",
+        "classification": "Earthworm Pok\u00e9mon"
+    },
+    {
+        "number": 969,
+        "name": "Glimmet",
+        "classification": "Ore Pok\u00e9mon"
+    },
+    {
+        "number": 970,
+        "name": "Glimmora",
+        "classification": "Ore Pok\u00e9mon"
+    },
+    {
+        "number": 971,
+        "name": "Greavard",
+        "classification": "Ghost Dog Pok\u00e9mon"
+    },
+    {
+        "number": 972,
+        "name": "Houndstone",
+        "classification": "Ghost Dog Pok\u00e9mon"
+    },
+    {
+        "number": 973,
+        "name": "Flamigo",
+        "classification": "Synchronize Pok\u00e9mon"
+    },
+    {
+        "number": 974,
+        "name": "Cetoddle",
+        "classification": "Terra Whale Pok\u00e9mon"
+    },
+    {
+        "number": 975,
+        "name": "Cetitan",
+        "classification": "Terra Whale Pok\u00e9mon"
+    },
+    {
+        "number": 976,
+        "name": "Veluza",
+        "classification": "Jettison Pok\u00e9mon"
+    },
+    {
+        "number": 977,
+        "name": "Dondozo",
+        "classification": "Big Catfish Pok\u00e9mon"
+    },
+    {
+        "number": 978,
+        "name": "Tatsugiri",
+        "classification": "Mimicry Pok\u00e9mon"
+    },
+    {
+        "number": 979,
+        "name": "Annihilape",
+        "classification": "Rage Monkey Pok\u00e9mon"
+    },
+    {
+        "number": 980,
+        "name": "Clodsire",
+        "classification": "Spiny Fish Pok\u00e9mon"
+    },
+    {
+        "number": 981,
+        "name": "Farigiraf",
+        "classification": "Long Neck Pok\u00e9mon"
+    },
+    {
+        "number": 982,
+        "name": "Dudunsparce",
+        "classification": "Land Snake Pok\u00e9mon"
+    },
+    {
+        "number": 983,
+        "name": "Kingambit",
+        "classification": "Big Blade Pok\u00e9mon"
+    },
+    {
+        "number": 984,
+        "name": "Great Tusk",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 985,
+        "name": "Scream Tail",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 986,
+        "name": "Brute Bonnet",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 987,
+        "name": "Flutter Mane",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 988,
+        "name": "Slither Wing",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 989,
+        "name": "Sandy Shocks",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 990,
+        "name": "Iron Treads",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 991,
+        "name": "Iron Bundle",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 992,
+        "name": "Iron Hands",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 993,
+        "name": "Iron Jugulis",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 994,
+        "name": "Iron Moth",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 995,
+        "name": "Iron Thorns",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 996,
+        "name": "Frigibax",
+        "classification": "Ice Fin Pok\u00e9mon"
+    },
+    {
+        "number": 997,
+        "name": "Arctibax",
+        "classification": "Ice Fin Pok\u00e9mon"
+    },
+    {
+        "number": 998,
+        "name": "Baxcalibur",
+        "classification": "Ice Dragon Pok\u00e9mon"
+    },
+    {
+        "number": 999,
+        "name": "GimmighoulChest Form",
+        "classification": "Coin Chest Pok\u00e9mon"
+    },
+    {
+        "number": 999,
+        "name": "GimmighoulRoaming Form",
+        "classification": "Coin Hunter Pok\u00e9mon"
+    },
+    {
+        "number": 1000,
+        "name": "Gholdengo",
+        "classification": "Coin Entity Pok\u00e9mon"
+    },
+    {
+        "number": 1001,
+        "name": "Wo-Chien",
+        "classification": "Ruinous Pok\u00e9mon"
+    },
+    {
+        "number": 1002,
+        "name": "Chien-Pao",
+        "classification": "Ruinous Pok\u00e9mon"
+    },
+    {
+        "number": 1003,
+        "name": "Ting-Lu",
+        "classification": "Ruinous Pok\u00e9mon"
+    },
+    {
+        "number": 1004,
+        "name": "Chi-Yu",
+        "classification": "Ruinous Pok\u00e9mon"
+    },
+    {
+        "number": 1005,
+        "name": "Roaring Moon",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 1006,
+        "name": "Iron Valiant",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 1007,
+        "name": "Koraidon",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 1008,
+        "name": "Miraidon",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 1009,
+        "name": "Walking Wake",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 1010,
+        "name": "Iron Leaves",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 1011,
+        "name": "Dipplin",
+        "classification": "Candy Apple Pok\u00e9mon"
+    },
+    {
+        "number": 1012,
+        "name": "Poltchageist",
+        "classification": "Matcha Pok\u00e9mon"
+    },
+    {
+        "number": 1013,
+        "name": "Sinistcha",
+        "classification": "Matcha Pok\u00e9mon"
+    },
+    {
+        "number": 1014,
+        "name": "Okidogi",
+        "classification": "Retainer Pok\u00e9mon"
+    },
+    {
+        "number": 1015,
+        "name": "Munkidori",
+        "classification": "Retainer Pok\u00e9mon"
+    },
+    {
+        "number": 1016,
+        "name": "Fezandipiti",
+        "classification": "Retainer Pok\u00e9mon"
+    },
+    {
+        "number": 1017,
+        "name": "Ogerpon",
+        "classification": "Mask Pok\u00e9mon"
+    },
+    {
+        "number": 1018,
+        "name": "Archaludon",
+        "classification": "Alloy Pok\u00e9mon"
+    },
+    {
+        "number": 1019,
+        "name": "Hydrapple",
+        "classification": "Apple Hydra Pok\u00e9mon"
+    },
+    {
+        "number": 1020,
+        "name": "Gouging Fire",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 1021,
+        "name": "Raging Bolt",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 1022,
+        "name": "Iron Boulder",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 1023,
+        "name": "Iron Crown",
+        "classification": "Paradox Pok\u00e9mon"
+    },
+    {
+        "number": 1024,
+        "name": "Terapagos",
+        "classification": "Tera Pok\u00e9mon"
+    },
+    {
+        "number": 1025,
+        "name": "Pecharunt",
+        "classification": "Subjugation Pok\u00e9mon"
+    }
+]

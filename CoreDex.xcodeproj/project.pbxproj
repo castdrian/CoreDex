@@ -23,6 +23,8 @@
 		3ACEBA312B8B8C4700BFF4CF /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACEBA302B8B8C4700BFF4CF /* Apollo */; };
 		3ACEBA372B8B9E8F00BFF4CF /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */; };
 		3ACEBA392B8BD40000BFF4CF /* AudioPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEBA382B8BD40000BFF4CF /* AudioPlayerDelegate.swift */; };
+		3ACEBA3B2B8C828E00BFF4CF /* Classifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEBA3A2B8C828E00BFF4CF /* Classifications.swift */; };
+		3ACEBA3D2B8C82CC00BFF4CF /* classifications.json in Resources */ = {isa = PBXBuildFile; fileRef = 3ACEBA3C2B8C82CC00BFF4CF /* classifications.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		3ACEBA2A2B8B676500BFF4CF /* DexEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexEntryView.swift; sourceTree = "<group>"; };
 		3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		3ACEBA382B8BD40000BFF4CF /* AudioPlayerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerDelegate.swift; sourceTree = "<group>"; };
+		3ACEBA3A2B8C828E00BFF4CF /* Classifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifications.swift; sourceTree = "<group>"; };
+		3ACEBA3C2B8C82CC00BFF4CF /* classifications.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = classifications.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		3AB6ED5C2B8A5B41009B24B4 /* CoreDex */ = {
 			isa = PBXGroup;
 			children = (
+				3ACEBA3C2B8C82CC00BFF4CF /* classifications.json */,
 				3ACEBA352B8B9DC900BFF4CF /* Util */,
 				3ACEBA342B8B9DAB00BFF4CF /* Views */,
 				3AB6ED8B2B8A8F60009B24B4 /* CoreML */,
@@ -136,6 +141,7 @@
 				3ACEBA282B8B62F700BFF4CF /* ImagePicker.swift */,
 				3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */,
 				3ACEBA382B8BD40000BFF4CF /* AudioPlayerDelegate.swift */,
+				3ACEBA3A2B8C828E00BFF4CF /* Classifications.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 				3AB6ED652B8A5B42009B24B4 /* Preview Assets.xcassets in Resources */,
 				3AB6ED832B8A8C91009B24B4 /* schema.graphqls in Resources */,
 				3AB6ED812B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql in Resources */,
+				3ACEBA3D2B8C82CC00BFF4CF /* classifications.json in Resources */,
 				3AB6ED7C2B8A7D41009B24B4 /* Config.xcconfig in Resources */,
 				3AB6ED622B8A5B42009B24B4 /* Assets.xcassets in Resources */,
 			);
@@ -230,6 +237,7 @@
 				3AB6ED5E2B8A5B41009B24B4 /* CoreDexApp.swift in Sources */,
 				3AB6ED922B8A953A009B24B4 /* Gen9.mlmodel in Sources */,
 				3ACEBA392B8BD40000BFF4CF /* AudioPlayerDelegate.swift in Sources */,
+				3ACEBA3B2B8C828E00BFF4CF /* Classifications.swift in Sources */,
 				3ACEBA2B2B8B676500BFF4CF /* DexEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

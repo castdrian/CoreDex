@@ -261,7 +261,9 @@ struct DexEntryView: View {
             print(error.localizedDescription)
         }
         
-        let dexEntry = "\(pokemon.species). \(pokemon.types.count == 2 ? "\(pokemon.types.first!.name) and \(pokemon.types.last!.name) type." : "\(pokemon.types.first!.name) type.") \(((pokemon.preevolutions?.first) != nil) ? "The evolution of \(pokemon.preevolutions!.first!.species)." : "") \(pokemon.flavorTexts.first!.flavor)"
+        let classificationText = getClassification(forNumber: pokemon.num).map { "The \($0)." } ?? ""
+
+        let dexEntry = "\(pokemon.species). \(classificationText) \(pokemon.types.count == 2 ? "\(pokemon.types.first!.name) and \(pokemon.types.last!.name) type." : "\(pokemon.types.first!.name) type.") \(((pokemon.preevolutions?.first) != nil) ? "The evolution of \(pokemon.preevolutions!.first!.species)." : "") \(pokemon.flavorTexts.first!.flavor)"
         
         let utterance = AVSpeechUtterance(string: dexEntry)
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
