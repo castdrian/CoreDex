@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3A3C38092B8CD67E006E5CDE /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C38082B8CD67E006E5CDE /* ScanButton.swift */; };
+		3A3C380B2B8CE160006E5CDE /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C380A2B8CE160006E5CDE /* ScannerViewController.swift */; };
+		3A3C380D2B8CE1AB006E5CDE /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C380C2B8CE1AB006E5CDE /* ScannerView.swift */; };
 		3AB6ED5E2B8A5B41009B24B4 /* CoreDexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED5D2B8A5B41009B24B4 /* CoreDexApp.swift */; };
 		3AB6ED602B8A5B41009B24B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */; };
 		3AB6ED622B8A5B42009B24B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED612B8A5B42009B24B4 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		3A3C38082B8CD67E006E5CDE /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
+		3A3C380A2B8CE160006E5CDE /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		3A3C380C2B8CE1AB006E5CDE /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		3AB6ED5A2B8A5B41009B24B4 /* CoreDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB6ED5D2B8A5B41009B24B4 /* CoreDexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDexApp.swift; sourceTree = "<group>"; };
 		3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */,
 				3ACEBA2A2B8B676500BFF4CF /* DexEntryView.swift */,
 				3A3C38082B8CD67E006E5CDE /* ScanButton.swift */,
+				3A3C380C2B8CE1AB006E5CDE /* ScannerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */,
 				3ACEBA382B8BD40000BFF4CF /* AudioPlayerDelegate.swift */,
 				3ACEBA3A2B8C828E00BFF4CF /* Classifications.swift */,
+				3A3C380A2B8CE160006E5CDE /* ScannerViewController.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -242,7 +248,9 @@
 				3AB6ED922B8A953A009B24B4 /* Gen9.mlmodel in Sources */,
 				3ACEBA392B8BD40000BFF4CF /* AudioPlayerDelegate.swift in Sources */,
 				3ACEBA3B2B8C828E00BFF4CF /* Classifications.swift in Sources */,
+				3A3C380D2B8CE1AB006E5CDE /* ScannerView.swift in Sources */,
 				3ACEBA2B2B8B676500BFF4CF /* DexEntryView.swift in Sources */,
+				3A3C380B2B8CE160006E5CDE /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

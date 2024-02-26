@@ -49,7 +49,7 @@ struct RotatingRing: View {
 }
 
 struct ScanButton: View {
-    @State private var showingImagePicker = false
+    @State private var showingScanner = false
     @State private var inputImage: UIImage?
     @State private var scale: CGFloat = 1
     @State private var rotateOuterAngle = 0.0
@@ -104,7 +104,7 @@ struct ScanButton: View {
                 Button(action: {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     DispatchQueue.global(qos: .userInitiated).async {
-                        showingImagePicker.toggle()
+                        showingScanner.toggle()
                     }
                 }) {
                     Image(systemName: "camera")
@@ -132,8 +132,8 @@ struct ScanButton: View {
                 }
             }
         }
-        .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
-            ImagePicker(image: self.$inputImage)
+        .sheet(isPresented: $showingScanner) {
+            ScannerView()
         }
         .navigationDestination(isPresented: $showDexEntryView) {
             if let pokemonData = pokemonData {
