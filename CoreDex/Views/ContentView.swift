@@ -43,7 +43,7 @@ struct ContentView: View {
                 
                 Button(action: {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
-
+                    
                     DispatchQueue.global(qos: .userInitiated).async {
                         getDexEntry()
                     }
@@ -68,7 +68,7 @@ struct ContentView: View {
                 .foregroundColor(Color.white)
                 
                 ScanButton()
-                Text("Scan currently Gen 9 starters only")
+                GenerationCheckMarkView()
             }
             .padding()
             .navigationDestination(isPresented: $showDexEntryView) {
