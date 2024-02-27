@@ -25,9 +25,7 @@ CoreDex uses the latest advancements in Apple's CoreML to provide a fast and acc
 3. CoreDex will classify the Pokémon and provide detailed information.
 
 ## Demo
-https://github.com/castdrian/CoreDex/assets/22133246/7a9d2e5b-7b70-46ac-8a16-f270fbe80f21
-
-https://github.com/castdrian/CoreDex/assets/22133246/ed54e765-7985-435e-823d-5e6465959dbd
+https://github.com/castdrian/CoreDex/assets/22133246/bf7ac4e0-30e0-444b-8d6c-1f0bde77498f
 
 ## Credits
 
