@@ -11,6 +11,7 @@
 		3A3C380B2B8CE160006E5CDE /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C380A2B8CE160006E5CDE /* ScannerViewController.swift */; };
 		3A3C380D2B8CE1AB006E5CDE /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C380C2B8CE1AB006E5CDE /* ScannerView.swift */; };
 		3A3C380F2B8D01E0006E5CDE /* GenerationCheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C380E2B8D01E0006E5CDE /* GenerationCheckMarkView.swift */; };
+		3A3C38112B8E74ED006E5CDE /* Gen7.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C38102B8E74ED006E5CDE /* Gen7.mlmodel */; };
 		3AB6ED5E2B8A5B41009B24B4 /* CoreDexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED5D2B8A5B41009B24B4 /* CoreDexApp.swift */; };
 		3AB6ED602B8A5B41009B24B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */; };
 		3AB6ED622B8A5B42009B24B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED612B8A5B42009B24B4 /* Assets.xcassets */; };
@@ -20,7 +21,6 @@
 		3AB6ED832B8A8C91009B24B4 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED822B8A8C91009B24B4 /* schema.graphqls */; };
 		3AB6ED8A2B8A8E94009B24B4 /* PkmnApi in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB6ED892B8A8E94009B24B4 /* PkmnApi */; };
 		3AB6ED8D2B8A924E009B24B4 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED8C2B8A924E009B24B4 /* ImagePredictor.swift */; };
-		3AB6ED922B8A953A009B24B4 /* Gen9.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED912B8A953A009B24B4 /* Gen9.mlmodel */; };
 		3ACEBA2B2B8B676500BFF4CF /* DexEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEBA2A2B8B676500BFF4CF /* DexEntryView.swift */; };
 		3ACEBA2E2B8B67B100BFF4CF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACEBA2D2B8B67B100BFF4CF /* Kingfisher */; };
 		3ACEBA312B8B8C4700BFF4CF /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACEBA302B8B8C4700BFF4CF /* Apollo */; };
@@ -35,6 +35,7 @@
 		3A3C380A2B8CE160006E5CDE /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		3A3C380C2B8CE1AB006E5CDE /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		3A3C380E2B8D01E0006E5CDE /* GenerationCheckMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationCheckMarkView.swift; sourceTree = "<group>"; };
+		3A3C38102B8E74ED006E5CDE /* Gen7.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Gen7.mlmodel; sourceTree = "<group>"; };
 		3AB6ED5A2B8A5B41009B24B4 /* CoreDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB6ED5D2B8A5B41009B24B4 /* CoreDexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDexApp.swift; sourceTree = "<group>"; };
 		3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		3AB6ED802B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = getPokemonByDexNumber.graphql; sourceTree = "<group>"; };
 		3AB6ED822B8A8C91009B24B4 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
 		3AB6ED8C2B8A924E009B24B4 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
-		3AB6ED912B8A953A009B24B4 /* Gen9.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Gen9.mlmodel; sourceTree = "<group>"; };
 		3ACEBA2A2B8B676500BFF4CF /* DexEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexEntryView.swift; sourceTree = "<group>"; };
 		3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		3ACEBA382B8BD40000BFF4CF /* AudioPlayerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		3AB6ED8E2B8A93B2009B24B4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3AB6ED912B8A953A009B24B4 /* Gen9.mlmodel */,
+				3A3C38102B8E74ED006E5CDE /* Gen7.mlmodel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,9 +245,9 @@
 				3ACEBA372B8B9E8F00BFF4CF /* ColorUtils.swift in Sources */,
 				3AB6ED8D2B8A924E009B24B4 /* ImagePredictor.swift in Sources */,
 				3AB6ED5E2B8A5B41009B24B4 /* CoreDexApp.swift in Sources */,
-				3AB6ED922B8A953A009B24B4 /* Gen9.mlmodel in Sources */,
 				3ACEBA392B8BD40000BFF4CF /* AudioPlayerDelegate.swift in Sources */,
 				3ACEBA3B2B8C828E00BFF4CF /* Classifications.swift in Sources */,
+				3A3C38112B8E74ED006E5CDE /* Gen7.mlmodel in Sources */,
 				3A3C380D2B8CE1AB006E5CDE /* ScannerView.swift in Sources */,
 				3ACEBA2B2B8B676500BFF4CF /* DexEntryView.swift in Sources */,
 				3A3C380B2B8CE160006E5CDE /* ScannerViewController.swift in Sources */,

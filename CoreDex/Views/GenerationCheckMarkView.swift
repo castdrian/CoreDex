@@ -17,7 +17,7 @@ struct GenerationCheckMarkView: View {
                 .font(.headline)
                 .padding(.bottom, 5)
             
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))], spacing: 10) {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))], spacing: 5) {
                 ForEach(generations, id: \.self) { gen in
                     HStack {
                         Image(systemName: selectedGens.contains(gen) ? "checkmark.square.fill" : "square")

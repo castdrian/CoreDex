@@ -12,7 +12,7 @@ class ImagePredictor {
     static func createImageClassifier() -> VNCoreMLModel {
         let defaultConfig = MLModelConfiguration()
         
-        let imageClassifierWrapper = try? Gen9(configuration: defaultConfig)
+        let imageClassifierWrapper = try? Gen7(configuration: defaultConfig)
         
         guard let imageClassifier = imageClassifierWrapper else {
             fatalError("App failed to create an image classifier model instance.")
