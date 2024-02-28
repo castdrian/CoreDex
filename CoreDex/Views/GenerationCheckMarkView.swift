@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GenerationCheckMarkView: View {
     let generations = 1...9
-    @State private var selectedGens: Set<Int> = [7]
+    @State private var selectedGens: Set<Int> = [1,7]
     
     var body: some View {
         VStack(alignment: .leading) {
