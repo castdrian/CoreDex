@@ -255,26 +255,58 @@ struct DexEntryView: View {
         }.resume()
     }
     
-    private func readDexEntry() {
+    private func readDexEntry(with dynamicCorrections: [(String, String)]? = nil) {
         let audioSession = AVAudioSession()
         
         do {
-            try audioSession.setCategory(.playback, mode: .default, options: .duckOthers)
+            try audioSession.setCategory(.playback, mode: .voicePrompt, options: .duckOthers)
             try audioSession.setActive(false)
         } catch let error {
             print(error.localizedDescription)
         }
-                
-        let classificationText = pokemon.classification != nil ? "The \(pokemon.classification!)." : ""
-        let typeText = pokemon.types.count == 2 ? "\(pokemon.types.first!.name) and \(pokemon.types.last!.name) type." : "\(pokemon.types.first!.name) type."
-        let preevolutionText = (pokemon.preevolutions?.first != nil) ? "The evolution of \(pokemon.preevolutions!.first!.species)." : ""
+        
+        let classificationText = pokemon.classification != nil ? "The \(pokemon.classification!)!" : ""
+        let typeText = pokemon.types.count == 2 ? "\(pokemon.types.first!.name) and \(pokemon.types.last!.name) type!" : "\(pokemon.types.first!.name) type!"
+        let preevolutionText = (pokemon.preevolutions?.first != nil) ? "The evolution of \(pokemon.preevolutions!.first!.species)!" : ""
         let flavorText = pokemon.flavorTexts.first?.flavor ?? ""
 
-        let dexEntry = "\(pokemon.species). \(classificationText) \(typeText) \(preevolutionText) \(flavorText)"
-
-        let utterance = AVSpeechUtterance(string: dexEntry)
+        let dexEntry = "\(pokemon.species)! \(classificationText) \(typeText) \(preevolutionText) \(flavorText)"
+        
+        var corrections = [("pokémon", "ˈpo͡ʊ.ki.ˈmɑn")]
+        
+        if let dynamicCorrections = dynamicCorrections {
+            corrections += dynamicCorrections.map { ($0.0.lowercased(), $0.1) }
+        }
+        
+        let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
+        let mutableAttributedString = NSMutableAttributedString()
+        
+        let parts = dexEntry.split { !$0.isLetter && !$0.isNumber }.map { String($0) }
+        
+        for part in parts {
+            var attributedPart = NSMutableAttributedString(string: part)
+            
+            for (target, ipa) in corrections {
+                if part.lowercased().contains(target) {
+                    attributedPart = NSMutableAttributedString(string: part)
+                    attributedPart.addAttribute(pronunciationKey, value: ipa, range: NSRange(location: 0, length: part.count))
+                    break
+                }
+            }
+            
+            mutableAttributedString.append(attributedPart)
+            
+            let originalPart = dexEntry.range(of: part)!
+            if originalPart.upperBound < dexEntry.endIndex {
+                let nextCharacter = dexEntry[originalPart.upperBound]
+                mutableAttributedString.append(NSAttributedString(string: String(nextCharacter)))
+            }
+        }
+        
+        let utterance = AVSpeechUtterance(attributedString: mutableAttributedString)
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
         utterance.rate = 0.4
+        
         synthesizer.speak(utterance)
     }
     
