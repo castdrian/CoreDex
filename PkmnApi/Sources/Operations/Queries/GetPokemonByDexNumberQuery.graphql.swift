@@ -7,7 +7,7 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
   public static let operationName: String = "GetPokemonByDexNumber"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query GetPokemonByDexNumber($number: Int!) { getPokemonByDexNumber(number: $number) { __typename abilities { __typename first { __typename name shortDesc desc serebiiPage smogonPage } second { __typename name shortDesc desc serebiiPage smogonPage } hidden { __typename name shortDesc desc serebiiPage smogonPage } } backSprite baseStats { __typename attack defense hp specialattack specialdefense speed } baseStatsTotal catchRate { __typename base percentageWithOrdinaryPokeballAtFullHealth } color classification eggGroups evYields { __typename attack defense hp specialattack specialdefense speed } evolutionLevel flavorTexts { __typename flavor game } gender { __typename female male } height num ipa preevolutions { __typename species } serebiiPage shinyBackSprite shinySprite smogonPage smogonTier species sprite types { __typename name } weight } }"#
+      #"query GetPokemonByDexNumber($number: Int!) { getPokemonByDexNumber(number: $number) { __typename abilities { __typename first { __typename name shortDesc desc serebiiPage smogonPage } second { __typename name shortDesc desc serebiiPage smogonPage } hidden { __typename name shortDesc desc serebiiPage smogonPage } } backSprite baseStats { __typename attack defense hp specialattack specialdefense speed } baseStatsTotal catchRate { __typename base percentageWithOrdinaryPokeballAtFullHealth } color classification eggGroups evYields { __typename attack defense hp specialattack specialdefense speed } evolutionLevel flavorTexts { __typename flavor game } gender { __typename female male } height num ipa preevolutions { __typename species ipa } serebiiPage shinyBackSprite shinySprite smogonPage smogonTier species sprite types { __typename name } weight } }"#
     ))
 
   public var number: Int
@@ -367,10 +367,13 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
         public static var __selections: [ApolloAPI.Selection] { [
           .field("__typename", String.self),
           .field("species", String.self),
+          .field("ipa", String?.self),
         ] }
 
         /// The species name for a Pokémon
         public var species: String { __data["species"] }
+        /// The International Phonetic Alphabet (IPA) representation of the name of the Pokémon
+        public var ipa: String? { __data["ipa"] }
       }
 
       /// GetPokemonByDexNumber.Type_SelectionSet

@@ -160,7 +160,8 @@ struct DexEntryView: View {
         .onAppear {
             if !hasAppeared {
                 playPokemonCry() {
-                    readDexEntry()
+                    let dynamicCorrections = createDynamicCorrections(for: pokemon)
+                    readDexEntry(with: dynamicCorrections)
                 }
                 hasAppeared = true
             }
@@ -214,7 +215,8 @@ struct DexEntryView: View {
         }
         .frame(maxWidth: .infinity)
         .onTapGesture {
-            readDexEntry()
+            let dynamicCorrections = createDynamicCorrections(for: pokemon)
+            readDexEntry(with: dynamicCorrections)
         }
     }
     
@@ -332,6 +334,24 @@ struct DexEntryView: View {
         }.resume()
     }
     
+    private func createDynamicCorrections(for pokemon: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber) -> [(String, String)] {
+        var corrections = [(String, String)]()
+
+        if let ipa = pokemon.ipa {
+            corrections.append((pokemon.species.lowercased(), ipa))
+        }
+
+        if let preevolutions = pokemon.preevolutions {
+            for preevolution in preevolutions {
+                if let ipa = preevolution.ipa {
+                    corrections.append((preevolution.species.lowercased(), ipa))
+                }
+            }
+        }
+
+        return corrections
+    }
+
     private func readDexEntry(with dynamicCorrections: [(String, String)]? = nil) {
         let audioSession = AVAudioSession()
         
