@@ -7,7 +7,7 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
   public static let operationName: String = "GetPokemonByDexNumber"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query GetPokemonByDexNumber($number: Int!) { getPokemonByDexNumber(number: $number) { __typename abilities { __typename first { __typename name shortDesc desc serebiiPage smogonPage } second { __typename name shortDesc desc serebiiPage smogonPage } hidden { __typename name shortDesc desc serebiiPage smogonPage } } backSprite baseStats { __typename attack defense hp specialattack specialdefense speed } baseStatsTotal catchRate { __typename base percentageWithOrdinaryPokeballAtFullHealth } color eggGroups evYields { __typename attack defense hp specialattack specialdefense speed } evolutionLevel flavorTexts { __typename flavor game } gender { __typename female male } height num preevolutions { __typename species } serebiiPage shinyBackSprite shinySprite smogonPage smogonTier species sprite types { __typename name } weight } }"#
+      #"query GetPokemonByDexNumber($number: Int!) { getPokemonByDexNumber(number: $number) { __typename abilities { __typename first { __typename name shortDesc desc serebiiPage smogonPage } second { __typename name shortDesc desc serebiiPage smogonPage } hidden { __typename name shortDesc desc serebiiPage smogonPage } } backSprite baseStats { __typename attack defense hp specialattack specialdefense speed } baseStatsTotal catchRate { __typename base percentageWithOrdinaryPokeballAtFullHealth } color classification eggGroups evYields { __typename attack defense hp specialattack specialdefense speed } evolutionLevel flavorTexts { __typename flavor game } gender { __typename female male } height num preevolutions { __typename species } serebiiPage shinyBackSprite shinySprite smogonPage smogonTier species sprite types { __typename name } weight } }"#
     ))
 
   public var number: Int
@@ -50,6 +50,7 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
         .field("baseStatsTotal", Int.self),
         .field("catchRate", CatchRate?.self),
         .field("color", String.self),
+        .field("classification", String?.self),
         .field("eggGroups", [String]?.self),
         .field("evYields", EvYields.self),
         .field("evolutionLevel", String?.self),
@@ -81,6 +82,8 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
       public var catchRate: CatchRate? { __data["catchRate"] }
       /// The colour of a Pokémon as listed in the Pokedex
       public var color: String { __data["color"] }
+      /// The classification of a Pokémon as listed in the Pokedex
+      public var classification: String? { __data["classification"] }
       /// The egg groups a Pokémon is in
       public var eggGroups: [String]? { __data["eggGroups"] }
       /// EV yields for a Pokémon

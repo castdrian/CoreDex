@@ -3589,6 +3589,9 @@ type Pokemon {
   """The catch rate data for a Pokémon"""
   catchRate: CatchRate
 
+  """The classification of a Pokémon as listed in the Pokedex"""
+  classification: String
+
   """The colour of a Pokémon as listed in the Pokedex"""
   color: String!
 
@@ -3596,6 +3599,9 @@ type Pokemon {
   Any other *cosmetic* forms for a Pokémon, distinguished from other formes as cosmetic formes only change the look of the Pokémon, while other formes might also change an ability, move set or other data.
   """
   cosmeticFormes: [String!]
+
+  """An URL to an mp3 file of the Pokémon's cry."""
+  cry: String
 
   """The egg groups a Pokémon is in"""
   eggGroups: [String!]
@@ -4098,7 +4104,10 @@ type Query {
     """
     reverseFlavorTexts: Boolean = true
 
-    """The International PokéDex number of the Pokémon to look up"""
+    """
+    The International PokéDex number of the Pokémon to look up.
+    The valid value ranges are (boundaries inclusive) `-5000` to `-5014` and `-72` to `1025`
+    """
     number: Int!
   ): Pokemon!
 

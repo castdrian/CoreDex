@@ -38,6 +38,7 @@ query GetPokemonByDexNumber($number: Int!) {
       percentageWithOrdinaryPokeballAtFullHealth
     }
     color
+    classification
     eggGroups
     evYields {
       attack

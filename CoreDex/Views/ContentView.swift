@@ -69,7 +69,6 @@ struct ContentView: View {
                 
                 ScanButton()
                 GenerationCheckMarkView()
-                Text("(consider [donating](https://ko-fi.com/castdrian) to keep this project alive)")
             }
             .padding()
             .navigationDestination(isPresented: $showDexEntryView) {
