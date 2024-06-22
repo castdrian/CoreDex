@@ -39,12 +39,25 @@ struct StatInfo: Identifiable {
     var color: Color
 }
 
+struct ActivityViewController: UIViewControllerRepresentable {
+    let activityItems: [Any]
+    let applicationActivities: [UIActivity]? = nil
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityViewController>) -> UIActivityViewController {
+        return UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ActivityViewController>) {}
+}
+
 struct SpriteView: View {
     let spriteURL: String
     let shinySpriteURL: String
     @Binding var showShinySprite: Bool
     var playPokemonCry: () -> Void
-    
+    @State private var documentURL: URL?
+    @State private var isLoading = false
+
     var body: some View {
         HStack {
             KFAnimatedImage(URL(string: showShinySprite ? shinySpriteURL : spriteURL))
@@ -60,6 +73,66 @@ struct SpriteView: View {
                 showShinySprite.toggle()
             }
         }
+        .onLongPressGesture {
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
+            
+            loadImageData()
+        }
+        .background(
+            Group {
+                if documentURL != nil {
+                    DocumentInteractionController(url: documentURL!)
+                        .onAppear {
+                            documentURL = nil
+                        }
+                }
+            }
+        )
+        .overlay {
+            if isLoading {
+                ProgressView("Loading...")
+            }
+        }
+    }
+
+    private func loadImageData() {
+        isLoading = true
+        guard let imageURL = URL(string: showShinySprite ? shinySpriteURL : spriteURL) else {
+            isLoading = false
+            return
+        }
+
+        URLSession.shared.dataTask(with: imageURL) { data, response, error in
+            DispatchQueue.main.async {
+                isLoading = false
+            }
+            guard let data = data, error == nil else {
+                print("Error loading image data: \(String(describing: error))")
+                return
+            }
+
+            let tempURL = saveImageToTemporaryDirectory(imageData: data)
+
+            DispatchQueue.main.async {
+                if let tempURL = tempURL {
+                    documentURL = tempURL
+                }
+            }
+        }.resume()
+    }
+
+    private func saveImageToTemporaryDirectory(imageData: Data) -> URL? {
+        let tempDirectory = FileManager.default.temporaryDirectory
+        let tempURL = tempDirectory.appendingPathComponent(UUID().uuidString).appendingPathExtension("gif")
+
+        do {
+            try imageData.write(to: tempURL)
+            return tempURL
+        } catch {
+            print("Error saving image to temporary directory: \(error)")
+            return nil
+        }
     }
 }
 
@@ -70,7 +143,8 @@ struct DexEntryView: View {
     @State private var audioPlayerDelegate = AudioPlayerDelegate()
     @State private var showShinySprite = false
     @State private var selectedAbilityIndex = 0
-    
+    @State private var hasAppeared = false
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
@@ -84,8 +158,11 @@ struct DexEntryView: View {
         }
         .navigationBarTitle(Text("\(pokemon.species.capitalized) #\(pokemon.num)"), displayMode: .inline)
         .onAppear {
-            playPokemonCry() {
-                readDexEntry()
+            if !hasAppeared {
+                playPokemonCry() {
+                    readDexEntry()
+                }
+                hasAppeared = true
             }
         }
         .onDisappear {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A2F99112C27698E0098F106 /* DocumentInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F99102C27698E0098F106 /* DocumentInteractionController.swift */; };
 		3A3C38092B8CD67E006E5CDE /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C38082B8CD67E006E5CDE /* ScanButton.swift */; };
 		3A3C380B2B8CE160006E5CDE /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C380A2B8CE160006E5CDE /* ScannerViewController.swift */; };
 		3A3C380D2B8CE1AB006E5CDE /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C380C2B8CE1AB006E5CDE /* ScannerView.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A2F99102C27698E0098F106 /* DocumentInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentInteractionController.swift; sourceTree = "<group>"; };
 		3A3C38082B8CD67E006E5CDE /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
 		3A3C380A2B8CE160006E5CDE /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		3A3C380C2B8CE1AB006E5CDE /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				3ACEBA362B8B9E8F00BFF4CF /* ColorUtils.swift */,
 				3ACEBA382B8BD40000BFF4CF /* AudioPlayerDelegate.swift */,
 				3A3C380A2B8CE160006E5CDE /* ScannerViewController.swift */,
+				3A2F99102C27698E0098F106 /* DocumentInteractionController.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				3AB6ED602B8A5B41009B24B4 /* ContentView.swift in Sources */,
 				3ACEBA372B8B9E8F00BFF4CF /* ColorUtils.swift in Sources */,
 				3A3C38152B8FAE31006E5CDE /* Dex.mlmodel in Sources */,
+				3A2F99112C27698E0098F106 /* DocumentInteractionController.swift in Sources */,
 				3AB6ED8D2B8A924E009B24B4 /* ImagePredictor.swift in Sources */,
 				3AB6ED5E2B8A5B41009B24B4 /* CoreDexApp.swift in Sources */,
 				3ACEBA392B8BD40000BFF4CF /* AudioPlayerDelegate.swift in Sources */,
