@@ -7,7 +7,7 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
   public static let operationName: String = "GetPokemonByDexNumber"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query GetPokemonByDexNumber($number: Int!) { getPokemonByDexNumber(number: $number) { __typename abilities { __typename first { __typename name shortDesc desc serebiiPage smogonPage } second { __typename name shortDesc desc serebiiPage smogonPage } hidden { __typename name shortDesc desc serebiiPage smogonPage } } backSprite baseStats { __typename attack defense hp specialattack specialdefense speed } baseStatsTotal catchRate { __typename base percentageWithOrdinaryPokeballAtFullHealth } color classification eggGroups evYields { __typename attack defense hp specialattack specialdefense speed } evolutionLevel flavorTexts { __typename flavor game } gender { __typename female male } height num preevolutions { __typename species } serebiiPage shinyBackSprite shinySprite smogonPage smogonTier species sprite types { __typename name } weight } }"#
+      #"query GetPokemonByDexNumber($number: Int!) { getPokemonByDexNumber(number: $number) { __typename abilities { __typename first { __typename name shortDesc desc serebiiPage smogonPage } second { __typename name shortDesc desc serebiiPage smogonPage } hidden { __typename name shortDesc desc serebiiPage smogonPage } } backSprite baseStats { __typename attack defense hp specialattack specialdefense speed } baseStatsTotal catchRate { __typename base percentageWithOrdinaryPokeballAtFullHealth } color classification eggGroups evYields { __typename attack defense hp specialattack specialdefense speed } evolutionLevel flavorTexts { __typename flavor game } gender { __typename female male } height num ipa preevolutions { __typename species } serebiiPage shinyBackSprite shinySprite smogonPage smogonTier species sprite types { __typename name } weight } }"#
     ))
 
   public var number: Int
@@ -58,6 +58,7 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
         .field("gender", Gender.self),
         .field("height", Double.self),
         .field("num", Int.self),
+        .field("ipa", String?.self),
         .field("preevolutions", [Preevolution]?.self),
         .field("serebiiPage", String.self),
         .field("shinyBackSprite", String.self),
@@ -98,6 +99,8 @@ public class GetPokemonByDexNumberQuery: GraphQLQuery {
       public var height: Double { __data["height"] }
       /// The dex number for a Pokémon
       public var num: Int { __data["num"] }
+      /// The International Phonetic Alphabet (IPA) representation of the name of the Pokémon
+      public var ipa: String? { __data["ipa"] }
       /// The preevolutions for a Pokémon, if any
       public var preevolutions: [Preevolution]? { __data["preevolutions"] }
       /// Serebii page for a Pokémon

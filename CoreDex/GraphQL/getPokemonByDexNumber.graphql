@@ -59,6 +59,7 @@ query GetPokemonByDexNumber($number: Int!) {
     }
     height
     num
+    ipa
     preevolutions {
       species
     }
