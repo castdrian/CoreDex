@@ -1,6 +1,8 @@
 # CoreDex
 
-CoreDex is a real PokéDex application for iOS, leveraging Apple's CoreML technology to classify images of Pokémon. This innovative app combines the fun of Pokémon with cutting-edge machine learning techniques for a unique user experience.
+<a href="https://testflight.apple.com/join/iWm3YqWJ"><img src="https://askyourself.app/assets/testflight.png" width="200"></a>
+
+CoreDex is a real PokéDex application for iOS, leveraging Apple's CoreML technology to classify images of Pokémon.
 
 <img src="https://discord.com/api/guilds/1211664271243612251/widget.png?style=banner3" />
 
@@ -9,7 +11,7 @@ Consider donating via [ko-fi](https://ko-fi.com/castdrian) to keep this project 
 
 ## Introduction
 
-CoreDex uses the latest advancements in Apple's CoreML to provide a fast and accurate Pokémon image classification. Whether you're a Pokémon enthusiast or a developer interested in machine learning and iOS development, CoreDex offers an engaging way to explore the world of Pokémon.
+CoreDex uses Apple's CoreML to provide a fast and accurate Pokémon image classification.
 
 ## Features
 
@@ -24,7 +26,7 @@ CoreDex uses the latest advancements in Apple's CoreML to provide a fast and acc
 2. Point your camera at a Pokémon.
 3. CoreDex will classify the Pokémon and provide detailed information.
 
-## Demo
+## Demo and progress
 https://github.com/castdrian/CoreDex/assets/22133246/bf7ac4e0-30e0-444b-8d6c-1f0bde77498f
 
 ## Credits
@@ -36,7 +38,7 @@ CoreDex utilizes the [GraphQL Pokémon API](https://github.com/favware/graphql-p
 
 ## Disclaimer
 
-Pokémon and all associated data are trademarks of Nintendo, Creatures Inc., GAME FREAK Inc., and The Pokémon Company. This project is in no way affiliated with, authorized, maintained, sponsored, or endorsed by these entities or any of their affiliates or subsidiaries.
+Pokémon and all associated data are trademarks of Nintendo, Creatures Inc., GAME FREAK Inc., and The Pokémon Company Int. This project is in no way affiliated with, authorized, maintained, sponsored, or endorsed by these entities or any of their affiliates or subsidiaries.
 
 ---
 
