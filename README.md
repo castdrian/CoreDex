@@ -7,6 +7,7 @@ CoreDex is a real PokéDex application for iOS, leveraging Apple's CoreML techno
 <img src="https://discord.com/api/guilds/1211664271243612251/widget.png?style=banner3" />
 
 ## Funding
+
 Consider donating via [ko-fi](https://ko-fi.com/castdrian) to keep this project alive.
 
 ## Introduction
@@ -27,13 +28,15 @@ CoreDex uses Apple's CoreML to provide a fast and accurate Pokémon image classi
 3. CoreDex will classify the Pokémon and provide detailed information.
 
 ## Demo and progress
-https://github.com/castdrian/CoreDex/assets/22133246/bf7ac4e0-30e0-444b-8d6c-1f0bde77498f
+
+<https://github.com/castdrian/CoreDex/assets/22133246/bf7ac4e0-30e0-444b-8d6c-1f0bde77498f>
 
 ## Credits
 
 CoreDex utilizes the [GraphQL Pokémon API](https://github.com/favware/graphql-pokemon) by [favware](https://github.com/favware).
 
 ## Contributors
+
 [![Contributors](https://contrib.rocks/image?repo=castdrian/CoreDex)](https://github.com/castdrian/CoreDex/graphs/contributors)
 
 ## Disclaimer
