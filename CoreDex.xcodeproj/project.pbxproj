@@ -19,7 +19,6 @@
 		3AB6ED602B8A5B41009B24B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */; };
 		3AB6ED622B8A5B42009B24B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED612B8A5B42009B24B4 /* Assets.xcassets */; };
 		3AB6ED652B8A5B42009B24B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED642B8A5B42009B24B4 /* Preview Assets.xcassets */; };
-		3AB6ED7C2B8A7D41009B24B4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED7B2B8A7D41009B24B4 /* Config.xcconfig */; };
 		3AB6ED812B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED802B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql */; };
 		3AB6ED832B8A8C91009B24B4 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6ED822B8A8C91009B24B4 /* schema.graphqls */; };
 		3AB6ED8D2B8A924E009B24B4 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6ED8C2B8A924E009B24B4 /* ImagePredictor.swift */; };
@@ -41,7 +40,6 @@
 		3AB6ED5F2B8A5B41009B24B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3AB6ED612B8A5B42009B24B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB6ED642B8A5B42009B24B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3AB6ED7B2B8A7D41009B24B4 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		3AB6ED802B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = getPokemonByDexNumber.graphql; sourceTree = "<group>"; };
 		3AB6ED822B8A8C91009B24B4 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
 		3AB6ED8C2B8A924E009B24B4 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				3AB6ED5D2B8A5B41009B24B4 /* CoreDexApp.swift */,
 				3AB6ED612B8A5B42009B24B4 /* Assets.xcassets */,
 				3AB6ED632B8A5B42009B24B4 /* Preview Content */,
-				3AB6ED7B2B8A7D41009B24B4 /* Config.xcconfig */,
 			);
 			path = CoreDex;
 			sourceTree = "<group>";
@@ -217,7 +214,6 @@
 				3AB6ED652B8A5B42009B24B4 /* Preview Assets.xcassets in Resources */,
 				3AB6ED832B8A8C91009B24B4 /* schema.graphqls in Resources */,
 				3AB6ED812B8A8BCF009B24B4 /* getPokemonByDexNumber.graphql in Resources */,
-				3AB6ED7C2B8A7D41009B24B4 /* Config.xcconfig in Resources */,
 				3AB6ED622B8A5B42009B24B4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,17 +364,18 @@
 		};
 		3AB6ED692B8A5B42009B24B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3AB6ED7B2B8A7D41009B24B4 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "${BUILD_NUMBER}";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoreDex/Preview Content\"";
 				DEVELOPMENT_TEAM = L988J7YMK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoreDex/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CoreDex;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used to identify PokéMon";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -390,7 +387,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "${VERSION}";
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.adrian.CoreDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -401,17 +398,18 @@
 		};
 		3AB6ED6A2B8A5B42009B24B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3AB6ED7B2B8A7D41009B24B4 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "${BUILD_NUMBER}";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoreDex/Preview Content\"";
 				DEVELOPMENT_TEAM = L988J7YMK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoreDex/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CoreDex;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used to identify PokéMon";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -423,7 +421,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "${VERSION}";
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.adrian.CoreDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
