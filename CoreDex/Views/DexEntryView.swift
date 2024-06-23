@@ -156,7 +156,20 @@ struct DexEntryView: View {
             }
             .padding()
         }
-        .navigationBarTitle(Text("\(pokemon.species.capitalized) #\(pokemon.num)"), displayMode: .inline)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack {
+                    Text("\(pokemon.species.capitalized) #\(pokemon.num)")
+                        .font(.headline)
+                    if let classification = pokemon.classification {
+                        Text(classification)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                }
+            }
+        }
         .onAppear {
             if !hasAppeared {
                 playPokemonCry() {
