@@ -35,7 +35,7 @@ struct RotatingRing: View {
                     startAngle: .degrees(Double(index) * (360.0 / Double(ringCount)) + segmentGap),
                     endAngle: .degrees(Double(index + 1) * (360.0 / Double(ringCount)) - segmentGap)
                 )
-                .stroke(Color.blue, lineWidth: 5)  // Scaled down line width
+                .stroke(Color.blue, lineWidth: 5)
                 .frame(width: ringRadius * 2, height: ringRadius * 2)
             }
         }
@@ -111,27 +111,28 @@ struct ScanButton: View {
                     Image(systemName: "camera")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 30, height: 30)  // Scaled down image size
+                        .frame(width: 30, height: 30)
                 }
-                .padding(15)  // Reduced padding
-                .frame(width: 90, height: 90)  // Scaled down frame
+                .padding(15)
+                .frame(width: 90, height: 90)
                 .background(
                     Circle()
                         .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .top, endPoint: .bottom))
                 )
                 .overlay(
                     Circle()
-                        .stroke(Color.blue, lineWidth: 1)  // Reduced stroke width
+                        .stroke(Color.blue, lineWidth: 1)
                 )
                 .foregroundColor(Color.white)
                 .padding()
                 .scaleEffect(scale)
                 .onAppear {
                     withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                        self.scale = 1.05  // Slightly reduced scale effect
+                        self.scale = 1.05
                     }
                 }
             }
+            .modifier(PulsatingWarning())
         }
         .sheet(isPresented: $showingScanner) {
             ScannerView(onImageCaptured: { image in
@@ -141,6 +142,31 @@ struct ScanButton: View {
         .navigationDestination(isPresented: $showDexEntryView) {
             if let pokemonData = pokemonData {
                 DexEntryView(pokemon: pokemonData)
+            }
+        }
+    }
+}
+
+struct PulsatingWarning: ViewModifier {
+    @State private var pulsate = false
+
+    func body(content: Content) -> some View {
+        VStack {
+            content
+            HStack {
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .foregroundColor(.red)
+                Text("scanning is very unstable")
+                    .foregroundColor(.red)
+                    .font(.caption)
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .foregroundColor(.red)
+            }
+            .scaleEffect(pulsate ? 1.1 : 1.0)
+            .onAppear {
+                withAnimation(Animation.easeInOut(duration: 0.8).repeatForever(autoreverses: true)) {
+                    pulsate = true
+                }
             }
         }
     }

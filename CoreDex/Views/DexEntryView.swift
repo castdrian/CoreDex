@@ -362,7 +362,8 @@ struct DexEntryView: View {
             }
         }
         
-        return corrections
+//        return corrections
+        return []
     }
     
     private func readDexEntry(with dynamicCorrections: [(String, String)]? = nil) {
