@@ -42,11 +42,11 @@ struct StatInfo: Identifiable {
 struct ActivityViewController: UIViewControllerRepresentable {
     let activityItems: [Any]
     let applicationActivities: [UIActivity]? = nil
-
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityViewController>) -> UIActivityViewController {
         return UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
     }
-
+    
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ActivityViewController>) {}
 }
 
@@ -57,7 +57,7 @@ struct SpriteView: View {
     var playPokemonCry: () -> Void
     @State private var documentURL: URL?
     @State private var isLoading = false
-
+    
     var body: some View {
         HStack {
             KFAnimatedImage(URL(string: showShinySprite ? shinySpriteURL : spriteURL))
@@ -95,14 +95,14 @@ struct SpriteView: View {
             }
         }
     }
-
+    
     private func loadImageData() {
         isLoading = true
         guard let imageURL = URL(string: showShinySprite ? shinySpriteURL : spriteURL) else {
             isLoading = false
             return
         }
-
+        
         URLSession.shared.dataTask(with: imageURL) { data, response, error in
             DispatchQueue.main.async {
                 isLoading = false
@@ -111,9 +111,9 @@ struct SpriteView: View {
                 print("Error loading image data: \(String(describing: error))")
                 return
             }
-
+            
             let tempURL = saveImageToTemporaryDirectory(imageData: data)
-
+            
             DispatchQueue.main.async {
                 if let tempURL = tempURL {
                     documentURL = tempURL
@@ -121,11 +121,11 @@ struct SpriteView: View {
             }
         }.resume()
     }
-
+    
     private func saveImageToTemporaryDirectory(imageData: Data) -> URL? {
         let tempDirectory = FileManager.default.temporaryDirectory
         let tempURL = tempDirectory.appendingPathComponent(UUID().uuidString).appendingPathExtension("gif")
-
+        
         do {
             try imageData.write(to: tempURL)
             return tempURL
@@ -144,7 +144,7 @@ struct DexEntryView: View {
     @State private var showShinySprite = false
     @State private var selectedAbilityIndex = 0
     @State private var hasAppeared = false
-
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
@@ -336,11 +336,11 @@ struct DexEntryView: View {
     
     private func createDynamicCorrections(for pokemon: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber) -> [(String, String)] {
         var corrections = [(String, String)]()
-
+        
         if let ipa = pokemon.ipa {
             corrections.append((pokemon.species.lowercased(), ipa))
         }
-
+        
         if let preevolutions = pokemon.preevolutions {
             for preevolution in preevolutions {
                 if let ipa = preevolution.ipa {
@@ -348,15 +348,15 @@ struct DexEntryView: View {
                 }
             }
         }
-
+        
         return corrections
     }
-
+    
     private func readDexEntry(with dynamicCorrections: [(String, String)]? = nil) {
         let audioSession = AVAudioSession()
         
         do {
-            try audioSession.setCategory(.ambient, mode: .voicePrompt, options: .duckOthers)
+            try audioSession.setCategory(.ambient, options: .duckOthers)
             try audioSession.setActive(false)
         } catch let error {
             print(error.localizedDescription)
@@ -366,37 +366,44 @@ struct DexEntryView: View {
         let typeText = pokemon.types.count == 2 ? "\(pokemon.types.first!.name) and \(pokemon.types.last!.name) type!" : "\(pokemon.types.first!.name) type!"
         let preevolutionText = (pokemon.preevolutions?.first != nil) ? "The evolution of \(pokemon.preevolutions!.first!.species)!" : ""
         let flavorText = pokemon.flavorTexts.first?.flavor ?? ""
-
+        
         let dexEntry = "\(pokemon.species)! \(classificationText) \(typeText) \(preevolutionText) \(flavorText)"
         
         let constantCorrections = [("pokémon", "ˈpo͡ʊ.ki.ˈmɑn")]
         var dynamicCorrections = dynamicCorrections ?? []
         dynamicCorrections += constantCorrections
-
+        
         let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
         
         func applyCorrections(to text: String, with corrections: [(String, String)]) -> NSMutableAttributedString {
             let attributedString = NSMutableAttributedString(string: text)
-            let normalizedText = text.folding(options: .diacriticInsensitive, locale: .current)
+            let normalizedText = text.folding(options: .diacriticInsensitive, locale: .current).lowercased()
+            
             for (target, ipa) in corrections {
-                let range = NSString(string: normalizedText).range(of: target, options: .caseInsensitive)
-                if range.location != NSNotFound {
-                    attributedString.setAttributes([pronunciationKey: ipa], range: range)
+                let normalizedTarget = target.folding(options: .diacriticInsensitive, locale: .current).lowercased()
+                var searchRange = NSRange(location: 0, length: normalizedText.utf16.count)
+                
+                while let range = normalizedText.range(of: normalizedTarget, options: .caseInsensitive, range: Range(searchRange, in: normalizedText)) {
+                    let nsRange = NSRange(range, in: normalizedText)
+                    attributedString.setAttributes([pronunciationKey: ipa], range: nsRange)
                     print("Applied correction for \(target)")
-                } else {
+                    searchRange = NSRange(location: nsRange.location + nsRange.length, length: normalizedText.utf16.count - (nsRange.location + nsRange.length))
+                }
+                
+                if !normalizedText.contains(normalizedTarget) {
                     print("No correctible text found for \(target)")
                 }
             }
             return attributedString
         }
-                
+        
         let utterance = AVSpeechUtterance(attributedString: applyCorrections(to: dexEntry, with: dynamicCorrections))
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
         utterance.rate = 0.4
         
         synthesizer.speak(utterance)
     }
-
+    
     
     private func stopAudioPlayback() {
         if synthesizer.isSpeaking {

@@ -41,31 +41,61 @@ struct ContentView: View {
                 .pickerStyle(WheelPickerStyle())
                 .frame(height: 150)
                 
-                Button(action: {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    
-                    DispatchQueue.global(qos: .userInitiated).async {
-                        getDexEntry()
-                    }
-                }) {
-                    Image(systemName: "magnifyingglass")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
-                }
-                .padding(15)
-                .frame(width: 100, height: 100)
-                .background(
-                    ZStack {
-                        Circle()
-                            .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .top, endPoint: .bottom))
-                            .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                HStack {
+                    Button(action: {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
                         
-                        Circle()
-                            .stroke(Color.blue, lineWidth: 2)
+                        DispatchQueue.global(qos: .userInitiated).async {
+                            getDexEntry()
+                        }
+                    }) {
+                        Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
                     }
-                )
-                .foregroundColor(Color.white)
+                    .padding(15)
+                    .frame(width: 100, height: 100)
+                    .background(
+                        ZStack {
+                            Circle()
+                                .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .top, endPoint: .bottom))
+                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                            
+                            Circle()
+                                .stroke(Color.blue, lineWidth: 2)
+                        }
+                    )
+                    .foregroundColor(Color.white)
+                    
+                    Button(action: {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        
+                        selectedNumber = numberRange.randomElement() ?? 1
+                        
+                        DispatchQueue.global(qos: .userInitiated).async {
+                            getDexEntry()
+                        }
+                    }) {
+                        Image(systemName: "shuffle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                    }
+                    .padding(15)
+                    .frame(width: 100, height: 100)
+                    .background(
+                        ZStack {
+                            Circle()
+                                .fill(LinearGradient(gradient: Gradient(colors: [Color.green.opacity(0.5), Color.green]), startPoint: .top, endPoint: .bottom))
+                                .shadow(color: .gray.opacity(0.5), radius: 10, x: 5, y: 5)
+                            
+                            Circle()
+                                .stroke(Color.green, lineWidth: 2)
+                        }
+                    )
+                    .foregroundColor(Color.white)
+                }
                 
                 ScanButton()
                 GenerationCheckMarkView()
