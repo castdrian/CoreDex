@@ -356,7 +356,7 @@ struct DexEntryView: View {
         let audioSession = AVAudioSession()
         
         do {
-            try audioSession.setCategory(.playback, mode: .voicePrompt, options: .duckOthers)
+            try audioSession.setCategory(.ambient, mode: .voicePrompt, options: .duckOthers)
             try audioSession.setActive(false)
         } catch let error {
             print(error.localizedDescription)
@@ -369,43 +369,34 @@ struct DexEntryView: View {
 
         let dexEntry = "\(pokemon.species)! \(classificationText) \(typeText) \(preevolutionText) \(flavorText)"
         
-        var corrections = [("pokémon", "ˈpo͡ʊ.ki.ˈmɑn")]
-        
-        if let dynamicCorrections = dynamicCorrections {
-            corrections += dynamicCorrections.map { ($0.0.lowercased(), $0.1) }
-        }
-        
+        let constantCorrections = [("pokémon", "ˈpo͡ʊ.ki.ˈmɑn")]
+        var dynamicCorrections = dynamicCorrections ?? []
+        dynamicCorrections += constantCorrections
+
         let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
-        let mutableAttributedString = NSMutableAttributedString()
         
-        let parts = dexEntry.split { !$0.isLetter && !$0.isNumber }.map { String($0) }
-        
-        for part in parts {
-            var attributedPart = NSMutableAttributedString(string: part)
-            
+        func applyCorrections(to text: String, with corrections: [(String, String)]) -> NSMutableAttributedString {
+            let attributedString = NSMutableAttributedString(string: text)
+            let normalizedText = text.folding(options: .diacriticInsensitive, locale: .current)
             for (target, ipa) in corrections {
-                if part.lowercased().contains(target) {
-                    attributedPart = NSMutableAttributedString(string: part)
-                    attributedPart.addAttribute(pronunciationKey, value: ipa, range: NSRange(location: 0, length: part.count))
-                    break
+                let range = NSString(string: normalizedText).range(of: target, options: .caseInsensitive)
+                if range.location != NSNotFound {
+                    attributedString.setAttributes([pronunciationKey: ipa], range: range)
+                    print("Applied correction for \(target)")
+                } else {
+                    print("No correctible text found for \(target)")
                 }
             }
-            
-            mutableAttributedString.append(attributedPart)
-            
-            let originalPart = dexEntry.range(of: part)!
-            if originalPart.upperBound < dexEntry.endIndex {
-                let nextCharacter = dexEntry[originalPart.upperBound]
-                mutableAttributedString.append(NSAttributedString(string: String(nextCharacter)))
-            }
+            return attributedString
         }
-        
-        let utterance = AVSpeechUtterance(attributedString: mutableAttributedString)
+                
+        let utterance = AVSpeechUtterance(attributedString: applyCorrections(to: dexEntry, with: dynamicCorrections))
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
         utterance.rate = 0.4
         
         synthesizer.speak(utterance)
     }
+
     
     private func stopAudioPlayback() {
         if synthesizer.isSpeaking {
