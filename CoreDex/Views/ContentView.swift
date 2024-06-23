@@ -52,10 +52,10 @@ struct ContentView: View {
                         Image(systemName: "magnifyingglass")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 40, height: 40)
+                            .frame(width: 30, height: 30)
                     }
                     .padding(15)
-                    .frame(width: 100, height: 100)
+                    .frame(width: 70, height: 70)
                     .background(
                         ZStack {
                             Circle()
@@ -80,10 +80,10 @@ struct ContentView: View {
                         Image(systemName: "shuffle")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 40, height: 40)
+                            .frame(width: 30, height: 30)
                     }
                     .padding(15)
-                    .frame(width: 100, height: 100)
+                    .frame(width: 70, height: 70)
                     .background(
                         ZStack {
                             Circle()

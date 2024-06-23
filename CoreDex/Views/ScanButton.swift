@@ -35,7 +35,7 @@ struct RotatingRing: View {
                     startAngle: .degrees(Double(index) * (360.0 / Double(ringCount)) + segmentGap),
                     endAngle: .degrees(Double(index + 1) * (360.0 / Double(ringCount)) - segmentGap)
                 )
-                .stroke(Color.blue, lineWidth: 10)
+                .stroke(Color.blue, lineWidth: 5)  // Scaled down line width
                 .frame(width: ringRadius * 2, height: ringRadius * 2)
             }
         }
@@ -88,14 +88,14 @@ struct ScanButton: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                RotatingRing(ringCount: 12, ringRadius: 130, segmentGap: 3, rotationDuration: 8, rotationAngle: $rotateOuterAngle)
+                RotatingRing(ringCount: 12, ringRadius: 65, segmentGap: 3, rotationDuration: 8, rotationAngle: $rotateOuterAngle)
                     .onAppear {
                         withAnimation(Animation.linear(duration: 8).repeatForever(autoreverses: false)) {
                             rotateOuterAngle = 360
                         }
                     }
                 
-                RotatingRing(ringCount: 12, ringRadius: 110, segmentGap: 3, rotationDuration: 6, rotationAngle: $rotateInnerAngle)
+                RotatingRing(ringCount: 12, ringRadius: 55, segmentGap: 3, rotationDuration: 6, rotationAngle: $rotateInnerAngle)
                     .onAppear {
                         withAnimation(Animation.linear(duration: 6).repeatForever(autoreverses: false)) {
                             rotateInnerAngle = -360
@@ -111,24 +111,24 @@ struct ScanButton: View {
                     Image(systemName: "camera")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 60, height: 60)
+                        .frame(width: 30, height: 30)  // Scaled down image size
                 }
-                .padding(25)
-                .frame(width: 180, height: 180)
+                .padding(15)  // Reduced padding
+                .frame(width: 90, height: 90)  // Scaled down frame
                 .background(
                     Circle()
                         .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .top, endPoint: .bottom))
                 )
                 .overlay(
                     Circle()
-                        .stroke(Color.blue, lineWidth: 2)
+                        .stroke(Color.blue, lineWidth: 1)  // Reduced stroke width
                 )
                 .foregroundColor(Color.white)
                 .padding()
                 .scaleEffect(scale)
                 .onAppear {
                     withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                        self.scale = 1.1
+                        self.scale = 1.05  // Slightly reduced scale effect
                     }
                 }
             }
