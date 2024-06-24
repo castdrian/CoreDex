@@ -376,7 +376,7 @@ struct DexEntryView: View {
             print(error.localizedDescription)
         }
         
-        let classificationText = pokemon.classification != nil ? "The \(pokemon.classification!)!" : ""
+        let classificationText = pokemon.classification != nil ? "The \(pokemon.classification!.split(separator: " ").dropLast().joined(separator: " ")) POH-kee-MAHN!" : ""
         let typeText = pokemon.types.count == 2 ? "\(pokemon.types.first!.name) and \(pokemon.types.last!.name) type!" : "\(pokemon.types.first!.name) type!"
         let preevolutionText = (pokemon.preevolutions?.first != nil) ? "The evolution of \(pokemon.preevolutions!.first!.species)!" : ""
         let flavorText = pokemon.flavorTexts.first?.flavor ?? ""
