@@ -29,15 +29,14 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                Text("Pokémon #\(selectedNumber)")
+                Text("Pokémon #\(selectedNumber.description)")
                     .font(.headline)
                     .padding(.top, 20)
                 
                 Picker(String(), selection: $selectedNumber) {
-                    ForEach(numberRange, id: \.self) {
-                        Text("#\($0)").tag($0)
-                    }
-                }
+                    ForEach(numberRange, id: \.self) { number in
+                        Text("#\(number.description)").tag(number)
+                    }                }
                 .pickerStyle(WheelPickerStyle())
                 .frame(height: 150)
                 

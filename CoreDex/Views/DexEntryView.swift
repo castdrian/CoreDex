@@ -160,7 +160,7 @@ struct DexEntryView: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
-                    Text("\(pokemon.species.capitalized) #\(pokemon.num)")
+                    Text("\(pokemon.species.capitalized) #\(pokemon.num.description)")
                         .font(.headline)
                     if let classification = pokemon.classification {
                         Text(classification)
