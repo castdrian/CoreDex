@@ -89,11 +89,6 @@ struct SpriteView: View {
                 }
             }
         )
-        .overlay {
-            if isLoading {
-                ProgressView("Loading...")
-            }
-        }
     }
     
     private func loadImageData() {
@@ -278,6 +273,11 @@ struct DexEntryView: View {
         .padding()
         .frame(maxWidth: .infinity)
         .clipShape(RoundedRectangle(cornerRadius: 10))
+        .onTapGesture {
+            let dynamicCorrections = createDynamicCorrections(for: pokemon)
+            readAbilityEntry(with: ability, dynamicCorrections: dynamicCorrections)
+        }
+        
     }
     
     private var statsSection: some View {
@@ -347,26 +347,26 @@ struct DexEntryView: View {
         }.resume()
     }
     
-    private func createDynamicCorrections(for pokemon: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber) -> [(String, String)] {
-        var corrections = [(String, String)]()
+    private func createDynamicCorrections(for pokemon: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber) -> [(String, String, CorrectionMode)] {
+        var corrections = [(String, String, CorrectionMode)]()
         
         if let ipa = pokemon.ipa {
-            corrections.append((pokemon.species.lowercased(), ipa))
+            corrections.append((pokemon.species.lowercased(), ipa, .ipa))
         }
         
         if let preevolutions = pokemon.preevolutions {
             for preevolution in preevolutions {
                 if let ipa = preevolution.ipa {
-                    corrections.append((preevolution.species.lowercased(), ipa))
+                    corrections.append((preevolution.species.lowercased(), ipa, .ipa))
                 }
             }
         }
         
-//        return corrections
+        //        return corrections
         return []
     }
     
-    private func readDexEntry(with dynamicCorrections: [(String, String)]? = nil) {
+    private func readDexEntry(with dynamicCorrections: [(String, String, CorrectionMode)]? = nil) {
         let audioSession = AVAudioSession()
         
         do {
@@ -382,35 +382,7 @@ struct DexEntryView: View {
         let flavorText = pokemon.flavorTexts.first?.flavor ?? ""
         
         let dexEntry = "\(pokemon.species)! \(classificationText) \(typeText) \(preevolutionText) \(flavorText)"
-        
-        let constantCorrections = [("pokémon", "ˈpo͡ʊ.ki.ˈmɑn")]
-        var dynamicCorrections = dynamicCorrections ?? []
-        dynamicCorrections += constantCorrections
-        
-        let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
-        
-        func applyCorrections(to text: String, with corrections: [(String, String)]) -> NSMutableAttributedString {
-            let attributedString = NSMutableAttributedString(string: text)
-            let normalizedText = text.folding(options: .diacriticInsensitive, locale: .current).lowercased()
-            
-            for (target, ipa) in corrections {
-                let normalizedTarget = target.folding(options: .diacriticInsensitive, locale: .current).lowercased()
-                var searchRange = NSRange(location: 0, length: normalizedText.utf16.count)
                 
-                while let range = normalizedText.range(of: normalizedTarget, options: .caseInsensitive, range: Range(searchRange, in: normalizedText)) {
-                    let nsRange = NSRange(range, in: normalizedText)
-                    attributedString.setAttributes([pronunciationKey: ipa], range: nsRange)
-                    print("Applied correction for \(target)")
-                    searchRange = NSRange(location: nsRange.location + nsRange.length, length: normalizedText.utf16.count - (nsRange.location + nsRange.length))
-                }
-                
-                if !normalizedText.contains(normalizedTarget) {
-                    print("No correctible text found for \(target)")
-                }
-            }
-            return attributedString
-        }
-        
         let utterance = AVSpeechUtterance(attributedString: applyCorrections(to: dexEntry, with: dynamicCorrections))
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
         utterance.rate = 0.4
@@ -418,6 +390,63 @@ struct DexEntryView: View {
         synthesizer.speak(utterance)
     }
     
+    private func readAbilityEntry(with ability: AbilityDisplayable, dynamicCorrections: [(String, String, CorrectionMode)]? = nil) {
+        let audioSession = AVAudioSession()
+        
+        do {
+            try audioSession.setCategory(.ambient, options: .duckOthers)
+            try audioSession.setActive(false)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
+        let abilityText = "\(ability.name). \(ability.shortDesc)"
+        
+        let utterance = AVSpeechUtterance(attributedString: applyCorrections(to: abilityText, with: dynamicCorrections))
+        utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
+        utterance.rate = 0.4
+        
+        synthesizer.speak(utterance)
+    }
+    
+    enum CorrectionMode {
+        case ipa
+        case textReplacement
+    }
+    
+    private func applyCorrections(to text: String, with corrections: [(String, String, CorrectionMode)]?) -> NSMutableAttributedString {
+           let constantCorrections: [(String, String, CorrectionMode)] = [
+               ("pokémon", "ˈpo͡ʊ.ki.ˈmɑn", .ipa),
+           ]
+        
+           var dynamicCorrections = corrections ?? []
+           dynamicCorrections += constantCorrections
+           
+           let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
+           let attributedString = NSMutableAttributedString(string: text)
+           let normalizedText = text.folding(options: .diacriticInsensitive, locale: .current).lowercased()
+           
+           for (target, correction, mode) in dynamicCorrections {
+               let normalizedTarget = target.folding(options: .diacriticInsensitive, locale: .current).lowercased()
+               var searchRange = NSRange(location: 0, length: normalizedText.utf16.count)
+               
+               while let range = normalizedText.range(of: normalizedTarget, options: .caseInsensitive, range: Range(searchRange, in: normalizedText)) {
+                   let nsRange = NSRange(range, in: normalizedText)
+                   if mode == .ipa {
+                       attributedString.setAttributes([pronunciationKey: correction], range: nsRange)
+                   } else if mode == .textReplacement {
+                       attributedString.replaceCharacters(in: nsRange, with: correction)
+                   }
+                   print("Applied correction for \(target)")
+                   searchRange = NSRange(location: nsRange.location + nsRange.length, length: normalizedText.utf16.count - (nsRange.location + nsRange.length))
+               }
+               
+               if !normalizedText.contains(normalizedTarget) {
+                   print("No correctible text found for \(target)")
+               }
+           }
+           return attributedString
+       }
     
     private func stopAudioPlayback() {
         if synthesizer.isSpeaking {
