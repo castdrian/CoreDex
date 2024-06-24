@@ -5,15 +5,15 @@
 //  Created by Adrian Castro on 26.02.24.
 //
 
-import SwiftUI
 import PkmnApi
+import SwiftUI
 
 let imagePredictor = ImagePredictor()
 
 struct RingSegment: Shape {
     let startAngle: Angle
     let endAngle: Angle
-    
+
     func path(in rect: CGRect) -> Path {
         var path = Path()
         path.addArc(center: CGPoint(x: rect.midX, y: rect.midY), radius: rect.width / 2, startAngle: startAngle, endAngle: endAngle, clockwise: false)
@@ -27,10 +27,10 @@ struct RotatingRing: View {
     let segmentGap: Double
     let rotationDuration: Double
     @Binding var rotationAngle: Double
-    
+
     var body: some View {
         ZStack {
-            ForEach(0..<ringCount, id: \.self) { index in
+            ForEach(0 ..< ringCount, id: \.self) { index in
                 RingSegment(
                     startAngle: .degrees(Double(index) * (360.0 / Double(ringCount)) + segmentGap),
                     endAngle: .degrees(Double(index + 1) * (360.0 / Double(ringCount)) - segmentGap)
@@ -56,35 +56,35 @@ struct ScanButton: View {
     @State private var rotateInnerAngle = 0.0
     @State private var pokemonData: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber?
     @State private var showDexEntryView = false
-    
+
     func processImage() {
         guard let selectedImage = inputImage else { return }
         processImageAndGetDexEntry(image: selectedImage)
     }
-    
+
     private func processImageAndGetDexEntry(image: UIImage) {
         DispatchQueue.global(qos: .userInitiated).async {
             imagePredictor.classifyImage(image) { result in
                 switch result {
-                case .success(let prediction):
+                case let .success(prediction):
                     apolloClient.fetch(query: GetPokemonByDexNumberQuery(number: prediction.classification)) { result in
                         guard let data = try? result.get().data else { return }
-                        
+
                         UINotificationFeedbackGenerator().notificationOccurred(.success)
-                        
+
                         DispatchQueue.main.async {
                             pokemonData = data.getPokemonByDexNumber
                             showingScanner = false
                             showDexEntryView = true
                         }
                     }
-                case .failure(let error):
+                case let .failure(error):
                     print("Error predicting image: \(error)")
                 }
             }
         }
     }
-    
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -94,14 +94,14 @@ struct ScanButton: View {
                             rotateOuterAngle = 360
                         }
                     }
-                
+
                 RotatingRing(ringCount: 12, ringRadius: 55, segmentGap: 3, rotationDuration: 6, rotationAngle: $rotateInnerAngle)
                     .onAppear {
                         withAnimation(Animation.linear(duration: 6).repeatForever(autoreverses: false)) {
                             rotateInnerAngle = -360
                         }
                     }
-                
+
                 Button(action: {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     DispatchQueue.global(qos: .userInitiated).async {
@@ -128,7 +128,7 @@ struct ScanButton: View {
                 .scaleEffect(scale)
                 .onAppear {
                     withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                        self.scale = 1.05
+                        scale = 1.05
                     }
                 }
             }
@@ -140,7 +140,7 @@ struct ScanButton: View {
             })
         }
         .navigationDestination(isPresented: $showDexEntryView) {
-            if let pokemonData = pokemonData {
+            if let pokemonData {
                 DexEntryView(pokemon: pokemonData)
             }
         }

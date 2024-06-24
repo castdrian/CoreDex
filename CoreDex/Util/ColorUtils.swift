@@ -26,7 +26,7 @@ extension Color {
             .sRGB,
             red: Double(r) / 255,
             green: Double(g) / 255,
-            blue:  Double(b) / 255,
+            blue: Double(b) / 255,
             opacity: Double(a) / 255
         )
     }
@@ -50,5 +50,5 @@ let pokemonTypeColors: [String: Color] = [
     "dragon": Color(hex: "#6F35FC"),
     "dark": Color(hex: "#705746"),
     "steel": Color(hex: "#B7B7CE"),
-    "fairy": Color(hex: "#D685AD")
+    "fairy": Color(hex: "#D685AD"),
 ]

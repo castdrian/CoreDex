@@ -4,9 +4,9 @@
 import ApolloAPI
 
 public extension Objects {
-  /// A Pokémon gender ratio entry
-  static let Gender = ApolloAPI.Object(
-    typename: "Gender",
-    implementedInterfaces: []
-  )
+    /// A Pokémon gender ratio entry
+    static let Gender = ApolloAPI.Object(
+        typename: "Gender",
+        implementedInterfaces: []
+    )
 }

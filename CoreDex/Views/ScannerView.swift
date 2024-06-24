@@ -5,17 +5,17 @@
 //  Created by Adrian Castro on 26.02.24.
 //
 
-import SwiftUI
 import PkmnApi
+import SwiftUI
 
 struct ScannerView: UIViewControllerRepresentable {
-    var onImageCaptured: ((UIImage) -> Void)
+    var onImageCaptured: (UIImage) -> Void
 
-    func makeUIViewController(context: Context) -> ScannerViewController {
+    func makeUIViewController(context _: Context) -> ScannerViewController {
         let scannerVC = ScannerViewController()
         scannerVC.onImageCaptured = onImageCaptured
         return scannerVC
     }
 
-    func updateUIViewController(_ uiViewController: ScannerViewController, context: Context) {}
+    func updateUIViewController(_: ScannerViewController, context _: Context) {}
 }

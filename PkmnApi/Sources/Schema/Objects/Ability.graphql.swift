@@ -4,9 +4,9 @@
 import ApolloAPI
 
 public extension Objects {
-  /// A single Pokémon ability entry
-  static let Ability = ApolloAPI.Object(
-    typename: "Ability",
-    implementedInterfaces: []
-  )
+    /// A single Pokémon ability entry
+    static let Ability = ApolloAPI.Object(
+        typename: "Ability",
+        implementedInterfaces: []
+    )
 }
