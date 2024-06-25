@@ -145,6 +145,7 @@ struct DexEntryView: View {
             VStack(alignment: .leading, spacing: 10) {
                 spriteSection
                 typeSection
+                dimensionsAndGenderSection
                 flavorTextSection
                 abilitiesSection
                 statsSection
@@ -209,6 +210,28 @@ struct DexEntryView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 10)
+    }
+
+    private var dimensionsAndGenderSection: some View {
+        VStack {
+            HStack {
+                Text("♂")
+                    .font(.system(size: 24))
+                    .foregroundColor(.blue)
+                Text(pokemon.gender.male)
+                Text("♀")
+                    .font(.system(size: 24))
+                    .foregroundColor(.red)
+                Text(pokemon.gender.female)
+            }
+            Text("Height: \(pokemon.height.description) M | Weight: \(pokemon.weight.description) KG")
+        }
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .center)
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.gray, lineWidth: 2)
+        )
     }
 
     private var flavorTextSection: some View {
