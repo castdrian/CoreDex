@@ -4,7 +4,7 @@
 
 CoreDex is a real PokéDex application for iOS, leveraging Apple's CoreML technology to classify images of Pokémon.
 
-<img src="https://discord.com/api/guilds/1211664271243612251/widget.png?style=banner3" />
+<a href="https://discord.gg/4xhgn6UHnd"><img src="https://discord.com/api/guilds/1211664271243612251/widget.png?style=banner3" />
 
 ## Funding
 
