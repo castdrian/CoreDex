@@ -42,25 +42,50 @@ struct StatInfo: Identifiable {
 struct ActivityViewController: UIViewControllerRepresentable {
     let activityItems: [Any]
     let applicationActivities: [UIActivity]? = nil
-
+    
     func makeUIViewController(context _: UIViewControllerRepresentableContext<ActivityViewController>) -> UIActivityViewController {
         UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
     }
-
+    
     func updateUIViewController(_: UIActivityViewController, context _: UIViewControllerRepresentableContext<ActivityViewController>) {}
 }
 
-struct SpriteView: View {
-    let spriteURL: String
+struct SpriteSet: Identifiable {
+    let id = UUID()
+    let normalSpriteURL: String
     let shinySpriteURL: String
+}
+
+struct SpriteView: View {
+    let spriteSets: [SpriteSet]
+    @Binding var selectedSpriteSetIndex: Int
     @Binding var showShinySprite: Bool
     var playPokemonCry: () -> Void
     @State private var documentURL: URL?
     @State private var isLoading = false
+    
+    var body: some View {
+        TabView(selection: $selectedSpriteSetIndex) {
+            ForEach(spriteSets.indices, id: \.self) { index in
+                SingleSpriteView(spriteSet: spriteSets[index], showShinySprite: $showShinySprite, playPokemonCry: playPokemonCry, documentURL: $documentURL, isLoading: $isLoading)
+                    .tag(index)
+            }
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+        .padding(.bottom, -25)
+    }
+}
 
+struct SingleSpriteView: View {
+    let spriteSet: SpriteSet
+    @Binding var showShinySprite: Bool
+    var playPokemonCry: () -> Void
+    @Binding var documentURL: URL?
+    @Binding var isLoading: Bool
+    
     var body: some View {
         HStack {
-            KFAnimatedImage(URL(string: showShinySprite ? shinySpriteURL : spriteURL))
+            KFAnimatedImage(URL(string: showShinySprite ? spriteSet.shinySpriteURL : spriteSet.normalSpriteURL))
                 .scaledToFit()
                 .frame(width: 150, height: 150)
         }
@@ -76,7 +101,7 @@ struct SpriteView: View {
         .onLongPressGesture {
             let generator = UIImpactFeedbackGenerator(style: .medium)
             generator.impactOccurred()
-
+            
             loadImageData()
         }
         .background(
@@ -90,14 +115,14 @@ struct SpriteView: View {
             }
         )
     }
-
+    
     private func loadImageData() {
         isLoading = true
-        guard let imageURL = URL(string: showShinySprite ? shinySpriteURL : spriteURL) else {
+        guard let imageURL = URL(string: showShinySprite ? spriteSet.shinySpriteURL : spriteSet.normalSpriteURL) else {
             isLoading = false
             return
         }
-
+        
         URLSession.shared.dataTask(with: imageURL) { data, _, error in
             DispatchQueue.main.async {
                 isLoading = false
@@ -106,9 +131,9 @@ struct SpriteView: View {
                 print("Error loading image data: \(String(describing: error))")
                 return
             }
-
+            
             let tempURL = saveImageToTemporaryDirectory(imageData: data)
-
+            
             DispatchQueue.main.async {
                 if let tempURL {
                     documentURL = tempURL
@@ -116,11 +141,11 @@ struct SpriteView: View {
             }
         }.resume()
     }
-
+    
     private func saveImageToTemporaryDirectory(imageData: Data) -> URL? {
         let tempDirectory = FileManager.default.temporaryDirectory
         let tempURL = tempDirectory.appendingPathComponent(UUID().uuidString).appendingPathExtension("gif")
-
+        
         do {
             try imageData.write(to: tempURL)
             return tempURL
@@ -137,9 +162,10 @@ struct DexEntryView: View {
     @State private var audioPlayer: AVAudioPlayer?
     @State private var audioPlayerDelegate = AudioPlayerDelegate()
     @State private var showShinySprite = false
+    @State private var selectedSpriteSetIndex = 0
     @State private var selectedAbilityIndex = 0
     @State private var hasAppeared = false
-
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
@@ -179,16 +205,25 @@ struct DexEntryView: View {
             stopAudioPlayback()
         }
     }
-
+    
+    var spriteSets: [SpriteSet] {
+        [
+            SpriteSet(normalSpriteURL: pokemon.sprite, shinySpriteURL: pokemon.shinySprite),
+            SpriteSet(normalSpriteURL: pokemon.backSprite, shinySpriteURL: pokemon.shinyBackSprite)
+        ]
+    }
+    
     private var spriteSection: some View {
-        SpriteView(spriteURL: pokemon.sprite,
-                   shinySpriteURL: pokemon.shinySprite,
+        SpriteView(spriteSets: spriteSets,
+                   selectedSpriteSetIndex: $selectedSpriteSetIndex,
                    showShinySprite: $showShinySprite,
                    playPokemonCry: {
-                       playPokemonCry()
-                   })
+            playPokemonCry()
+        })
+        .frame(height: 200)
+        .padding(.vertical)
     }
-
+    
     private var typeSection: some View {
         HStack(spacing: 10) {
             ForEach(pokemon.types, id: \.name) { type in
@@ -196,7 +231,7 @@ struct DexEntryView: View {
                     Text(type.name.capitalized)
                         .padding(8)
                         .frame(minWidth: 80, alignment: .center)
-
+                    
                     Image(type.name.lowercased())
                         .resizable()
                         .scaledToFit()
@@ -211,7 +246,7 @@ struct DexEntryView: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 10)
     }
-
+    
     private var dimensionsAndGenderSection: some View {
         VStack {
             HStack {
@@ -233,7 +268,7 @@ struct DexEntryView: View {
                 .stroke(Color.gray, lineWidth: 2)
         )
     }
-
+    
     private var flavorTextSection: some View {
         VStack {
             Text(pokemon.flavorTexts.first!.flavor)
@@ -250,12 +285,12 @@ struct DexEntryView: View {
             readDexEntry(with: dynamicCorrections)
         }
     }
-
+    
     private var abilities: [AbilityDisplayable] {
         var abilitiesList: [AbilityDisplayable] = []
-
+        
         abilitiesList.append(pokemon.abilities.first)
-
+        
         if let second = pokemon.abilities.second {
             abilitiesList.append(second)
         }
@@ -264,12 +299,12 @@ struct DexEntryView: View {
         }
         return abilitiesList
     }
-
+    
     private var abilitiesSection: some View {
         VStack(alignment: .leading) {
             Text("Abilities")
                 .font(.headline)
-
+            
             TabView(selection: $selectedAbilityIndex) {
                 ForEach(0 ..< abilities.count, id: \.self) { index in
                     abilityView(ability: abilities[index])
@@ -284,7 +319,7 @@ struct DexEntryView: View {
                 .stroke(Color.gray, lineWidth: 2)
         )
     }
-
+    
     private func abilityView(ability: AbilityDisplayable) -> some View {
         VStack(alignment: .leading) {
             Text(ability.name)
@@ -301,13 +336,13 @@ struct DexEntryView: View {
             readAbilityEntry(with: ability, dynamicCorrections: dynamicCorrections)
         }
     }
-
+    
     private var statsSection: some View {
         VStack(alignment: .leading) {
             Text("Base Stats")
                 .font(.headline)
                 .padding(.bottom, 4)
-
+            
             ForEach(pokemon.baseStatsArray) { stat in
                 HStack {
                     Text(stat.name)
@@ -334,13 +369,13 @@ struct DexEntryView: View {
                 .stroke(Color.gray, lineWidth: 2)
         )
     }
-
+    
     private func playPokemonCry(completion: (() -> Void)? = nil) {
         guard let url = URL(string: "https://play.pokemonshowdown.com/audio/cries/\(pokemon.species).mp3") else {
             completion?()
             return
         }
-
+        
         URLSession.shared.dataTask(with: url) { [self] data, _, error in
             DispatchQueue.main.async {
                 if let data, error == nil {
@@ -351,10 +386,10 @@ struct DexEntryView: View {
                             completion?()
                         }
                         audioPlayer?.delegate = audioPlayerDelegate
-
+                        
                         try AVAudioSession.sharedInstance().setCategory(.playback)
                         try AVAudioSession.sharedInstance().setActive(true)
-
+                        
                         audioPlayer?.prepareToPlay()
                         audioPlayer?.play()
                     } catch {
@@ -368,14 +403,14 @@ struct DexEntryView: View {
             }
         }.resume()
     }
-
+    
     private func createDynamicCorrections(for pokemon: GetPokemonByDexNumberQuery.Data.GetPokemonByDexNumber) -> [(String, String, CorrectionMode)] {
         var corrections = [(String, String, CorrectionMode)]()
-
+        
         if let ipa = pokemon.ipa {
             corrections.append((pokemon.species.lowercased(), ipa, .ipa))
         }
-
+        
         if let preevolutions = pokemon.preevolutions {
             for preevolution in preevolutions {
                 if let ipa = preevolution.ipa {
@@ -383,75 +418,75 @@ struct DexEntryView: View {
                 }
             }
         }
-
+        
         //        return corrections
         return []
     }
-
+    
     private func readDexEntry(with dynamicCorrections: [(String, String, CorrectionMode)]? = nil) {
         let audioSession = AVAudioSession()
-
+        
         do {
             try audioSession.setCategory(.ambient, options: .duckOthers)
             try audioSession.setActive(false)
         } catch {
             print(error.localizedDescription)
         }
-
+        
         let classificationText = pokemon.classification != nil ? "The \(pokemon.classification!.split(separator: " ").dropLast().joined(separator: " ")) POH-kee-MAHN!" : ""
         let typeText = pokemon.types.count == 2 ? "\(pokemon.types.first!.name) and \(pokemon.types.last!.name) type!" : "\(pokemon.types.first!.name) type!"
         let preevolutionText = (pokemon.preevolutions?.first != nil) ? "The evolution of \(pokemon.preevolutions!.first!.species)!" : ""
         let flavorText = pokemon.flavorTexts.first?.flavor ?? ""
-
+        
         let dexEntry = "\(pokemon.species)! \(classificationText) \(typeText) \(preevolutionText) \(flavorText)"
-
+        
         let utterance = AVSpeechUtterance(attributedString: applyCorrections(to: dexEntry, with: dynamicCorrections))
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
         utterance.rate = 0.4
-
+        
         synthesizer.speak(utterance)
     }
-
+    
     private func readAbilityEntry(with ability: AbilityDisplayable, dynamicCorrections: [(String, String, CorrectionMode)]? = nil) {
         let audioSession = AVAudioSession()
-
+        
         do {
             try audioSession.setCategory(.ambient, options: .duckOthers)
             try audioSession.setActive(false)
         } catch {
             print(error.localizedDescription)
         }
-
+        
         let abilityText = "\(ability.name). \(ability.shortDesc)"
-
+        
         let utterance = AVSpeechUtterance(attributedString: applyCorrections(to: abilityText, with: dynamicCorrections))
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.premium.en-US.Zoe")
         utterance.rate = 0.4
-
+        
         synthesizer.speak(utterance)
     }
-
+    
     enum CorrectionMode {
         case ipa
         case textReplacement
     }
-
+    
     private func applyCorrections(to text: String, with corrections: [(String, String, CorrectionMode)]?) -> NSMutableAttributedString {
         let constantCorrections: [(String, String, CorrectionMode)] = [
             ("pokémon", "ˈpo͡ʊ.ki.ˈmɑn", .ipa),
         ]
-
+        
         var dynamicCorrections = corrections ?? []
         dynamicCorrections += constantCorrections
-
+        
         let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
         let attributedString = NSMutableAttributedString(string: text)
         let normalizedText = text.folding(options: .diacriticInsensitive, locale: .current).lowercased()
-
+        
         for (target, correction, mode) in dynamicCorrections {
             let normalizedTarget = target.folding(options: .diacriticInsensitive, locale: .current).lowercased()
             var searchRange = NSRange(location: 0, length: normalizedText.utf16.count)
-
+            
             while let range = normalizedText.range(of: normalizedTarget, options: .caseInsensitive, range: Range(searchRange, in: normalizedText)) {
                 let nsRange = NSRange(range, in: normalizedText)
                 if mode == .ipa {
@@ -462,23 +497,23 @@ struct DexEntryView: View {
                 print("Applied correction for \(target)")
                 searchRange = NSRange(location: nsRange.location + nsRange.length, length: normalizedText.utf16.count - (nsRange.location + nsRange.length))
             }
-
+            
             if !normalizedText.contains(normalizedTarget) {
                 print("No correctible text found for \(target)")
             }
         }
         return attributedString
     }
-
+    
     private func stopAudioPlayback() {
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
         }
-
+        
         if let player = audioPlayer, player.isPlaying {
             player.stop()
         }
-
+        
         do {
             try AVAudioSession.sharedInstance().setActive(false)
         } catch {
