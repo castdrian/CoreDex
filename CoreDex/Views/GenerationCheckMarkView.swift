@@ -24,13 +24,6 @@ struct GenerationCheckMarkView: View {
                         Text("Gen \(gen)")
                     }
                     .padding(5)
-                    .onTapGesture {
-                        if selectedGens.contains(gen) {
-                            selectedGens.remove(gen)
-                        } else {
-                            selectedGens.insert(gen)
-                        }
-                    }
                 }
             }
         }
